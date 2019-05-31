@@ -8,7 +8,7 @@ namespace SellAirplaneTicketManagement.DTO
 {
     class ChuyenBayBUS
     {
-        ublic DataTable LoadList()
+        public DataTable LoadList()
         {
 
         }
