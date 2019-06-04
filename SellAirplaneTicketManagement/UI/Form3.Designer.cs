@@ -30,10 +30,10 @@
         {
             this.tbMenu = new System.Windows.Forms.TabControl();
             this.tb1 = new System.Windows.Forms.TabPage();
-            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
             this.tb2 = new System.Windows.Forms.TabPage();
-            this.findFight1 = new SellAirplaneTicketManagement.User_Control.FindFight();
             this.tb3 = new System.Windows.Forms.TabPage();
+            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
+            this.findFight1 = new SellAirplaneTicketManagement.User_Control.FindFight();
             this.checkTransaction1 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tbMenu.SuspendLayout();
             this.tb1.SuspendLayout();
@@ -71,16 +71,6 @@
             this.tb1.Text = "Đặt vé chuyến bay";
             this.tb1.UseVisualStyleBackColor = true;
             // 
-            // bookTicket1
-            // 
-            this.bookTicket1.AutoSize = true;
-            this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookTicket1.Location = new System.Drawing.Point(21, 21);
-            this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bookTicket1.Name = "bookTicket1";
-            this.bookTicket1.Size = new System.Drawing.Size(1131, 416);
-            this.bookTicket1.TabIndex = 0;
-            // 
             // tb2
             // 
             this.tb2.Controls.Add(this.findFight1);
@@ -93,15 +83,6 @@
             this.tb2.Text = "Tra cứu chuyến bay";
             this.tb2.UseVisualStyleBackColor = true;
             // 
-            // findFight1
-            // 
-            this.findFight1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findFight1.Location = new System.Drawing.Point(4, 9);
-            this.findFight1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.findFight1.Name = "findFight1";
-            this.findFight1.Size = new System.Drawing.Size(1105, 362);
-            this.findFight1.TabIndex = 0;
-            // 
             // tb3
             // 
             this.tb3.Controls.Add(this.checkTransaction1);
@@ -112,6 +93,25 @@
             this.tb3.TabIndex = 2;
             this.tb3.Text = "Lịch sử giao dịch";
             this.tb3.UseVisualStyleBackColor = true;
+            // 
+            // bookTicket1
+            // 
+            this.bookTicket1.AutoSize = true;
+            this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookTicket1.Location = new System.Drawing.Point(21, 21);
+            this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bookTicket1.Name = "bookTicket1";
+            this.bookTicket1.Size = new System.Drawing.Size(1131, 472);
+            this.bookTicket1.TabIndex = 0;
+            // 
+            // findFight1
+            // 
+            this.findFight1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findFight1.Location = new System.Drawing.Point(4, 9);
+            this.findFight1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.findFight1.Name = "findFight1";
+            this.findFight1.Size = new System.Drawing.Size(1146, 606);
+            this.findFight1.TabIndex = 0;
             // 
             // checkTransaction1
             // 
@@ -130,7 +130,7 @@
             // Form3
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1386, 654);
+            this.ClientSize = new System.Drawing.Size(1370, 654);
             this.Controls.Add(this.tbMenu);
             this.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.Margin = new System.Windows.Forms.Padding(5);
