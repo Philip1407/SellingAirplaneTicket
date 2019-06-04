@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.BUS
 {
-    public class VeBUS
+    /*public class VeBUS
     {
         public DataTable LoadList()
         {
@@ -26,5 +26,5 @@ namespace SellAirplaneTicketManagement.BUS
         {
 
         }
-    }
+    }*/
 }

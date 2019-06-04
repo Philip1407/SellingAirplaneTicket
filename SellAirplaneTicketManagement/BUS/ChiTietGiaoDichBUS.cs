@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.BUS
 {
-    public class ChiTietGiaoDichBUS
+    /*public class ChiTietGiaoDichBUS
     {
         public DataTable LoadList()
         {
@@ -27,5 +27,5 @@ namespace SellAirplaneTicketManagement.BUS
         {
             
         }
-    }
+    }*/
 }

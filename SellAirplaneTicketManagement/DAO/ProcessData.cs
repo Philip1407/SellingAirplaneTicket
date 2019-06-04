@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.DAO
 {
-    class ProcessData
+    /*class ProcessData
     {
 
         static string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
@@ -37,6 +37,6 @@ namespace SellAirplaneTicketManagement.DAO
 
             return rs;
         }
-
-    }
+        
+    }*/
 }

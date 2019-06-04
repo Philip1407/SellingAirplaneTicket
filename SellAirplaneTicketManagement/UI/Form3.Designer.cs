@@ -99,7 +99,7 @@
             this.findFight1.Location = new System.Drawing.Point(4, 9);
             this.findFight1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.findFight1.Name = "findFight1";
-            this.findFight1.Size = new System.Drawing.Size(851, 362);
+            this.findFight1.Size = new System.Drawing.Size(1105, 362);
             this.findFight1.TabIndex = 0;
             // 
             // tb3
@@ -115,12 +115,17 @@
             // 
             // checkTransaction1
             // 
+            this.checkTransaction1.AddEnable = false;
+            this.checkTransaction1.DeleteEnable = false;
+            this.checkTransaction1.EditEnable = false;
             this.checkTransaction1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkTransaction1.Location = new System.Drawing.Point(41, 28);
+            this.checkTransaction1.Location = new System.Drawing.Point(37, 15);
             this.checkTransaction1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.checkTransaction1.Name = "checkTransaction1";
             this.checkTransaction1.Size = new System.Drawing.Size(1110, 559);
             this.checkTransaction1.TabIndex = 0;
+            this.checkTransaction1.Title = "TRA CỨU THÔNG TIN GIAO DỊCH";
+            this.checkTransaction1.DetailClick += new System.EventHandler(this.checkTransaction1_DetailClick);
             // 
             // Form3
             // 
@@ -131,7 +136,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Nhân viên bán vé";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.tbMenu.ResumeLayout(false);
             this.tb1.ResumeLayout(false);

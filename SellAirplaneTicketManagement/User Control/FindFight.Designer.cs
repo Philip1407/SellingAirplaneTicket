@@ -165,9 +165,9 @@
             this.label20.Location = new System.Drawing.Point(273, 41);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(305, 38);
+            this.label20.Size = new System.Drawing.Size(409, 38);
             this.label20.TabIndex = 24;
-            this.label20.Text = "Tra cứu chuyến bay";
+            this.label20.Text = "TRA CỨU CHUYẾN BAY";
             // 
             // FindFight
             // 

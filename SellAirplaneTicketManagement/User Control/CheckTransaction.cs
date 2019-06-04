@@ -17,11 +17,84 @@ namespace SellAirplaneTicketManagement.User_Control
             InitializeComponent();
         }
 
+        private bool add=true;
+        private bool delete = true;
+        private bool edit = true;
+        
+        public bool AddEnable
+        {
+            get
+            {
+                return add;
+            }
+            set
+            {
+                if (value)
+                {
+                    btnAdd.Show();
+                    add = true;
+                }
+                else {
+                    btnAdd.Hide();
+                    add = false;
+                }
+            }
+        }
+
+        public bool EditEnable
+        {
+            get
+            {
+                return edit;
+            }
+            set
+            {
+                if (value)
+                {
+                    btnEdit.Show();
+                    edit = true;
+                }
+                else
+                {
+                    btnEdit.Hide();
+                    edit = false;
+                }
+            }
+        }
+
+        public bool DeleteEnable {
+            get
+            {
+                return delete;
+            }
+            set
+            {
+                if (value)
+                {
+                    btnDelete.Show();
+                    delete = true;
+                }
+                else
+                {
+                    btnDelete.Hide();
+                    delete = false;
+                }
+            }
+        }
+        
+
+        public string Title
+        {
+            get { return lblTitle.Text; }
+            set { lblTitle.Text = value; }
+        }
+
         public event EventHandler AddClick;
         public event EventHandler EditClick;
         public event EventHandler DeleteClick;
+        public event EventHandler DetailClick;
 
-        protected DataTable DataTable
+        public DataTable DataTable
         {
             set { grvData.DataSource = value; }
         }
@@ -41,6 +114,9 @@ namespace SellAirplaneTicketManagement.User_Control
             DeleteClick?.Invoke(this, e);
         }
 
-
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            DetailClick?.Invoke(this, e);
+        }
     }
 }

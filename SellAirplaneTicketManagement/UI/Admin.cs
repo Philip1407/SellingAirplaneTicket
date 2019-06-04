@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SellAirplaneTicketManagement.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +54,8 @@ namespace SellAirplaneTicketManagement
         }
 
 
+
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
@@ -64,6 +67,106 @@ namespace SellAirplaneTicketManagement
                     e.Cancel = true;
             }
 
+        }
+
+        private void ucFightInfo_AddClick(object sender, EventArgs e)
+        {
+            Add_EditFightInfo frm = new Add_EditFightInfo();
+            frm.ShowDialog();
+        }
+
+        private void ucFightInfo_EditClick(object sender, EventArgs e)
+        {
+            Add_EditFightInfo frm = new Add_EditFightInfo();
+            frm.ShowDialog();
+        }
+
+        private void ucFightInfo_DeleteClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+
+        }
+        private void ucFightInfo_DetailClick(object sender, EventArgs e)
+        {
+            Add_EditFightInfo frm = new Add_EditFightInfo();
+            frm.ShowDialog();
+        }
+
+
+        private void ucFightSchedule_AddClick(object sender, EventArgs e)
+        {
+            Add_EditFightSchedule frm = new Add_EditFightSchedule();
+            frm.ShowDialog();
+        }
+
+        private void ucFightSchedule_DetailClick(object sender, EventArgs e)
+        {
+            Add_EditFightSchedule frm = new Add_EditFightSchedule();
+            frm.ShowDialog();
+        }
+
+        private void ucFightSchedule_DeleteClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+        }
+
+        private void ucFightSchedule_EditClick(object sender, EventArgs e)
+        {
+            Add_EditFightSchedule frm = new Add_EditFightSchedule();
+            frm.ShowDialog();
+        }
+
+        private void EmployeeInfo_AddClick(object sender, EventArgs e)
+        {
+            Add_EditEmployeeInfo frm = new Add_EditEmployeeInfo();
+            frm.ShowDialog();
+        }
+
+        private void EmployeeInfo_DeleteClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+        }
+
+        private void EmployeeInfo_DetailClick(object sender, EventArgs e)
+        {
+            Add_EditEmployeeInfo frm = new Add_EditEmployeeInfo();
+            frm.ShowDialog();
+        }
+
+        private void EmployeeInfo_EditClick(object sender, EventArgs e)
+        {
+            Add_EditEmployeeInfo frm = new Add_EditEmployeeInfo();
+            frm.ShowDialog();
+        }
+
+        private void ucEmployeeSchedule_AddClick(object sender, EventArgs e)
+        {
+            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            frm.ShowDialog();
+        }
+
+        private void ucEmployeeSchedule_DeleteClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+
+        }
+
+        private void ucEmployeeSchedule_DetailClick(object sender, EventArgs e)
+        {
+            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            frm.ShowDialog();
+        }
+
+        private void ucEmployeeSchedule_EditClick(object sender, EventArgs e)
+        {
+            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            frm.ShowDialog();
+        }
+
+        private void checkTransaction1_DetailClick(object sender, EventArgs e)
+        {
+            SeeTransactionInfo frm = new SeeTransactionInfo();
+            frm.ShowDialog();
         }
     }
 }

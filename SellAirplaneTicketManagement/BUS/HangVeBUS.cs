@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.BUS
 {
-    public class HangVeBUS
+    /*public class HangVeBUS
     {
         string MaHangVe { get; set; }
         string MaChuyenBay { get; set; }
         int SoCho { get; set; }
         int GiaVe{ get; set; }
-    }
+    }*/
 }

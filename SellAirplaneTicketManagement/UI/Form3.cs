@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SellAirplaneTicketManagement.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,6 +65,12 @@ namespace SellAirplaneTicketManagement
                     e.Cancel = true;
             }
 
+        }
+
+        private void checkTransaction1_DetailClick(object sender, EventArgs e)
+        {
+            SeeTransactionInfo frm = new SeeTransactionInfo();
+            frm.ShowDialog();
         }
     }
 }

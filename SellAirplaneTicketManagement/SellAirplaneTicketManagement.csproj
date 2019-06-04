@@ -77,11 +77,41 @@
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\SoChoTrong.cs" />
     <Compile Include="DTO\Ve.cs" />
+    <Compile Include="UI\Add_EditEmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Add_EditEmployeeInfo.Designer.cs">
+      <DependentUpon>Add_EditEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Add_EditEmployeeSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Add_EditEmployeeSchedule.Designer.cs">
+      <DependentUpon>Add_EditEmployeeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Add_EditFightInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Add_EditFightInfo.Designer.cs">
+      <DependentUpon>Add_EditFightInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Add_EditFightSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Add_EditFightSchedule.Designer.cs">
+      <DependentUpon>Add_EditFightSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeeTransactionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SeeTransactionInfo.Designer.cs">
+      <DependentUpon>SeeTransactionInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\BookTicket.cs">
       <SubType>UserControl</SubType>
@@ -113,12 +143,6 @@
     <Compile Include="User Control\ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,14 +163,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Control\RenevueReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\RenevueReport.Designer.cs">
+      <DependentUpon>RenevueReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Control\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Add_EditEmployeeInfo.resx">
+      <DependentUpon>Add_EditEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Add_EditEmployeeSchedule.resx">
+      <DependentUpon>Add_EditEmployeeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Add_EditFightInfo.resx">
+      <DependentUpon>Add_EditFightInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Add_EditFightSchedule.resx">
+      <DependentUpon>Add_EditFightSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SeeTransactionInfo.resx">
+      <DependentUpon>SeeTransactionInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\BookTicket.resx">
       <DependentUpon>BookTicket.cs</DependentUpon>
@@ -162,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -185,6 +227,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Control\RenevueReport.resx">
+      <DependentUpon>RenevueReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>

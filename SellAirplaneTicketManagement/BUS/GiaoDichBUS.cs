@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.BUS
 {
-    public class GiaoDichBUS
+    /*public class GiaoDichBUS
     {
         public DataTable LoadList()
         {
@@ -27,5 +27,5 @@ namespace SellAirplaneTicketManagement.BUS
         {
 
         }
-    }
+    }*/
 }

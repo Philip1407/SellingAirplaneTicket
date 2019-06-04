@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.BUS
 {
-    public class LichBayBUS
+    /*public class LichBayBUS
     {
         string MaLichBay { get; set; }
         string MaChuyenBay { get; set; }
@@ -16,5 +16,5 @@ namespace SellAirplaneTicketManagement.BUS
         string TinhTrang { get; set; }
 
 
-    }
+    }*/
 }
