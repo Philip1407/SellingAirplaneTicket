@@ -107,6 +107,12 @@
     <Compile Include="UI\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SeeTransactionInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     <Compile Include="User Control\RenevueReport.Designer.cs">
       <DependentUpon>RenevueReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\UserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SeeTransactionInfo.resx">
       <DependentUpon>SeeTransactionInfo.cs</DependentUpon>
@@ -229,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="User Control\RenevueReport.resx">
       <DependentUpon>RenevueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>

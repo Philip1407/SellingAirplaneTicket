@@ -43,7 +43,6 @@ D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirpl
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\bin\Debug\SellAirplaneTicketManagement.exe.config
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\bin\Debug\SellAirplaneTicketManagement.exe
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\bin\Debug\SellAirplaneTicketManagement.pdb
-C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.csprojAssemblyReference.cache
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditEmployeeInfo.resources
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditEmployeeSchedule.resources
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditFightInfo.resources
@@ -65,3 +64,6 @@ C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagem
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.exe
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.pdb
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.Customer.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.csprojAssemblyReference.cache
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.ucUserInfo.resources

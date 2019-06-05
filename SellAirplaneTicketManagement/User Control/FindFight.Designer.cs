@@ -167,9 +167,9 @@
             this.label20.Location = new System.Drawing.Point(273, 41);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(326, 31);
+            this.label20.Size = new System.Drawing.Size(276, 31);
             this.label20.TabIndex = 24;
-            this.label20.Text = "TRA CỨU CHUYẾN BAY";
+            this.label20.Text = "TRA CỨU LỊCH BAY";
             // 
             // dataGridView1
             // 

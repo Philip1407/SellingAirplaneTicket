@@ -246,7 +246,7 @@
             this.label37.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(352, 33);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(358, 38);
+            this.label37.Size = new System.Drawing.Size(287, 31);
             this.label37.TabIndex = 0;
             this.label37.Text = "Điều khoản chuyến bay";
             // 
@@ -290,7 +290,7 @@
             // Admin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1386, 654);
+            this.ClientSize = new System.Drawing.Size(1370, 654);
             this.Controls.Add(this.tbMenu);
             this.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.Margin = new System.Windows.Forms.Padding(5);
