@@ -41,12 +41,16 @@
             this.ucEmployeeSchedule = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tb6 = new System.Windows.Forms.TabPage();
             this.checkTransaction1 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
+            this.tb7 = new System.Windows.Forms.TabPage();
+            this.ucAdminInfo1 = new SellAirplaneTicketManagement.ucAdminInfo();
             this.pnFlightPolicy = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
             this.findFight1 = new SellAirplaneTicketManagement.User_Control.FindFight();
+            this.tb8 = new System.Windows.Forms.TabPage();
+            this.CheckCustomerInfo = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tbMenu.SuspendLayout();
             this.tb1.SuspendLayout();
             this.tb2.SuspendLayout();
@@ -54,7 +58,9 @@
             this.tb4.SuspendLayout();
             this.tb5.SuspendLayout();
             this.tb6.SuspendLayout();
+            this.tb7.SuspendLayout();
             this.pnFlightPolicy.SuspendLayout();
+            this.tb8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbMenu
@@ -66,6 +72,8 @@
             this.tbMenu.Controls.Add(this.tb4);
             this.tbMenu.Controls.Add(this.tb5);
             this.tbMenu.Controls.Add(this.tb6);
+            this.tbMenu.Controls.Add(this.tb7);
+            this.tbMenu.Controls.Add(this.tb8);
             this.tbMenu.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tbMenu.ItemSize = new System.Drawing.Size(75, 200);
             this.tbMenu.Location = new System.Drawing.Point(3, 5);
@@ -167,7 +175,7 @@
             // 
             this.EmployeeInfo.AddEnable = true;
             this.EmployeeInfo.DeleteEnable = true;
-            this.EmployeeInfo.EditEnable = true;
+            this.EmployeeInfo.EditEnable = false;
             this.EmployeeInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeInfo.Location = new System.Drawing.Point(5, 4);
             this.EmployeeInfo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -231,6 +239,27 @@
             this.checkTransaction1.Title = "TRA CỨU THÔNG TIN GIAO DỊCH";
             this.checkTransaction1.DetailClick += new System.EventHandler(this.checkTransaction1_DetailClick);
             // 
+            // tb7
+            // 
+            this.tb7.Controls.Add(this.ucAdminInfo1);
+            this.tb7.Location = new System.Drawing.Point(204, 4);
+            this.tb7.Name = "tb7";
+            this.tb7.Size = new System.Drawing.Size(1173, 644);
+            this.tb7.TabIndex = 6;
+            this.tb7.Text = "Thông tin tài khoản";
+            this.tb7.UseVisualStyleBackColor = true;
+            // 
+            // ucAdminInfo1
+            // 
+            this.ucAdminInfo1.BackColor = System.Drawing.SystemColors.Window;
+            this.ucAdminInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucAdminInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucAdminInfo1.Location = new System.Drawing.Point(272, 57);
+            this.ucAdminInfo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ucAdminInfo1.Name = "ucAdminInfo1";
+            this.ucAdminInfo1.Size = new System.Drawing.Size(592, 541);
+            this.ucAdminInfo1.TabIndex = 0;
+            // 
             // pnFlightPolicy
             // 
             this.pnFlightPolicy.Controls.Add(this.label37);
@@ -246,7 +275,7 @@
             this.label37.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(352, 33);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(287, 31);
+            this.label37.Size = new System.Drawing.Size(358, 38);
             this.label37.TabIndex = 0;
             this.label37.Text = "Điều khoản chuyến bay";
             // 
@@ -270,6 +299,7 @@
             // 
             // bookTicket1
             // 
+            this.bookTicket1.AddCustomer = true;
             this.bookTicket1.AutoSize = true;
             this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookTicket1.Location = new System.Drawing.Point(21, 21);
@@ -286,6 +316,30 @@
             this.findFight1.Name = "findFight1";
             this.findFight1.Size = new System.Drawing.Size(851, 362);
             this.findFight1.TabIndex = 0;
+            // 
+            // tb8
+            // 
+            this.tb8.Controls.Add(this.CheckCustomerInfo);
+            this.tb8.Location = new System.Drawing.Point(204, 4);
+            this.tb8.Name = "tb8";
+            this.tb8.Size = new System.Drawing.Size(1173, 644);
+            this.tb8.TabIndex = 7;
+            this.tb8.Text = "Xem danh sách khách hàng";
+            this.tb8.UseVisualStyleBackColor = true;
+            // 
+            // CheckCustomerInfo
+            // 
+            this.CheckCustomerInfo.AddEnable = false;
+            this.CheckCustomerInfo.DeleteEnable = false;
+            this.CheckCustomerInfo.EditEnable = false;
+            this.CheckCustomerInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckCustomerInfo.Location = new System.Drawing.Point(5, 4);
+            this.CheckCustomerInfo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.CheckCustomerInfo.Name = "CheckCustomerInfo";
+            this.CheckCustomerInfo.Size = new System.Drawing.Size(1163, 640);
+            this.CheckCustomerInfo.TabIndex = 0;
+            this.CheckCustomerInfo.Title = "XEM THÔNG TIN KHÁCH HÀNG";
+            this.CheckCustomerInfo.DetailClick += new System.EventHandler(this.CheckCustomerInfo_DetailClick);
             // 
             // Admin
             // 
@@ -305,8 +359,10 @@
             this.tb4.ResumeLayout(false);
             this.tb5.ResumeLayout(false);
             this.tb6.ResumeLayout(false);
+            this.tb7.ResumeLayout(false);
             this.pnFlightPolicy.ResumeLayout(false);
             this.pnFlightPolicy.PerformLayout();
+            this.tb8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -332,5 +388,9 @@
         private User_Control.CheckTransaction ucFightSchedule;
         private System.Windows.Forms.TabPage tb6;
         private User_Control.CheckTransaction checkTransaction1;
+        private System.Windows.Forms.TabPage tb7;
+        private ucAdminInfo ucAdminInfo1;
+        private System.Windows.Forms.TabPage tb8;
+        private User_Control.CheckTransaction CheckCustomerInfo;
     }
 }

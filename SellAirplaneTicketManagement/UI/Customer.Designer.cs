@@ -31,17 +31,17 @@
             this.tbMenu = new System.Windows.Forms.TabControl();
             this.tb1 = new System.Windows.Forms.TabPage();
             this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
+            this.tb2 = new System.Windows.Forms.TabPage();
+            this.checkTransaction2 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tb3 = new System.Windows.Forms.TabPage();
             this.checkTransaction1 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tb4 = new System.Windows.Forms.TabPage();
-            this.ucUserInfo1 = new SellAirplaneTicketManagement.ucUserInfo();
-            this.tb2 = new System.Windows.Forms.TabPage();
-            this.checkTransaction2 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
+            this.ucCustomerInfo1 = new SellAirplaneTicketManagement.User_Control.ucCustomerInfo();
             this.tbMenu.SuspendLayout();
             this.tb1.SuspendLayout();
+            this.tb2.SuspendLayout();
             this.tb3.SuspendLayout();
             this.tb4.SuspendLayout();
-            this.tb2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbMenu
@@ -76,57 +76,13 @@
             // 
             // bookTicket1
             // 
+            this.bookTicket1.AddCustomer = false;
             this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookTicket1.Location = new System.Drawing.Point(0, 0);
             this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bookTicket1.Name = "bookTicket1";
             this.bookTicket1.Size = new System.Drawing.Size(1253, 495);
             this.bookTicket1.TabIndex = 0;
-            // 
-            // tb3
-            // 
-            this.tb3.Controls.Add(this.checkTransaction1);
-            this.tb3.Location = new System.Drawing.Point(204, 4);
-            this.tb3.Name = "tb3";
-            this.tb3.Padding = new System.Windows.Forms.Padding(3);
-            this.tb3.Size = new System.Drawing.Size(1173, 644);
-            this.tb3.TabIndex = 1;
-            this.tb3.Text = "Xem lịch sử giao dịch";
-            this.tb3.UseVisualStyleBackColor = true;
-            // 
-            // checkTransaction1
-            // 
-            this.checkTransaction1.AddEnable = true;
-            this.checkTransaction1.DeleteEnable = true;
-            this.checkTransaction1.EditEnable = true;
-            this.checkTransaction1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkTransaction1.Location = new System.Drawing.Point(0, 4);
-            this.checkTransaction1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.checkTransaction1.Name = "checkTransaction1";
-            this.checkTransaction1.Size = new System.Drawing.Size(1110, 559);
-            this.checkTransaction1.TabIndex = 0;
-            this.checkTransaction1.Title = "TRA CỨU THÔNG TIN GIAO DỊCH";
-            // 
-            // tb4
-            // 
-            this.tb4.Controls.Add(this.ucUserInfo1);
-            this.tb4.Location = new System.Drawing.Point(204, 4);
-            this.tb4.Name = "tb4";
-            this.tb4.Size = new System.Drawing.Size(1173, 644);
-            this.tb4.TabIndex = 2;
-            this.tb4.Text = "Thông tin tài khoản";
-            this.tb4.UseVisualStyleBackColor = true;
-            // 
-            // ucUserInfo1
-            // 
-            this.ucUserInfo1.BackColor = System.Drawing.SystemColors.Window;
-            this.ucUserInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucUserInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucUserInfo1.Location = new System.Drawing.Point(136, 53);
-            this.ucUserInfo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.ucUserInfo1.Name = "ucUserInfo1";
-            this.ucUserInfo1.Size = new System.Drawing.Size(608, 536);
-            this.ucUserInfo1.TabIndex = 0;
             // 
             // tb2
             // 
@@ -135,7 +91,7 @@
             this.tb2.Name = "tb2";
             this.tb2.Size = new System.Drawing.Size(1173, 644);
             this.tb2.TabIndex = 3;
-            this.tb2.Text = "DANH SÁCH VÉ ";
+            this.tb2.Text = "Tình trạng vé";
             this.tb2.UseVisualStyleBackColor = true;
             // 
             // checkTransaction2
@@ -151,17 +107,62 @@
             this.checkTransaction2.TabIndex = 0;
             this.checkTransaction2.Title = "DANH SÁCH VÉ ";
             // 
+            // tb3
+            // 
+            this.tb3.Controls.Add(this.checkTransaction1);
+            this.tb3.Location = new System.Drawing.Point(204, 4);
+            this.tb3.Name = "tb3";
+            this.tb3.Padding = new System.Windows.Forms.Padding(3);
+            this.tb3.Size = new System.Drawing.Size(1173, 644);
+            this.tb3.TabIndex = 1;
+            this.tb3.Text = "Xem lịch sử giao dịch";
+            this.tb3.UseVisualStyleBackColor = true;
+            // 
+            // checkTransaction1
+            // 
+            this.checkTransaction1.AddEnable = false;
+            this.checkTransaction1.DeleteEnable = false;
+            this.checkTransaction1.EditEnable = false;
+            this.checkTransaction1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkTransaction1.Location = new System.Drawing.Point(0, 4);
+            this.checkTransaction1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.checkTransaction1.Name = "checkTransaction1";
+            this.checkTransaction1.Size = new System.Drawing.Size(1110, 559);
+            this.checkTransaction1.TabIndex = 0;
+            this.checkTransaction1.Title = "TRA CỨU THÔNG TIN GIAO DỊCH";
+            // 
+            // tb4
+            // 
+            this.tb4.Controls.Add(this.ucCustomerInfo1);
+            this.tb4.Location = new System.Drawing.Point(204, 4);
+            this.tb4.Name = "tb4";
+            this.tb4.Size = new System.Drawing.Size(1173, 644);
+            this.tb4.TabIndex = 2;
+            this.tb4.Text = "Thông tin tài khoản";
+            this.tb4.UseVisualStyleBackColor = true;
+            // 
+            // ucCustomerInfo1
+            // 
+            this.ucCustomerInfo1.BackColor = System.Drawing.SystemColors.Window;
+            this.ucCustomerInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucCustomerInfo1.Location = new System.Drawing.Point(252, 60);
+            this.ucCustomerInfo1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucCustomerInfo1.Name = "ucCustomerInfo1";
+            this.ucCustomerInfo1.Size = new System.Drawing.Size(590, 439);
+            this.ucCustomerInfo1.TabIndex = 0;
+            // 
             // Customer
             // 
             this.ClientSize = new System.Drawing.Size(1370, 654);
             this.Controls.Add(this.tbMenu);
             this.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Customer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.tbMenu.ResumeLayout(false);
             this.tb1.ResumeLayout(false);
+            this.tb2.ResumeLayout(false);
             this.tb3.ResumeLayout(false);
             this.tb4.ResumeLayout(false);
-            this.tb2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -173,8 +174,8 @@
         private User_Control.BookTicket bookTicket1;
         private User_Control.CheckTransaction checkTransaction1;
         private System.Windows.Forms.TabPage tb4;
-        private ucUserInfo ucUserInfo1;
         private System.Windows.Forms.TabPage tb2;
         private User_Control.CheckTransaction checkTransaction2;
+        private User_Control.ucCustomerInfo ucCustomerInfo1;
     }
 }

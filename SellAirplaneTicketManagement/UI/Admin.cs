@@ -168,5 +168,11 @@ namespace SellAirplaneTicketManagement
             SeeTransactionInfo frm = new SeeTransactionInfo();
             frm.ShowDialog();
         }
+
+        private void CheckCustomerInfo_DetailClick(object sender, EventArgs e)
+        {
+            Add_EditCustomerInfo frm = new Add_EditCustomerInfo();
+            frm.ShowDialog();
+        }
     }
 }

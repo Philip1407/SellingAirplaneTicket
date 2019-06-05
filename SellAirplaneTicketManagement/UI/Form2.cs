@@ -37,7 +37,7 @@ namespace SellAirplaneTicketManagement
         private void logIn1_LoginClick(object sender, EventArgs e)
         {
             this.Hide();
-            Customer frm = new Customer();
+            Form3 frm = new Form3();
             frm.Show();
         }
 
@@ -73,7 +73,6 @@ namespace SellAirplaneTicketManagement
                 else
                     e.Cancel = true;
             }
-
         }
     }
 }

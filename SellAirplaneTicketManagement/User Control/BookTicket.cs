@@ -17,6 +17,24 @@ namespace SellAirplaneTicketManagement.User_Control
             InitializeComponent();
         }
 
+        bool addCustomer = true;
+
+        public bool AddCustomer
+        {
+            get
+            {
+                return addCustomer;
+            }
+            set
+            {
+                addCustomer = value;
+                if (addCustomer) btnAddCustomer.Show();
+                else btnAddCustomer.Hide();
+            }
+        }
+
+
+
         private void label11_Click(object sender, EventArgs e)
         {
 
@@ -30,6 +48,12 @@ namespace SellAirplaneTicketManagement.User_Control
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public event EventHandler AddCustomerClick;
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            AddCustomerClick?.Invoke(this, e);
         }
     }
 }
