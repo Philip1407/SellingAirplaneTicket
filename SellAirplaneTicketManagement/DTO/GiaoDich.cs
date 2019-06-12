@@ -8,12 +8,12 @@ namespace SellAirplaneTicketManagement.DTO
 {
     public class GiaoDich
     {
-        string MaGiaoDich { get; set; }
-        int SoTienGiaoDch { get; set; }
-        string ThoiGianGiaoDich { get; set; }
-        string MaKhachHang { get; set; }
-        string MaNhanVien { get; set; }
-        string SoTaiKhoanChuyenDen { get; set; }
-        string MaLichBay { get; set; }
+        public string MaGiaoDich { get; set; }
+        public int SoTienGiaoDich { get; set; }
+        public string ThoiGianGiaoDich { get; set; }
+        public string MaKhachHang { get; set; }
+        public string MaNhanVien { get; set; }
+        public string SoTaiKhoanChuyenDen { get; set; }
+        public string MaLichBay { get; set; }
     }
 }

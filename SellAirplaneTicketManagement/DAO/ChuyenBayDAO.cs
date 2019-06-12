@@ -7,7 +7,7 @@ using SellAirplaneTicketManagement.DTO;
 using System.Data;
 
 namespace SellAirplaneTicketManagement.DAO
-{/*
+{
     public class ChuyenBayDAO
     {
         public DataTable LoadList()
@@ -19,15 +19,15 @@ namespace SellAirplaneTicketManagement.DAO
 
         public int Insert(ChuyenBay ChuyenBay)
         {
-            string sql = string.Format("Insert into ChuyenBay(MaLichBay, MaChuyenBay, Ngay, GioKhoiHanh, GioKetThuc, TinhTrang)  Values('{0}','{1}',{2},{3},{4},{5})",
-              ChuyenBay.MaLichBay, ChuyenBay.MaChuyenBay, ChuyenBay.HangHangKhong, ChuyenBay.DiemKhoiHanh,ChuyenBay.DiemDen, ChuyenBay.SoLuongKhach);
+            string sql = string.Format("Insert into ChuyenBay(MaChuyenBay, HangHangKhong, DiemKhoiHanh, DiemDen, SoLuongKhach)  Values('{0}','{1}','{2}','{3}','{4}')",
+               ChuyenBay.MaChuyenBay, ChuyenBay.HangHangKhong, ChuyenBay.DiemKhoiHanh,ChuyenBay.DiemDen, ChuyenBay.SoLuongKhach);
             var rs = ProcessData.Execute(sql);
             return rs;
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
-            string sql = string.Format("Delete from ChuyenBay Where Id={0}",
+            string sql = string.Format("Delete from ChuyenBay Where MaChuyenBay={0}",
                id);
             var rs = ProcessData.Execute(sql);
             return rs;
@@ -35,11 +35,11 @@ namespace SellAirplaneTicketManagement.DAO
 
         public int Update(ChuyenBay ChuyenBay)
         {
-            string sql = string.Format("Update ChiTietGiaoDich Set MaLichBay='{0}', MaChuyenBay='{1}', Ngay='{2}', GioKhoiHanh='{3}', GioKetThuc='{4}', TinhTrang='{5}' Where Id={6}",
-               ChuyenBay.MaLichBay, ChuyenBay.MaChuyenBay, ChuyenBay.HangHangKhong, ChuyenBay.DiemKhoiHanh, ChuyenBay.DiemDen, ChuyenBay.SoLuongKhach,id);
+            string sql = string.Format("Update ChiTietGiaoDich Set HangHangKhong='{1}', DiemKhoiHanh='{3}', DiemDen='{4}', SoLuongKhach='{5}' Where MaChuyenBay={0}",
+              ChuyenBay.MaChuyenBay, ChuyenBay.HangHangKhong, ChuyenBay.DiemKhoiHanh, ChuyenBay.DiemDen, ChuyenBay.SoLuongKhach);
 
             var rs = ProcessData.Execute(sql);
             return rs;
         }
-    }*/
+    }
 }

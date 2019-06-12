@@ -8,10 +8,10 @@ namespace SellAirplaneTicketManagement.DTO
 {
     public class ChuyenBay
     {
-        string MaChuyenBay { get; set;}
-        string HangHangKhong { get; set; }
-        string DiemKhoiHanh { get; set; }
-        string DiemDen { get; set; }
-        int SoLuongKhach { get; set; }
+        public string MaChuyenBay { get; set;}
+        public string HangHangKhong { get; set; }
+        public string DiemKhoiHanh { get; set; }
+        public string DiemDen { get; set; }
+        public int SoLuongKhach { get; set; }
     }
 }

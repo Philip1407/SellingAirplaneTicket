@@ -46,16 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\ChiTietGiaoDichBUS.cs" />
-    <Compile Include="BUS\ChuyenBayBUS.cs" />
-    <Compile Include="BUS\GiaoDichBUS.cs" />
-    <Compile Include="BUS\HangVeBUS.cs" />
-    <Compile Include="BUS\KhachHangBUS.cs" />
-    <Compile Include="BUS\LichBayBUS.cs" />
+    <Compile Include="BUS\BaoCaoDoanhThuBUS.cs" />
+    <Compile Include="BUS\DatVeBUS.cs" />
+    <Compile Include="BUS\LichChuyenBayBUS.cs" />
     <Compile Include="BUS\LichLamViecBUS.cs" />
-    <Compile Include="BUS\NhanVienBUS.cs" />
-    <Compile Include="BUS\SoChoTrongBUS.cs" />
-    <Compile Include="BUS\VeBUS.cs" />
+    <Compile Include="BUS\ThongTinChuyenBayBUS.cs" />
+    <Compile Include="BUS\ThongTinGiaoDichBUS.cs" />
+    <Compile Include="BUS\ThongTinKhachHangBUS.cs" />
+    <Compile Include="BUS\ThongTinNhanVienBUS.cs" />
+    <Compile Include="BUS\ThongTinAdminBUS.cs" />
     <Compile Include="DAO\ChiTietGiaoDichDAO.cs" />
     <Compile Include="DAO\ChuyenBayDAO.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
@@ -65,7 +64,7 @@
     <Compile Include="DAO\LichLamViecDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\ProcessData.cs" />
-    <Compile Include="DAO\SoChoTrongDAO.cs" />
+    <Compile Include="DAO\SoChoConTrongDAO.cs" />
     <Compile Include="DAO\VeDAO.cs" />
     <Compile Include="DTO\ChiTietGiaoDich.cs" />
     <Compile Include="DTO\ChuyenBay.cs" />
@@ -75,7 +74,7 @@
     <Compile Include="DTO\LichBay.cs" />
     <Compile Include="DTO\LichLamViec.cs" />
     <Compile Include="DTO\NhanVien.cs" />
-    <Compile Include="DTO\SoChoTrong.cs" />
+    <Compile Include="DTO\SoChoConTrong.cs" />
     <Compile Include="DTO\Ve.cs" />
     <Compile Include="UI\Add_EditCustomerInfo.cs">
       <SubType>Form</SubType>

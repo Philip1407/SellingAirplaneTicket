@@ -8,8 +8,8 @@ namespace SellAirplaneTicketManagement.DTO
 {
     public class LichLamViec
     {
-        string MaNhanVien { get; set; }
-        int Ca { get; set; }
-        string Ngay { get; set; }
+        public string MaNhanVien { get; set; }
+        public int Ca { get; set; }
+        public string Ngay { get; set; }
     }
 }

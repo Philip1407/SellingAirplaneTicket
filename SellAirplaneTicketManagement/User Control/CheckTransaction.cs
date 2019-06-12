@@ -94,8 +94,9 @@ namespace SellAirplaneTicketManagement.User_Control
         public event EventHandler DeleteClick;
         public event EventHandler DetailClick;
 
-        public DataTable DataTable
+        public DataTable Data
         {
+            get { return grvData.DataSource as DataTable; }
             set { grvData.DataSource = value; }
         }
 

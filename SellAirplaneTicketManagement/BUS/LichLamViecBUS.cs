@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SellAirplaneTicketManagement.DAO;
+using SellAirplaneTicketManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,25 +9,27 @@ using System.Threading.Tasks;
 
 namespace SellAirplaneTicketManagement.BUS
 {
-    /*public class LichLamViecBUS
+    public class LichLamViecBUS
     {
-        public DataTable LoadList()
+        LichLamViecDAO lichlamviecDAO = new LichLamViecDAO();
+        public DataTable Loadata()
         {
-
+            return lichlamviecDAO.LoadList();
         }
 
-        public int Insert()
+        public int Insert(LichLamViec dt)
         {
-
+            return lichlamviecDAO.Insert(dt);
         }
 
-        public int Delete()
+        public int Delete(string id)
         {
+            return lichlamviecDAO.Delete(id);
         }
 
-        public int Update()
+        public int Update(LichLamViec dt)
         {
-
+            return lichlamviecDAO.Update(dt);
         }
-    }*/
+    }
 }

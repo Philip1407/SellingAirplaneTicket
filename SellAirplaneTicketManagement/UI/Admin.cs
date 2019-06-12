@@ -1,4 +1,5 @@
-﻿using SellAirplaneTicketManagement.UI;
+﻿using SellAirplaneTicketManagement.BUS;
+using SellAirplaneTicketManagement.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,29 @@ namespace SellAirplaneTicketManagement
 {
     public partial class Admin : Form
     {
+        ThongTinChuyenBayBUS thongtinchuyenbay = new ThongTinChuyenBayBUS();
+        LichChuyenBayBUS thongtinlichbay = new LichChuyenBayBUS();
+        ThongTinNhanVienBUS thongtinnhanvien = new ThongTinNhanVienBUS();
+        LichLamViecBUS lichlamviec = new LichLamViecBUS();
+        ThongTinGiaoDichBUS thongtingiaodich = new ThongTinGiaoDichBUS();
+        ThongTinKhachHangBUS thongtinkhachhang = new ThongTinKhachHangBUS();
+        ThongTinAdminBUS thongtinadmin = new ThongTinAdminBUS();
+
+        private void ReloadData()
+        {
+            ucFightInfo.Data = thongtinchuyenbay.Loadata();
+            ucFightSchedule.Data = thongtinlichbay.Loadata();
+            EmployeeInfo.Data = thongtinnhanvien.Loadata();
+            ucEmployeeSchedule.Data = lichlamviec.Loadata();
+            checkTransaction1.Data = thongtingiaodich.Loadata();
+            ucCustomerInfo.Data = thongtinkhachhang.Loadata();
+        }
+        
         public Admin()
         {
             InitializeComponent();
-
             tbMenu.DrawItem += new DrawItemEventHandler(tbMenu_DrawItem);
+            ReloadData();
         }
 
         private void tbMenu_DrawItem(object sender, DrawItemEventArgs e)
@@ -88,8 +107,8 @@ namespace SellAirplaneTicketManagement
         }
         private void ucFightInfo_DetailClick(object sender, EventArgs e)
         {
-            Add_EditFightInfo frm = new Add_EditFightInfo();
-            frm.ShowDialog();
+            ThongTinChuyenBayBUS thongtin = new ThongTinChuyenBayBUS();
+            ucFightInfo.Data = thongtin.Loadata();
         }
 
 

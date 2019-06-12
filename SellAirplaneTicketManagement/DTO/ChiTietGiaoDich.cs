@@ -8,7 +8,7 @@ namespace SellAirplaneTicketManagement.DTO
 {
     public class ChiTietGiaoDich
     {
-        string MaGiaoDich { get; set; }
-        string MaVe { get; set; }
+        public string MaGiaoDich { get; set; }
+        public string MaVe { get; set; }
     }
 }
