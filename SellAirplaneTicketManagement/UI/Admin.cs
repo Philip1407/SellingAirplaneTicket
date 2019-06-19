@@ -1,4 +1,5 @@
 ﻿using SellAirplaneTicketManagement.BUS;
+using SellAirplaneTicketManagement.DTO;
 using SellAirplaneTicketManagement.UI;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,23 @@ namespace SellAirplaneTicketManagement
         ThongTinGiaoDichBUS thongtingiaodich = new ThongTinGiaoDichBUS();
         ThongTinKhachHangBUS thongtinkhachhang = new ThongTinKhachHangBUS();
         ThongTinAdminBUS thongtinadmin = new ThongTinAdminBUS();
+
+        string AdminID = "";
+
+        public string RandomString(int size, bool lowerCase)
+        {
+            StringBuilder builder = new StringBuilder();
+            Random random = new Random();
+            char ch;
+            for (int i = 0; i < size; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            if (lowerCase)
+                return builder.ToString().ToLower();
+            return builder.ToString();
+        }
 
         private void ReloadData()
         {
@@ -71,51 +89,90 @@ namespace SellAirplaneTicketManagement
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
-
-
-
-
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                if (MessageBox.Show("Bạn có chấc là muốn thoát?","Thông báo",
+                if (MessageBox.Show("Bạn có chắc là muốn thoát?","Thông báo",
                                 MessageBoxButtons.OKCancel) == DialogResult.OK)
                     Environment.Exit(1);
                 else
                     e.Cancel = true;
             }
-
         }
 
+        //Fight Iinfo tab function
         private void ucFightInfo_AddClick(object sender, EventArgs e)
         {
             Add_EditFightInfo frm = new Add_EditFightInfo();
+            frm.onAdd += Frm_onAdd;
             frm.ShowDialog();
+        }
+
+        private void Frm_onAdd(ChuyenBay chuyenbay)
+        {
+            thongtinchuyenbay.Insert(chuyenbay); 
+            ReloadData();
         }
 
         private void ucFightInfo_EditClick(object sender, EventArgs e)
         {
-            Add_EditFightInfo frm = new Add_EditFightInfo();
+            string id = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
+            string hang = ucFightInfo.GridView.CurrentRow.Cells[1].Value.ToString();
+            string khoihanh = ucFightInfo.GridView.CurrentRow.Cells[2].Value.ToString();
+            string den = ucFightInfo.GridView.CurrentRow.Cells[3].Value.ToString();
+            int soluong = (int)ucFightInfo.GridView.CurrentRow.Cells[4].Value;
+            
+
+            ChuyenBay chuyenbay = new ChuyenBay();
+
+            chuyenbay.MaChuyenBay = id;
+            chuyenbay.HangHangKhong = hang;
+            chuyenbay.DiemKhoiHanh = khoihanh;
+            chuyenbay.DiemDen = den;
+            chuyenbay.SoLuongKhach = soluong;
+            
+            Add_EditFightInfo frm = new Add_EditFightInfo(chuyenbay);
+            frm.onEdit += Frm_onEdit;
             frm.ShowDialog();
+        }
+
+        private void Frm_onEdit(ChuyenBay chuyenbay)
+        {
+            new ThongTinChuyenBayBUS().Update(chuyenbay);
+            ReloadData();
         }
 
         private void ucFightInfo_DeleteClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+            DialogResult msg = MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
 
+            if (msg == DialogResult.No) return;
+            string id = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
+
+            new ThongTinChuyenBayBUS().Delete(id);
+            ReloadData();
         }
         private void ucFightInfo_DetailClick(object sender, EventArgs e)
         {
-            ThongTinChuyenBayBUS thongtin = new ThongTinChuyenBayBUS();
-            ucFightInfo.Data = thongtin.Loadata();
+            
         }
+        //End of FightInfo Tab function
 
+
+        //FightSchedule Tab Function
 
         private void ucFightSchedule_AddClick(object sender, EventArgs e)
         {
             Add_EditFightSchedule frm = new Add_EditFightSchedule();
+            frm.onAdd += Frm_onAdd1;
             frm.ShowDialog();
+        }
+
+        private void Frm_onAdd1(LichBay lichbay)
+        {
+            new LichChuyenBayBUS().Insert(lichbay);
+            ReloadData();
         }
 
         private void ucFightSchedule_DetailClick(object sender, EventArgs e)
@@ -126,14 +183,39 @@ namespace SellAirplaneTicketManagement
 
         private void ucFightSchedule_DeleteClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+            DialogResult msg = MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+
+            if (msg == DialogResult.No) return;
+            string id = ucFightSchedule.GridView.CurrentRow.Cells[0].Value.ToString();
+
+            new LichChuyenBayBUS().Delete(id);
+            ReloadData();
         }
 
         private void ucFightSchedule_EditClick(object sender, EventArgs e)
         {
-            Add_EditFightSchedule frm = new Add_EditFightSchedule();
+            LichBay lichbay = new LichBay();
+            lichbay.MaLichBay = ucFightSchedule.GridView.CurrentRow.Cells[0].Value.ToString();
+            lichbay.MaChuyenBay = ucFightSchedule.GridView.CurrentRow.Cells[1].Value.ToString();
+            lichbay.Ngay= ucFightSchedule.GridView.CurrentRow.Cells[2].Value.ToString();
+            lichbay.GioKhoiHanh = ucFightSchedule.GridView.CurrentRow.Cells[3].Value.ToString();
+            lichbay.GioKetThuc= ucFightSchedule.GridView.CurrentRow.Cells[4].Value.ToString();
+            lichbay.TinhTrang= ucFightSchedule.GridView.CurrentRow.Cells[5].Value.ToString();
+
+            Add_EditFightSchedule frm = new Add_EditFightSchedule(lichbay);
+            frm.onEdit += Frm_onEdit1;
             frm.ShowDialog();
         }
+
+        private void Frm_onEdit1(LichBay lichbay)
+        {
+            new LichChuyenBayBUS().Update(lichbay);
+            ReloadData();
+        }
+
+        // End of FightSchedule Tab Function
+
+
 
         private void EmployeeInfo_AddClick(object sender, EventArgs e)
         {
@@ -178,6 +260,9 @@ namespace SellAirplaneTicketManagement
 
         private void ucEmployeeSchedule_EditClick(object sender, EventArgs e)
         {
+            
+
+
             Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
             frm.ShowDialog();
         }

@@ -21,7 +21,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Insert into GiaoDich(MaGiaoDich, SoTienGiaoDich, ThoiGianGIaoDich,MaKhachHang,MaNhanVien,SoTaiKhoanChuyenDen,MaLichBay)  Values('{0}','{1}',{2},{3},{4},{5})",
               GiaoDich.MaGiaoDich, GiaoDich.SoTienGiaoDich, GiaoDich.ThoiGianGiaoDich, GiaoDich.MaKhachHang, GiaoDich.MaNhanVien, GiaoDich.SoTaiKhoanChuyenDen, GiaoDich.MaLichBay);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
             
         }
@@ -30,7 +30,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Delete from ChuyenBay Where MaGiaoDich={0}",
                id);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
 
@@ -38,7 +38,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Update GiaoDich Set SoTienGiaoDich='{1}', ThoiGianGiaoDich='{2}', GiaoDich.MaKhachHang='{3}', MaNhanVien='{4}', SoTaiKhoanChuyenDen='{5}', GiaoDich.MaLichBay='{6}'  Where MaGiaoDich={0}",
                GiaoDich.MaGiaoDich, GiaoDich.SoTienGiaoDich, GiaoDich.ThoiGianGiaoDich, GiaoDich.MaKhachHang, GiaoDich.MaNhanVien, GiaoDich.SoTaiKhoanChuyenDen, GiaoDich.MaLichBay);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
     }

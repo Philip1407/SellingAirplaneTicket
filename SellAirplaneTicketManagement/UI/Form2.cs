@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SellAirplaneTicketManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,9 +37,28 @@ namespace SellAirplaneTicketManagement
 
         private void logIn1_LoginClick(object sender, EventArgs e)
         {
-            this.Hide();
-            Admin frm = new Admin();
-            frm.Show();
+            if (logIn1.UserName == "" || logIn1.Pass == "") { 
+                MessageBox.Show("Hãy điền đầy đủ tài khoản và mật khẩu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            NhanVienDAO nhanvien = new NhanVienDAO();
+            if (!nhanvien.FindUser(logIn1.UserName))
+            {
+                MessageBox.Show("Tài khoản không tồn tại", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            else if (!nhanvien.VerifyPass(logIn1.UserName,logIn1.Pass))
+            {
+                MessageBox.Show("Mật khẩu sai", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                this.Hide();
+                Admin frm = new Admin();
+                frm.Show();
+            }
         }
 
         private void logIn1_SignUpClick(object sender, EventArgs e)

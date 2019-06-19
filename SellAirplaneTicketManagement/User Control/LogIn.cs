@@ -15,6 +15,19 @@ namespace SellAirplaneTicketManagement
         public LogIn()
         {
             InitializeComponent();
+            txtPass.PasswordChar='*';
+        }
+
+        public string UserName
+        {
+            get { return txtUserName.Text; }
+            set { txtUserName.Text = value; }
+        }
+
+        public string Pass
+        {
+            get { return txtPass.Text; }
+            set { txtPass.Text = value; }
         }
 
         public event EventHandler LoginClick;

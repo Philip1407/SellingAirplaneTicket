@@ -28,28 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logIn1 = new SellAirplaneTicketManagement.LogIn();
             this.forgetPassword1 = new SellAirplaneTicketManagement.ForgetPassword();
             this.signUp1 = new SellAirplaneTicketManagement.SignUp();
+            this.logIn1 = new SellAirplaneTicketManagement.LogIn();
             this.SuspendLayout();
-            // 
-            // logIn1
-            // 
-            this.logIn1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logIn1.BackColor = System.Drawing.SystemColors.Window;
-            this.logIn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.logIn1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logIn1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logIn1.Location = new System.Drawing.Point(359, 104);
-            this.logIn1.Margin = new System.Windows.Forms.Padding(4);
-            this.logIn1.Name = "logIn1";
-            this.logIn1.Size = new System.Drawing.Size(494, 447);
-            this.logIn1.TabIndex = 3;
-            this.logIn1.LoginClick += new System.EventHandler(this.logIn1_LoginClick);
-            this.logIn1.ForgotPasswordClick += new System.EventHandler(this.logIn1_ForgotPasswordClick);
-            this.logIn1.SignUpClick += new System.EventHandler(this.logIn1_SignUpClick);
             // 
             // forgetPassword1
             // 
@@ -81,6 +63,26 @@
             this.signUp1.TabIndex = 0;
             this.signUp1.BackClick += new System.EventHandler(this.signUp1_BackClick);
             // 
+            // logIn1
+            // 
+            this.logIn1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logIn1.BackColor = System.Drawing.SystemColors.Window;
+            this.logIn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.logIn1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.logIn1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logIn1.Location = new System.Drawing.Point(359, 104);
+            this.logIn1.Margin = new System.Windows.Forms.Padding(4);
+            this.logIn1.Name = "logIn1";
+            this.logIn1.Pass = "";
+            this.logIn1.Size = new System.Drawing.Size(494, 447);
+            this.logIn1.TabIndex = 3;
+            this.logIn1.UserName = "";
+            this.logIn1.LoginClick += new System.EventHandler(this.logIn1_LoginClick);
+            this.logIn1.ForgotPasswordClick += new System.EventHandler(this.logIn1_ForgotPasswordClick);
+            this.logIn1.SignUpClick += new System.EventHandler(this.logIn1_SignUpClick);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -88,9 +90,9 @@
             this.BackgroundImage = global::SellAirplaneTicketManagement.Properties.Resources.Login1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1214, 639);
-            this.Controls.Add(this.logIn1);
-            this.Controls.Add(this.forgetPassword1);
             this.Controls.Add(this.signUp1);
+            this.Controls.Add(this.forgetPassword1);
+            this.Controls.Add(this.logIn1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(700, 625);

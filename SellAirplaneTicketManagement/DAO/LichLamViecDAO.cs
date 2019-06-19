@@ -21,7 +21,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Insert into LichLamViec(MaNhanVien, Ngay, Ca)  Values('{0}','{1}','{2}')",
               LichLamViec.MaNhanVien,  LichLamViec.Ngay,LichLamViec.Ca);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
 
@@ -29,7 +29,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Delete from LichLamViec Where MaNhanVien='{0}'",
                id);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
 
@@ -37,7 +37,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Update LichBay Set  Ngay='{1}', Ca='{2}'  Where MaNhanVien='{0}'",
                 LichLamViec.MaNhanVien, LichLamViec.Ngay, LichLamViec.Ca);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
     }

@@ -12,6 +12,12 @@ namespace SellAirplaneTicketManagement.UI
 {
     public partial class Add_EditCustomerInfo : Form
     {
+        public delegate void Add();
+        public event Add onAdd = null;
+
+        public delegate void Edit();
+        public event Edit onEdit = null;
+
         public Add_EditCustomerInfo()
         {
             InitializeComponent();
@@ -20,6 +26,11 @@ namespace SellAirplaneTicketManagement.UI
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

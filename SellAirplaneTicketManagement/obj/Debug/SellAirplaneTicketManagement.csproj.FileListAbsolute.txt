@@ -72,4 +72,3 @@ D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirpl
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.pdb
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\bin\Debug\SellAirplaneTicketManagement.pdb
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditCustomerInfo.resources
-D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.csprojResolveAssemblyReference.cache

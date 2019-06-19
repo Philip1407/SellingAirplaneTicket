@@ -24,7 +24,7 @@ namespace SellAirplaneTicketManagement.DAO
             return table;
         }
 
-        public static int Execute(string sql)
+        public static int ExecuteNonQuery(string sql)
         {
             SqlConnection conn = new SqlConnection(path);
 
@@ -37,6 +37,33 @@ namespace SellAirplaneTicketManagement.DAO
 
             return rs;
         }
+
+
+        public static SqlDataReader ExecuteReader(string sql)
+        {
+            SqlConnection conn = new SqlConnection(path);
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rs = command.ExecuteReader();
+
+
+            return rs;
+        }
         
+        public static object ExecuteScalar(string sql)
+        {
+            SqlConnection conn = new SqlConnection(path);
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rs = command.ExecuteScalar();
+
+            conn.Close();
+
+            return rs;
+        }
     }
 }

@@ -97,8 +97,16 @@ namespace SellAirplaneTicketManagement.User_Control
         public DataTable Data
         {
             get { return grvData.DataSource as DataTable; }
-            set { grvData.DataSource = value; }
+            set { grvData.DataSource = value;
+            }
         }
+
+        public DataGridView GridView
+        {
+            get { return grvData; }
+            set { grvData = value; }
+        }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {

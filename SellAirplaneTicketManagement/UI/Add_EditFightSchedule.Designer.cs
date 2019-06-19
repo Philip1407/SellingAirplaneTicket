@@ -32,12 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtChuyenbay = new System.Windows.Forms.TextBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.dpkDate = new System.Windows.Forms.DateTimePicker();
+            this.dpkStart = new System.Windows.Forms.DateTimePicker();
+            this.dpkEnd = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 107);
+            this.label2.Location = new System.Drawing.Point(46, 136);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 22);
@@ -63,7 +65,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 164);
+            this.label3.Location = new System.Drawing.Point(61, 189);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 22);
@@ -73,77 +75,102 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 224);
+            this.label5.Location = new System.Drawing.Point(123, 245);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 22);
             this.label5.TabIndex = 3;
             this.label5.Text = "Tình trạng";
             // 
-            // textBox1
+            // txtChuyenbay
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 30);
-            this.textBox1.TabIndex = 4;
+            this.txtChuyenbay.Location = new System.Drawing.Point(239, 44);
+            this.txtChuyenbay.Name = "txtChuyenbay";
+            this.txtChuyenbay.Size = new System.Drawing.Size(291, 30);
+            this.txtChuyenbay.TabIndex = 4;
             // 
-            // textBox2
+            // btnConfirm
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(291, 30);
-            this.textBox2.TabIndex = 5;
+            this.btnConfirm.Location = new System.Drawing.Point(116, 287);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(118, 58);
+            this.btnConfirm.TabIndex = 8;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // textBox3
+            // btnCancel
             // 
-            this.textBox3.Location = new System.Drawing.Point(239, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(291, 30);
-            this.textBox3.TabIndex = 6;
+            this.btnCancel.Location = new System.Drawing.Point(399, 287);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(118, 58);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // label4
             // 
-            this.textBox4.Location = new System.Drawing.Point(239, 221);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(291, 30);
-            this.textBox4.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(162, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 22);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Ngày";
             // 
-            // button1
+            // cmbState
             // 
-            this.button1.Location = new System.Drawing.Point(116, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 58);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Xác nhận";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Items.AddRange(new object[] {
+            "Chưa cất cánh",
+            "Đã hạ cánh",
+            "Đã dời lịch",
+            "Đã hủy"});
+            this.cmbState.Location = new System.Drawing.Point(239, 242);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(291, 30);
+            this.cmbState.TabIndex = 13;
             // 
-            // button3
+            // dpkDate
             // 
-            this.button3.Location = new System.Drawing.Point(399, 287);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 58);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Hủy";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dpkDate.Location = new System.Drawing.Point(239, 89);
+            this.dpkDate.Name = "dpkDate";
+            this.dpkDate.Size = new System.Drawing.Size(291, 30);
+            this.dpkDate.TabIndex = 14;
+            // 
+            // dpkStart
+            // 
+            this.dpkStart.Location = new System.Drawing.Point(239, 136);
+            this.dpkStart.Name = "dpkStart";
+            this.dpkStart.Size = new System.Drawing.Size(291, 30);
+            this.dpkStart.TabIndex = 15;
+            // 
+            // dpkEnd
+            // 
+            this.dpkEnd.Location = new System.Drawing.Point(239, 189);
+            this.dpkEnd.Name = "dpkEnd";
+            this.dpkEnd.Size = new System.Drawing.Size(291, 30);
+            this.dpkEnd.TabIndex = 16;
             // 
             // Add_EditFightSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 385);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dpkEnd);
+            this.Controls.Add(this.dpkStart);
+            this.Controls.Add(this.dpkDate);
+            this.Controls.Add(this.cmbState);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.txtChuyenbay);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_EditFightSchedule";
             this.Text = "Add_EditFightSchedule";
             this.ResumeLayout(false);
@@ -157,11 +184,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtChuyenbay;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.DateTimePicker dpkDate;
+        private System.Windows.Forms.DateTimePicker dpkStart;
+        private System.Windows.Forms.DateTimePicker dpkEnd;
     }
 }

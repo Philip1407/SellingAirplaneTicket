@@ -23,7 +23,7 @@ namespace SellAirplaneTicketManagement.DAO
             string sql = string.Format("Insert into ChiTietGiaoDich(MaGiaoDich, MaVe)  Values('{0}','{1}')",
               ChiTiet.MaGiaoDich, ChiTiet.MaVe);
 
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
 
@@ -31,7 +31,7 @@ namespace SellAirplaneTicketManagement.DAO
         {
             string sql = string.Format("Delete from ChiTietGiaoDich Where Id={0}",
                id);
-            var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
     }
