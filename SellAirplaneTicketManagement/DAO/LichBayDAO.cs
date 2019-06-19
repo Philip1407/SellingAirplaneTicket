@@ -59,7 +59,7 @@ namespace SellAirplaneTicketManagement.DAO
 
         public int Update(LichBay LichBay)
         {
-            string sql = string.Format("Update LichBay Set MaChuyenBay='{1}, Ngay='{2}', GioKhoiHanh='{3}', GioKetThuc='{4}', TinhTrang=N'{5}'  Where MaLichBay='{0}'",
+            string sql = string.Format("Update LichBay Set MaChuyenBay='{1}', Ngay='{2}', GioKhoiHanh='{3}', GioKetThuc='{4}', TinhTrang=N'{5}'  Where MaLichBay='{0}'",
                 LichBay.MaLichBay, LichBay.MaChuyenBay, LichBay.Ngay, LichBay.GioKhoiHanh, LichBay.GioKetThuc, LichBay.TinhTrang);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;

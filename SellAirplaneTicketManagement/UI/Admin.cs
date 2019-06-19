@@ -16,7 +16,7 @@ namespace SellAirplaneTicketManagement
     public partial class Admin : Form
     {
         ThongTinChuyenBayBUS thongtinchuyenbay = new ThongTinChuyenBayBUS();
-        LichChuyenBayBUS thongtinlichbay = new LichChuyenBayBUS();
+        LichChuyenBayBUS lichchuyenbay = new LichChuyenBayBUS();
         ThongTinNhanVienBUS thongtinnhanvien = new ThongTinNhanVienBUS();
         LichLamViecBUS lichlamviec = new LichLamViecBUS();
         ThongTinGiaoDichBUS thongtingiaodich = new ThongTinGiaoDichBUS();
@@ -43,7 +43,7 @@ namespace SellAirplaneTicketManagement
         private void ReloadData()
         {
             ucFightInfo.Data = thongtinchuyenbay.Loadata();
-            ucFightSchedule.Data = thongtinlichbay.Loadata();
+            ucFightSchedule.Data = lichchuyenbay.Loadata();
             EmployeeInfo.Data = thongtinnhanvien.Loadata();
             ucEmployeeSchedule.Data = lichlamviec.Loadata();
             checkTransaction1.Data = thongtingiaodich.Loadata();
@@ -101,7 +101,7 @@ namespace SellAirplaneTicketManagement
             }
         }
 
-        //Fight Iinfo tab function
+        //Fight Info tab function
         private void ucFightInfo_AddClick(object sender, EventArgs e)
         {
             Add_EditFightInfo frm = new Add_EditFightInfo();
@@ -117,21 +117,14 @@ namespace SellAirplaneTicketManagement
 
         private void ucFightInfo_EditClick(object sender, EventArgs e)
         {
-            string id = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
-            string hang = ucFightInfo.GridView.CurrentRow.Cells[1].Value.ToString();
-            string khoihanh = ucFightInfo.GridView.CurrentRow.Cells[2].Value.ToString();
-            string den = ucFightInfo.GridView.CurrentRow.Cells[3].Value.ToString();
-            int soluong = (int)ucFightInfo.GridView.CurrentRow.Cells[4].Value;
-            
-
             ChuyenBay chuyenbay = new ChuyenBay();
 
-            chuyenbay.MaChuyenBay = id;
-            chuyenbay.HangHangKhong = hang;
-            chuyenbay.DiemKhoiHanh = khoihanh;
-            chuyenbay.DiemDen = den;
-            chuyenbay.SoLuongKhach = soluong;
-            
+            chuyenbay.MaChuyenBay = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
+            chuyenbay.HangHangKhong = ucFightInfo.GridView.CurrentRow.Cells[1].Value.ToString();
+            chuyenbay.DiemKhoiHanh = ucFightInfo.GridView.CurrentRow.Cells[2].Value.ToString();
+            chuyenbay.DiemDen = ucFightInfo.GridView.CurrentRow.Cells[3].Value.ToString();
+            chuyenbay.SoLuongKhach = (int)ucFightInfo.GridView.CurrentRow.Cells[4].Value;
+
             Add_EditFightInfo frm = new Add_EditFightInfo(chuyenbay);
             frm.onEdit += Frm_onEdit;
             frm.ShowDialog();
@@ -139,7 +132,7 @@ namespace SellAirplaneTicketManagement
 
         private void Frm_onEdit(ChuyenBay chuyenbay)
         {
-            new ThongTinChuyenBayBUS().Update(chuyenbay);
+            thongtinchuyenbay.Update(chuyenbay);
             ReloadData();
         }
 
@@ -150,12 +143,21 @@ namespace SellAirplaneTicketManagement
             if (msg == DialogResult.No) return;
             string id = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
 
-            new ThongTinChuyenBayBUS().Delete(id);
+            thongtinchuyenbay.Delete(id);
             ReloadData();
         }
         private void ucFightInfo_DetailClick(object sender, EventArgs e)
         {
-            
+            ChuyenBay chuyenbay = new ChuyenBay();
+
+            chuyenbay.MaChuyenBay = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
+            chuyenbay.HangHangKhong = ucFightInfo.GridView.CurrentRow.Cells[1].Value.ToString();
+            chuyenbay.DiemKhoiHanh = ucFightInfo.GridView.CurrentRow.Cells[2].Value.ToString();
+            chuyenbay.DiemDen = ucFightInfo.GridView.CurrentRow.Cells[3].Value.ToString();
+            chuyenbay.SoLuongKhach = (int)ucFightInfo.GridView.CurrentRow.Cells[4].Value;
+
+            FightInfoDetail frm = new FightInfoDetail(chuyenbay);
+            frm.ShowDialog();
         }
         //End of FightInfo Tab function
 
@@ -171,7 +173,7 @@ namespace SellAirplaneTicketManagement
 
         private void Frm_onAdd1(LichBay lichbay)
         {
-            new LichChuyenBayBUS().Insert(lichbay);
+            lichchuyenbay.Insert(lichbay);
             ReloadData();
         }
 
@@ -209,7 +211,7 @@ namespace SellAirplaneTicketManagement
 
         private void Frm_onEdit1(LichBay lichbay)
         {
-            new LichChuyenBayBUS().Update(lichbay);
+            lichchuyenbay.Update(lichbay);
             ReloadData();
         }
 
@@ -242,7 +244,7 @@ namespace SellAirplaneTicketManagement
 
         private void ucEmployeeSchedule_AddClick(object sender, EventArgs e)
         {
-            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            EmployeeScheduleDetail frm = new EmployeeScheduleDetail();
             frm.ShowDialog();
         }
 
@@ -254,7 +256,7 @@ namespace SellAirplaneTicketManagement
 
         private void ucEmployeeSchedule_DetailClick(object sender, EventArgs e)
         {
-            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            EmployeeScheduleDetail frm = new EmployeeScheduleDetail();
             frm.ShowDialog();
         }
 
@@ -263,7 +265,7 @@ namespace SellAirplaneTicketManagement
             
 
 
-            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            EmployeeScheduleDetail frm = new EmployeeScheduleDetail();
             frm.ShowDialog();
         }
 

@@ -95,6 +95,12 @@
     <Compile Include="UI\Add_EditEmployeeSchedule.Designer.cs">
       <DependentUpon>Add_EditEmployeeSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\EmployeeScheduleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeScheduleDetail.Designer.cs">
+      <DependentUpon>EmployeeScheduleDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Add_EditFightInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,30 @@
     </Compile>
     <Compile Include="UI\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerDetail.Designer.cs">
+      <DependentUpon>CustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeDetail.Designer.cs">
+      <DependentUpon>EmployeeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FightInfoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FightInfoDetail.Designer.cs">
+      <DependentUpon>FightInfoDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FightScheduleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FightScheduleDetail.Designer.cs">
+      <DependentUpon>FightScheduleDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SeeTransactionInfo.cs">
       <SubType>Form</SubType>
@@ -220,6 +250,9 @@
     <EmbeddedResource Include="UI\Add_EditEmployeeSchedule.resx">
       <DependentUpon>Add_EditEmployeeSchedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeScheduleDetail.resx">
+      <DependentUpon>EmployeeScheduleDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Add_EditFightInfo.resx">
       <DependentUpon>Add_EditFightInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +264,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerDetail.resx">
+      <DependentUpon>CustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeDetail.resx">
+      <DependentUpon>EmployeeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FightInfoDetail.resx">
+      <DependentUpon>FightInfoDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FightScheduleDetail.resx">
+      <DependentUpon>FightScheduleDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SeeTransactionInfo.resx">
       <DependentUpon>SeeTransactionInfo.cs</DependentUpon>

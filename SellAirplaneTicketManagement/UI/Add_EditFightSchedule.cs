@@ -23,6 +23,8 @@ namespace SellAirplaneTicketManagement.UI
             InitializeComponent();
             dpkStart.Format = DateTimePickerFormat.Time;
             dpkEnd.Format = DateTimePickerFormat.Time;
+
+            cmbState.SelectedIndex = 1;
         }
 
         public Add_EditFightSchedule(LichBay lichbay)
@@ -31,6 +33,7 @@ namespace SellAirplaneTicketManagement.UI
 
             dpkStart.Format = DateTimePickerFormat.Time;
             dpkEnd.Format = DateTimePickerFormat.Time;
+            cmbState.SelectedIndex = 1;
 
             idlich = lichbay.MaLichBay;
             txtChuyenbay.Text = lichbay.MaChuyenBay;
@@ -51,6 +54,7 @@ namespace SellAirplaneTicketManagement.UI
             LichBay lichbay = GetInfo();
             onAdd?.Invoke(lichbay);
             onEdit?.Invoke(lichbay);
+            this.Close();
         }
 
         private LichBay GetInfo()
@@ -66,6 +70,11 @@ namespace SellAirplaneTicketManagement.UI
 
             return inf;
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

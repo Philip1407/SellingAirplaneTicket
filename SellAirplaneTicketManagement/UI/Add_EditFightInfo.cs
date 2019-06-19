@@ -18,6 +18,7 @@ namespace SellAirplaneTicketManagement.UI
 
         public delegate void Edit(ChuyenBay chuyenbay);
         public event Edit onEdit=null;
+        
 
 
         public Add_EditFightInfo()

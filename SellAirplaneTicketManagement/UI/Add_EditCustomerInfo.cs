@@ -27,8 +27,12 @@ namespace SellAirplaneTicketManagement.UI
         {
 
         }
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

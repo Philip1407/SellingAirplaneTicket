@@ -38,10 +38,6 @@
             this.txtSoLuongKhach = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAddClass = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -110,7 +106,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(127, 469);
+            this.btnConfirm.Location = new System.Drawing.Point(117, 243);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(106, 47);
             this.btnConfirm.TabIndex = 8;
@@ -120,7 +116,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(372, 469);
+            this.btnCancel.Location = new System.Drawing.Point(362, 243);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(106, 47);
             this.btnCancel.TabIndex = 9;
@@ -128,41 +124,11 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnAddClass
-            // 
-            this.btnAddClass.Location = new System.Drawing.Point(112, 230);
-            this.btnAddClass.Name = "btnAddClass";
-            this.btnAddClass.Size = new System.Drawing.Size(148, 47);
-            this.btnAddClass.TabIndex = 10;
-            this.btnAddClass.Text = "Thêm hạng vé";
-            this.btnAddClass.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(372, 230);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 47);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Xóa hạng vé";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 287);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(566, 176);
-            this.dataGridView1.TabIndex = 12;
-            // 
             // Add_EditFightInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 554);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnAddClass);
+            this.ClientSize = new System.Drawing.Size(639, 323);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtSoLuongKhach);
@@ -177,7 +143,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_EditFightInfo";
             this.Text = "Thêm thông tin chuyến bay";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,8 +160,5 @@
         private System.Windows.Forms.TextBox txtSoLuongKhach;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnAddClass;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
