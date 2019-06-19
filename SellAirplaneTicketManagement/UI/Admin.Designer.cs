@@ -102,6 +102,7 @@
             this.ucFightInfo.AddEnable = true;
             this.ucFightInfo.Data = null;
             this.ucFightInfo.DeleteEnable = true;
+            this.ucFightInfo.DetailEnable = true;
             this.ucFightInfo.EditEnable = true;
             this.ucFightInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucFightInfo.Location = new System.Drawing.Point(0, 0);
@@ -131,6 +132,7 @@
             this.ucFightSchedule.AddEnable = true;
             this.ucFightSchedule.Data = null;
             this.ucFightSchedule.DeleteEnable = true;
+            this.ucFightSchedule.DetailEnable = true;
             this.ucFightSchedule.EditEnable = true;
             this.ucFightSchedule.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucFightSchedule.Location = new System.Drawing.Point(5, 0);
@@ -178,6 +180,7 @@
             this.EmployeeInfo.AddEnable = true;
             this.EmployeeInfo.Data = null;
             this.EmployeeInfo.DeleteEnable = true;
+            this.EmployeeInfo.DetailEnable = true;
             this.EmployeeInfo.EditEnable = false;
             this.EmployeeInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeInfo.Location = new System.Drawing.Point(5, 4);
@@ -205,7 +208,8 @@
             // 
             this.ucEmployeeSchedule.AddEnable = true;
             this.ucEmployeeSchedule.Data = null;
-            this.ucEmployeeSchedule.DeleteEnable = true;
+            this.ucEmployeeSchedule.DeleteEnable = false;
+            this.ucEmployeeSchedule.DetailEnable = true;
             this.ucEmployeeSchedule.EditEnable = true;
             this.ucEmployeeSchedule.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucEmployeeSchedule.Location = new System.Drawing.Point(2, 4);
@@ -234,6 +238,7 @@
             this.checkTransaction1.AddEnable = false;
             this.checkTransaction1.Data = null;
             this.checkTransaction1.DeleteEnable = false;
+            this.checkTransaction1.DetailEnable = true;
             this.checkTransaction1.EditEnable = false;
             this.checkTransaction1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkTransaction1.Location = new System.Drawing.Point(14, 4);
@@ -280,6 +285,7 @@
             this.ucCustomerInfo.AddEnable = false;
             this.ucCustomerInfo.Data = null;
             this.ucCustomerInfo.DeleteEnable = false;
+            this.ucCustomerInfo.DetailEnable = true;
             this.ucCustomerInfo.EditEnable = false;
             this.ucCustomerInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucCustomerInfo.Location = new System.Drawing.Point(5, 4);
@@ -305,7 +311,7 @@
             this.label37.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(352, 33);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(358, 38);
+            this.label37.Size = new System.Drawing.Size(287, 31);
             this.label37.TabIndex = 0;
             this.label37.Text = "Điều khoản chuyến bay";
             // 

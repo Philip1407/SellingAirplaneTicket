@@ -42,7 +42,6 @@ C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagem
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.exe
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.pdb
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.Customer.resources
-C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.csprojAssemblyReference.cache
 C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.ucUserInfo.resources
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\bin\Debug\SellAirplaneTicketManagement.exe.config
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditEmployeeInfo.resources
@@ -78,3 +77,12 @@ D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirpl
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.csprojResolveAssemblyReference.cache
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditEmployeeSchedule.resources
 D:\Senior Year\Code\SellAirplaneTicketManagement\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.FightInfoDetail.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.Add_EditCustomerInfo.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.EmployeeScheduleDetail.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.CustomerDetail.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.EmployeeDetail.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.FightInfoDetail.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.UI.FightScheduleDetail.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.ucAdminInfo.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.User_Control.ucCustomerInfo.resources
+C:\Users\User\Desktop\New folder\SellingAirplaneTicket\SellAirplaneTicketManagement\obj\Debug\SellAirplaneTicketManagement.ucEmployeeInfo.resources

@@ -20,6 +20,7 @@ namespace SellAirplaneTicketManagement.User_Control
         private bool add=true;
         private bool delete = true;
         private bool edit = true;
+        private bool detail = true; 
         
         public bool AddEnable
         {
@@ -81,6 +82,25 @@ namespace SellAirplaneTicketManagement.User_Control
                 }
             }
         }
+
+        public bool DetailEnable
+        {
+            get { return detail; }
+            set
+            {
+                if (value)
+                {
+                    btnDetail.Show();
+                    delete = true;
+                }
+                else
+                {
+                    btnDetail.Hide();
+                    delete = false;
+                }
+            }
+        }
+
         
 
         public string Title

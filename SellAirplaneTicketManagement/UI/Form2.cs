@@ -43,7 +43,7 @@ namespace SellAirplaneTicketManagement
             }
 
             NhanVienDAO nhanvien = new NhanVienDAO();
-            if (!nhanvien.FindUser(logIn1.UserName))
+            if (nhanvien.FindUser(logIn1.UserName)==0)
             {
                 MessageBox.Show("Tài khoản không tồn tại", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -53,10 +53,16 @@ namespace SellAirplaneTicketManagement
                 MessageBox.Show("Mật khẩu sai", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            else
+            else if (nhanvien.FindUser(logIn1.UserName) == 2)
             {
                 this.Hide();
                 Admin frm = new Admin();
+                frm.Show();
+            }
+            else if(nhanvien.FindUser(logIn1.UserName) == 1)
+            {
+                this.Hide();
+                Form3 frm = new Form3();
                 frm.Show();
             }
         }

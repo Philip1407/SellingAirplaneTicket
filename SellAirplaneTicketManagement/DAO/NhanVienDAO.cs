@@ -42,21 +42,26 @@ namespace SellAirplaneTicketManagement.DAO
             return rs;
         }
 
-        public bool FindUser(string userid)
+        public int FindUser(string userid)
         {
-
             string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
 
             SqlConnection conn = new SqlConnection(path);
-            string sql = string.Format("Select MaNhanVien From NhanVien Where MaNhanVien='{0}'", userid);
+            string sql = string.Format("Select MaNhanVien, ChucVu From NhanVien Where MaNhanVien='{0}'", userid);
 
             SqlCommand command = new SqlCommand(sql, conn);
             conn.Open();
             try {
                 var rs = command.ExecuteReader();
+                
+                if (!rs.HasRows) return 0;
+                else
+                {
+                    rs.Read();
+                    if (rs.GetString(1) == "Nhân viên bán vé") return 1; // nhân viên
+                    else return 2; // admin
 
-                if (rs.HasRows) return true;
-                return false;
+                }
             }
             finally {
                 conn.Close();

@@ -140,7 +140,7 @@ namespace SellAirplaneTicketManagement
         {
             DialogResult msg = MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
 
-            if (msg == DialogResult.No) return;
+            if (msg == DialogResult.Cancel) return;
             string id = ucFightInfo.GridView.CurrentRow.Cells[0].Value.ToString();
 
             thongtinchuyenbay.Delete(id);
@@ -279,6 +279,11 @@ namespace SellAirplaneTicketManagement
         {
             Add_EditCustomerInfo frm = new Add_EditCustomerInfo();
             frm.ShowDialog();
+        }
+
+        private void ucFightInfo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
