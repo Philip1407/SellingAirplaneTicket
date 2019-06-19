@@ -49,7 +49,7 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
+            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.lblNotifyCusInfo();
             this.findFight1 = new SellAirplaneTicketManagement.User_Control.FindFight();
             this.tbMenu.SuspendLayout();
             this.tb1.SuspendLayout();
@@ -386,7 +386,7 @@
         private System.Windows.Forms.Panel pnFlightPolicy;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Panel panel1;
-        private User_Control.BookTicket bookTicket1;
+        private User_Control.lblNotifyCusInfo bookTicket1;
         private User_Control.FindFight findFight1;
         private System.Windows.Forms.TabPage tb1;
         private System.Windows.Forms.TabPage tb2;

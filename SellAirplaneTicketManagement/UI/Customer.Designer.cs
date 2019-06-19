@@ -30,7 +30,7 @@
         {
             this.tbMenu = new System.Windows.Forms.TabControl();
             this.tb1 = new System.Windows.Forms.TabPage();
-            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
+            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.lblNotifyCusInfo();
             this.tb2 = new System.Windows.Forms.TabPage();
             this.checkTransaction2 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tb3 = new System.Windows.Forms.TabPage();
@@ -171,7 +171,7 @@
         private System.Windows.Forms.TabControl tbMenu;
         private System.Windows.Forms.TabPage tb1;
         private System.Windows.Forms.TabPage tb3;
-        private User_Control.BookTicket bookTicket1;
+        private User_Control.lblNotifyCusInfo bookTicket1;
         private User_Control.CheckTransaction checkTransaction1;
         private System.Windows.Forms.TabPage tb4;
         private System.Windows.Forms.TabPage tb2;

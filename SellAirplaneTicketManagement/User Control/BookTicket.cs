@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SellAirplaneTicketManagement.User_Control
 {
-    public partial class BookTicket : UserControl
+    public partial class lblNotifyCusInfo : UserControl
     {
-        public BookTicket()
+        public lblNotifyCusInfo()
         {
             InitializeComponent();
         }

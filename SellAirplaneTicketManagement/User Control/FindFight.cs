@@ -16,5 +16,10 @@ namespace SellAirplaneTicketManagement.User_Control
         {
             InitializeComponent();
         }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
