@@ -32,5 +32,25 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return nhanvienDAO.Update(lb);
         }
+
+        public List<string> GetAllManager()
+        {
+            return nhanvienDAO.ManagerList();
+        }
+
+        public string GetManagerName(string id)
+        {
+            return nhanvienDAO.ManagerName(id);
+        }
+
+        public List<string> GetAllEmployee()
+        {
+            return nhanvienDAO.EmployeeList();
+        }
+
+        public NhanVien GetInfo(string id)
+        {
+            return nhanvienDAO.GetInfo(id);
+        }
     }
 }

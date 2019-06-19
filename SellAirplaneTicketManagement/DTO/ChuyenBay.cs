@@ -13,5 +13,6 @@ namespace SellAirplaneTicketManagement.DTO
         public string DiemKhoiHanh { get; set; }
         public string DiemDen { get; set; }
         public int SoLuongKhach { get; set; }
+        public string DaXoa { get; set; }
     }
 }

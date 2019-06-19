@@ -209,7 +209,7 @@
             this.ucEmployeeSchedule.AddEnable = true;
             this.ucEmployeeSchedule.Data = null;
             this.ucEmployeeSchedule.DeleteEnable = false;
-            this.ucEmployeeSchedule.DetailEnable = true;
+            this.ucEmployeeSchedule.DetailEnable = false;
             this.ucEmployeeSchedule.EditEnable = true;
             this.ucEmployeeSchedule.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucEmployeeSchedule.Location = new System.Drawing.Point(2, 4);
@@ -220,7 +220,6 @@
             this.ucEmployeeSchedule.Title = "LỊCH LÀM VIỆC NHÂN VIÊN";
             this.ucEmployeeSchedule.AddClick += new System.EventHandler(this.ucEmployeeSchedule_AddClick);
             this.ucEmployeeSchedule.EditClick += new System.EventHandler(this.ucEmployeeSchedule_EditClick);
-            this.ucEmployeeSchedule.DeleteClick += new System.EventHandler(this.ucEmployeeSchedule_DeleteClick);
             this.ucEmployeeSchedule.DetailClick += new System.EventHandler(this.ucEmployeeSchedule_DetailClick);
             // 
             // tb6
@@ -261,14 +260,23 @@
             // 
             // ucAdminInfo1
             // 
+            this.ucAdminInfo1.Address = "";
             this.ucAdminInfo1.BackColor = System.Drawing.SystemColors.Window;
             this.ucAdminInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucAdminInfo1.DOB = "";
             this.ucAdminInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucAdminInfo1.Location = new System.Drawing.Point(272, 57);
+            this.ucAdminInfo1.FullName = "";
+            this.ucAdminInfo1.Gender = "";
+            this.ucAdminInfo1.Location = new System.Drawing.Point(162, 37);
             this.ucAdminInfo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ucAdminInfo1.Name = "ucAdminInfo1";
+            this.ucAdminInfo1.Phone = "";
+            this.ucAdminInfo1.Role = "";
             this.ucAdminInfo1.Size = new System.Drawing.Size(592, 541);
+            this.ucAdminInfo1.State = "";
             this.ucAdminInfo1.TabIndex = 0;
+            this.ucAdminInfo1.ConfirmClick += new System.EventHandler(this.ucAdminInfo1_ConfirmClick);
+            this.ucAdminInfo1.ExitClick += new System.EventHandler(this.ucAdminInfo1_ExitClick);
             // 
             // tb8
             // 
@@ -284,7 +292,7 @@
             // 
             this.ucCustomerInfo.AddEnable = false;
             this.ucCustomerInfo.Data = null;
-            this.ucCustomerInfo.DeleteEnable = false;
+            this.ucCustomerInfo.DeleteEnable = true;
             this.ucCustomerInfo.DetailEnable = true;
             this.ucCustomerInfo.EditEnable = false;
             this.ucCustomerInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,7 +319,7 @@
             this.label37.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(352, 33);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(287, 31);
+            this.label37.Size = new System.Drawing.Size(358, 38);
             this.label37.TabIndex = 0;
             this.label37.Text = "Điều khoản chuyến bay";
             // 

@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grvData = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
+            this.lblEmployee = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // grvData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 140);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 356);
-            this.dataGridView1.TabIndex = 0;
+            this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvData.Location = new System.Drawing.Point(48, 140);
+            this.grvData.Margin = new System.Windows.Forms.Padding(4);
+            this.grvData.Name = "grvData";
+            this.grvData.RowTemplate.Height = 24;
+            this.grvData.Size = new System.Drawing.Size(780, 356);
+            this.grvData.TabIndex = 0;
             // 
             // label1
             // 
@@ -75,55 +75,54 @@
             this.label3.Size = new System.Drawing.Size(245, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nhân viên thực hiện giao dịch";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // lblTime
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(343, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 22);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "<xem>";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(343, 26);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(64, 22);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "<xem>";
             // 
-            // label5
+            // lblMoney
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(343, 73);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 22);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "<xem>";
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Location = new System.Drawing.Point(343, 73);
+            this.lblMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(64, 22);
+            this.lblMoney.TabIndex = 5;
+            this.lblMoney.Text = "<xem>";
             // 
-            // label6
+            // lblEmployee
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(343, 114);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 22);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "<xem>";
+            this.lblEmployee.AutoSize = true;
+            this.lblEmployee.Location = new System.Drawing.Point(343, 114);
+            this.lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmployee.Name = "lblEmployee";
+            this.lblEmployee.Size = new System.Drawing.Size(64, 22);
+            this.lblEmployee.TabIndex = 6;
+            this.lblEmployee.Text = "<xem>";
             // 
             // SeeTransactionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 514);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblEmployee);
+            this.Controls.Add(this.lblMoney);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grvData);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SeeTransactionInfo";
             this.Text = "Xem chi tiết giao dịch";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,12 +130,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grvData;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblMoney;
+        private System.Windows.Forms.Label lblEmployee;
     }
 }

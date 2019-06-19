@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtChuyenbay = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.dpkDate = new System.Windows.Forms.DateTimePicker();
             this.dpkStart = new System.Windows.Forms.DateTimePicker();
             this.dpkEnd = new System.Windows.Forms.DateTimePicker();
+            this.cmbFight = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -82,16 +82,9 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Tình trạng";
             // 
-            // txtChuyenbay
-            // 
-            this.txtChuyenbay.Location = new System.Drawing.Point(239, 44);
-            this.txtChuyenbay.Name = "txtChuyenbay";
-            this.txtChuyenbay.Size = new System.Drawing.Size(291, 30);
-            this.txtChuyenbay.TabIndex = 4;
-            // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(116, 287);
+            this.btnConfirm.Location = new System.Drawing.Point(117, 302);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(118, 58);
             this.btnConfirm.TabIndex = 8;
@@ -101,7 +94,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(399, 287);
+            this.btnCancel.Location = new System.Drawing.Point(400, 302);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(118, 58);
             this.btnCancel.TabIndex = 10;
@@ -153,11 +146,20 @@
             this.dpkEnd.Size = new System.Drawing.Size(291, 30);
             this.dpkEnd.TabIndex = 16;
             // 
+            // cmbFight
+            // 
+            this.cmbFight.FormattingEnabled = true;
+            this.cmbFight.Location = new System.Drawing.Point(239, 47);
+            this.cmbFight.Name = "cmbFight";
+            this.cmbFight.Size = new System.Drawing.Size(291, 30);
+            this.cmbFight.TabIndex = 17;
+            // 
             // Add_EditFightSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 385);
+            this.Controls.Add(this.cmbFight);
             this.Controls.Add(this.dpkEnd);
             this.Controls.Add(this.dpkStart);
             this.Controls.Add(this.dpkDate);
@@ -165,7 +167,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.txtChuyenbay);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -185,7 +186,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtChuyenbay;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label4;
@@ -193,5 +193,6 @@
         private System.Windows.Forms.DateTimePicker dpkDate;
         private System.Windows.Forms.DateTimePicker dpkStart;
         private System.Windows.Forms.DateTimePicker dpkEnd;
+        private System.Windows.Forms.ComboBox cmbFight;
     }
 }

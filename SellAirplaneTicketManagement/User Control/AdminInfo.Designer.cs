@@ -31,13 +31,13 @@
             this.label26 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtDOB = new System.Windows.Forms.TextBox();
+            this.txtRole = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,54 +77,54 @@
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // textBox8
+            // txtPhone
             // 
-            this.textBox8.Location = new System.Drawing.Point(161, 386);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(331, 30);
-            this.textBox8.TabIndex = 35;
+            this.txtPhone.Location = new System.Drawing.Point(161, 386);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(331, 30);
+            this.txtPhone.TabIndex = 35;
             // 
-            // textBox7
+            // txtGender
             // 
-            this.textBox7.Location = new System.Drawing.Point(161, 333);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(331, 30);
-            this.textBox7.TabIndex = 34;
+            this.txtGender.Location = new System.Drawing.Point(161, 333);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(331, 30);
+            this.txtGender.TabIndex = 34;
             // 
-            // textBox6
+            // txtAddress
             // 
-            this.textBox6.Location = new System.Drawing.Point(161, 279);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(331, 30);
-            this.textBox6.TabIndex = 33;
+            this.txtAddress.Location = new System.Drawing.Point(161, 279);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(331, 30);
+            this.txtAddress.TabIndex = 33;
             // 
-            // textBox4
+            // txtDOB
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 225);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(331, 30);
-            this.textBox4.TabIndex = 32;
+            this.txtDOB.Location = new System.Drawing.Point(161, 225);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(331, 30);
+            this.txtDOB.TabIndex = 32;
             // 
-            // textBox3
+            // txtRole
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 172);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(331, 30);
-            this.textBox3.TabIndex = 31;
+            this.txtRole.Location = new System.Drawing.Point(161, 172);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(331, 30);
+            this.txtRole.TabIndex = 31;
             // 
-            // textBox2
+            // txtState
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 30);
-            this.textBox2.TabIndex = 30;
+            this.txtState.Location = new System.Drawing.Point(161, 120);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(331, 30);
+            this.txtState.TabIndex = 30;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 30);
-            this.textBox1.TabIndex = 29;
+            this.txtName.Location = new System.Drawing.Point(161, 69);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(331, 30);
+            this.txtName.TabIndex = 29;
             // 
             // label8
             // 
@@ -204,13 +204,13 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtDOB);
+            this.Controls.Add(this.txtRole);
+            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -232,13 +232,13 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtDOB;
+        private System.Windows.Forms.TextBox txtRole;
+        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

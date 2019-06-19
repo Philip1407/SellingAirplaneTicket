@@ -11,9 +11,13 @@ namespace SellAirplaneTicketManagement.DAO
     
     public class ChiTietGiaoDichDAO
     { 
-        public DataTable LoadList()
+        public DataTable LoadList(string id)
         {
-            string sql = "Select * from ChiTietGiaoDich";
+            string sql = string.Format("Select Ve.MAVE, LichBay.* " 
+                +"From GiaoDich, ChiTietGiaoDich, Ve, LichBay "
+                +"Where Ve.MaVe=ChiTietGiaoDich.MaVe and GiaoDich.MaGiaoDich = ChiTietGiaoDich.MaGiaoDich "
+                +"and GiaoDich.MaKhachHang = '{0}' and LichBay.MaLichBay = Ve.MaLichBay ",
+                id);
             var rs = ProcessData.LoadData(sql);
             return rs;
         }

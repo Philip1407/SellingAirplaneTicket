@@ -91,12 +91,12 @@ namespace SellAirplaneTicketManagement.User_Control
                 if (value)
                 {
                     btnDetail.Show();
-                    delete = true;
+                    detail = true;
                 }
                 else
                 {
                     btnDetail.Hide();
-                    delete = false;
+                    detail = false;
                 }
             }
         }

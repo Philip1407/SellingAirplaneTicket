@@ -18,14 +18,42 @@ namespace SellAirplaneTicketManagement
         ThongTinChuyenBayBUS thongtinchuyenbay = new ThongTinChuyenBayBUS();
         LichChuyenBayBUS lichchuyenbay = new LichChuyenBayBUS();
         ThongTinNhanVienBUS thongtinnhanvien = new ThongTinNhanVienBUS();
-        LichLamViecBUS lichlamviec = new LichLamViecBUS();
+        LichLamViecBUS lichlamviecbus = new LichLamViecBUS();
         ThongTinGiaoDichBUS thongtingiaodich = new ThongTinGiaoDichBUS();
         ThongTinKhachHangBUS thongtinkhachhang = new ThongTinKhachHangBUS();
         ThongTinAdminBUS thongtinadmin = new ThongTinAdminBUS();
 
         string AdminID = "";
 
-        public string RandomString(int size, bool lowerCase)
+        private void ShowAdminInfo(string id)
+        {
+            NhanVien admin = thongtinadmin.GetInfo(id);
+
+            ucAdminInfo1.FullName = admin.HoTen;
+            ucAdminInfo1.State = admin.TinhTrang;
+            ucAdminInfo1.Role = admin.ChucVu;
+            ucAdminInfo1.DOB = admin.NgaySinh;
+            ucAdminInfo1.Address = admin.DiaChi;
+            ucAdminInfo1.Gender = admin.GioiTinh;
+            ucAdminInfo1.Phone = admin.SoDienThoai;
+        }
+
+        private void UpdateAdminInfo(string id)
+        {
+            NhanVien admin = new NhanVien();
+
+            admin.HoTen = ucAdminInfo1.FullName;
+            admin.TinhTrang = ucAdminInfo1.State;
+            admin.ChucVu = ucAdminInfo1.Role;
+            admin.NgaySinh = ucAdminInfo1.DOB;
+            admin.DiaChi = ucAdminInfo1.Address;
+            admin.GioiTinh = ucAdminInfo1.Gender;
+            admin.SoDienThoai = ucAdminInfo1.Phone;
+
+            thongtinadmin.Update(admin);
+        }
+
+        /*public string RandomString(int size, bool lowerCase)
         {
             StringBuilder builder = new StringBuilder();
             Random random = new Random();
@@ -38,23 +66,29 @@ namespace SellAirplaneTicketManagement
             if (lowerCase)
                 return builder.ToString().ToLower();
             return builder.ToString();
-        }
+        }*/
+
+
 
         private void ReloadData()
         {
             ucFightInfo.Data = thongtinchuyenbay.Loadata();
             ucFightSchedule.Data = lichchuyenbay.Loadata();
             EmployeeInfo.Data = thongtinnhanvien.Loadata();
-            ucEmployeeSchedule.Data = lichlamviec.Loadata();
+            ucEmployeeSchedule.Data = lichlamviecbus.Loadata();
             checkTransaction1.Data = thongtingiaodich.Loadata();
             ucCustomerInfo.Data = thongtinkhachhang.Loadata();
+            ShowAdminInfo(AdminID);
         }
         
-        public Admin()
+        public Admin(string id)
         {
             InitializeComponent();
+            AdminID = id;
             tbMenu.DrawItem += new DrawItemEventHandler(tbMenu_DrawItem);
             ReloadData();
+
+            EmployeeInfo.GridView.Columns["MATKHAU"].Visible = false;
         }
 
         private void tbMenu_DrawItem(object sender, DrawItemEventArgs e)
@@ -187,10 +221,10 @@ namespace SellAirplaneTicketManagement
         {
             DialogResult msg = MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
 
-            if (msg == DialogResult.No) return;
+            if (msg == DialogResult.Cancel) return;
             string id = ucFightSchedule.GridView.CurrentRow.Cells[0].Value.ToString();
 
-            new LichChuyenBayBUS().Delete(id);
+            lichchuyenbay.Delete(id);
             ReloadData();
         }
 
@@ -218,60 +252,100 @@ namespace SellAirplaneTicketManagement
         // End of FightSchedule Tab Function
 
 
-
+        //Employee Info Tab
         private void EmployeeInfo_AddClick(object sender, EventArgs e)
         {
             Add_EditEmployeeInfo frm = new Add_EditEmployeeInfo();
+            frm.onAdd += Frm_onAdd2;
             frm.ShowDialog();
+        }
+
+        private void Frm_onAdd2(NhanVien nhanvien)
+        {
+            thongtinnhanvien.Insert(nhanvien);
+            ReloadData();
         }
 
         private void EmployeeInfo_DeleteClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+            DialogResult msg = MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+
+            if (msg == DialogResult.Cancel) return;
+            string id = EmployeeInfo.GridView.CurrentRow.Cells[0].Value.ToString();
+
+            thongtinnhanvien.Delete(id);
+            ReloadData();
         }
 
         private void EmployeeInfo_DetailClick(object sender, EventArgs e)
         {
-            Add_EditEmployeeInfo frm = new Add_EditEmployeeInfo();
-            frm.ShowDialog();
+            
+
         }
 
         private void EmployeeInfo_EditClick(object sender, EventArgs e)
         {
             Add_EditEmployeeInfo frm = new Add_EditEmployeeInfo();
+            frm.onEdit += Frm_onEdit2;
             frm.ShowDialog();
+        }
+
+        private void Frm_onEdit2(NhanVien nhanvien)
+        {
+            thongtinnhanvien.Update(nhanvien);
+            ReloadData();
         }
 
         private void ucEmployeeSchedule_AddClick(object sender, EventArgs e)
         {
-            EmployeeScheduleDetail frm = new EmployeeScheduleDetail();
+            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
+            frm.onAdd += Frm_onAdd3;
             frm.ShowDialog();
         }
 
-        private void ucEmployeeSchedule_DeleteClick(object sender, EventArgs e)
+        private void Frm_onAdd3(LichLamViec lichlamviec)
         {
-            MessageBox.Show("Bạn có chắc là muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
-
+            lichlamviecbus.Insert(lichlamviec);
+            ReloadData();   
         }
 
         private void ucEmployeeSchedule_DetailClick(object sender, EventArgs e)
         {
-            EmployeeScheduleDetail frm = new EmployeeScheduleDetail();
+            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule();
             frm.ShowDialog();
         }
 
         private void ucEmployeeSchedule_EditClick(object sender, EventArgs e)
         {
-            
+            LichLamViec lichlamviec = new LichLamViec();
+            lichlamviec.MaNhanVien = ucEmployeeSchedule.GridView.CurrentRow.Cells[0].Value.ToString();
+            lichlamviec.Ngay = ucEmployeeSchedule.GridView.CurrentRow.Cells[2].Value.ToString();
+            lichlamviec.Ca= (int)ucEmployeeSchedule.GridView.CurrentRow.Cells[3].Value;
 
+            Add_EditEmployeeSchedule frm = new Add_EditEmployeeSchedule(lichlamviec);
+            frm.onEdit += Frm_onEdit3;
+            frm.ShowDialog(); ;
+        }
 
-            EmployeeScheduleDetail frm = new EmployeeScheduleDetail();
-            frm.ShowDialog();
+        private void Frm_onEdit3(LichLamViec lichlamviec)
+        {
+            lichlamviecbus.Update(lichlamviec);
+            ReloadData();
         }
 
         private void checkTransaction1_DetailClick(object sender, EventArgs e)
         {
-            SeeTransactionInfo frm = new SeeTransactionInfo();
+            GiaoDich giaodich = new GiaoDich();
+
+            giaodich.MaGiaoDich = checkTransaction1.GridView.CurrentRow.Cells[0].Value.ToString();
+            giaodich.ThoiGianGiaoDich = checkTransaction1.GridView.CurrentRow.Cells[1].Value.ToString();
+            giaodich.SoTienGiaoDich = (int)checkTransaction1.GridView.CurrentRow.Cells[2].Value;
+            giaodich.MaKhachHang = checkTransaction1.GridView.CurrentRow.Cells[3].Value.ToString();
+            giaodich.MaNhanVien = checkTransaction1.GridView.CurrentRow.Cells[4].Value.ToString();
+            giaodich.SoTaiKhoanChuyenDen = checkTransaction1.GridView.CurrentRow.Cells[5].Value.ToString();
+            giaodich.MaLichBay = checkTransaction1.GridView.CurrentRow.Cells[6].Value.ToString();
+
+            SeeTransactionInfo frm = new SeeTransactionInfo(giaodich);
             frm.ShowDialog();
         }
 
@@ -281,9 +355,18 @@ namespace SellAirplaneTicketManagement
             frm.ShowDialog();
         }
 
-        private void ucFightInfo_Load(object sender, EventArgs e)
+        private void ucAdminInfo1_ExitClick(object sender, EventArgs e)
         {
+            AdminID = "";
+            Form2 frm = new Form2();
+            this.Hide();
+            frm.Show();
+        }
 
+        private void ucAdminInfo1_ConfirmClick(object sender, EventArgs e)
+        {
+            UpdateAdminInfo(AdminID);
+            MessageBox.Show("Cập nhật thành công!");
         }
     }
 }

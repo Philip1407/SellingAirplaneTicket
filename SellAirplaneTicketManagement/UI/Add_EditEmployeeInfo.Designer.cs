@@ -35,17 +35,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.lblManager = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.cmbManager = new System.Windows.Forms.ComboBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.dpkDOB = new System.Windows.Forms.DateTimePicker();
+            this.lblManagerName = new System.Windows.Forms.Label();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -118,71 +119,36 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Số điện thoại";
             // 
-            // label9
+            // lblManager
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(39, 427);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 22);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Người quản lý";
+            this.lblManager.AutoSize = true;
+            this.lblManager.Location = new System.Drawing.Point(39, 427);
+            this.lblManager.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManager.Name = "lblManager";
+            this.lblManager.Size = new System.Drawing.Size(124, 22);
+            this.lblManager.TabIndex = 6;
+            this.lblManager.Text = "Người quản lý";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 30);
-            this.textBox1.TabIndex = 7;
+            this.txtName.Location = new System.Drawing.Point(194, 27);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(331, 30);
+            this.txtName.TabIndex = 7;
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 30);
-            this.textBox2.TabIndex = 8;
+            this.txtAddress.Location = new System.Drawing.Point(194, 241);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(331, 30);
+            this.txtAddress.TabIndex = 11;
             // 
-            // textBox3
+            // txtPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 134);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(331, 30);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(194, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(331, 30);
-            this.textBox4.TabIndex = 10;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(194, 241);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(331, 30);
-            this.textBox6.TabIndex = 11;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(194, 288);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(331, 30);
-            this.textBox7.TabIndex = 12;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(194, 354);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(331, 30);
-            this.textBox8.TabIndex = 13;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(194, 419);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(331, 30);
-            this.textBox9.TabIndex = 14;
+            this.txtPhone.Location = new System.Drawing.Point(194, 354);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(331, 30);
+            this.txtPhone.TabIndex = 13;
             // 
             // btnConfirm
             // 
@@ -204,22 +170,85 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // cmbState
+            // 
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Items.AddRange(new object[] {
+            "Đang làm việc",
+            "Đã nghỉ việc",
+            "Tạm nghỉ"});
+            this.cmbState.Location = new System.Drawing.Point(194, 78);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(331, 30);
+            this.cmbState.TabIndex = 17;
+            // 
+            // cmbManager
+            // 
+            this.cmbManager.FormattingEnabled = true;
+            this.cmbManager.Location = new System.Drawing.Point(194, 424);
+            this.cmbManager.Name = "cmbManager";
+            this.cmbManager.Size = new System.Drawing.Size(104, 30);
+            this.cmbManager.TabIndex = 18;
+            this.cmbManager.SelectedValueChanged += new System.EventHandler(this.cmbManager_SelectedValueChanged);
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cmbGender.Location = new System.Drawing.Point(194, 292);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(331, 30);
+            this.cmbGender.TabIndex = 19;
+            // 
+            // dpkDOB
+            // 
+            this.dpkDOB.Location = new System.Drawing.Point(194, 187);
+            this.dpkDOB.Name = "dpkDOB";
+            this.dpkDOB.Size = new System.Drawing.Size(331, 30);
+            this.dpkDOB.TabIndex = 20;
+            // 
+            // lblManagerName
+            // 
+            this.lblManagerName.AutoSize = true;
+            this.lblManagerName.Location = new System.Drawing.Point(348, 427);
+            this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManagerName.Name = "lblManagerName";
+            this.lblManagerName.Size = new System.Drawing.Size(124, 22);
+            this.lblManagerName.TabIndex = 21;
+            this.lblManagerName.Text = "Người quản lý";
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Nhân viên bán vé",
+            "Quản lý nhân sự",
+            "Quản lý doanh thu"});
+            this.cmbRole.Location = new System.Drawing.Point(194, 137);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(331, 30);
+            this.cmbRole.TabIndex = 22;
+            this.cmbRole.SelectedValueChanged += new System.EventHandler(this.cmbRole_SelectedValueChanged);
+            // 
             // Add_EditEmployeeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 481);
+            this.Controls.Add(this.cmbRole);
+            this.Controls.Add(this.lblManagerName);
+            this.Controls.Add(this.dpkDOB);
+            this.Controls.Add(this.cmbGender);
+            this.Controls.Add(this.cmbManager);
+            this.Controls.Add(this.cmbState);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblManager);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -245,16 +274,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label lblManager;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.ComboBox cmbManager;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.DateTimePicker dpkDOB;
+        private System.Windows.Forms.Label lblManagerName;
+        private System.Windows.Forms.ComboBox cmbRole;
     }
 }

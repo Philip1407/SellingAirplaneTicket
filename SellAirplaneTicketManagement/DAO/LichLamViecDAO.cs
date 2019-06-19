@@ -12,7 +12,7 @@ namespace SellAirplaneTicketManagement.DAO
     {
         public DataTable LoadList()
         {
-            string sql = "Select * from LichLamViec";
+            string sql = "Select LichLamViec.MaNhanVien, NhanVien.HoTen, LichLamViec.Ngay, LichLamViec.Ca from LichLamViec, NhanVien where LichLamViec.MaNhanVien = NhanVien.MaNhanVien";
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
@@ -35,7 +35,7 @@ namespace SellAirplaneTicketManagement.DAO
 
         public int Update(LichLamViec LichLamViec)
         {
-            string sql = string.Format("Update LichBay Set  Ngay='{1}', Ca='{2}'  Where MaNhanVien='{0}'",
+            string sql = string.Format("Update LichLamViec Set  Ngay='{1}', Ca='{2}'  Where MaNhanVien='{0}'",
                 LichLamViec.MaNhanVien, LichLamViec.Ngay, LichLamViec.Ca);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;

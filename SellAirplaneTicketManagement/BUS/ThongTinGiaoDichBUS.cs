@@ -33,5 +33,10 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return giaodichDAO.Update(dt);
         }
+
+        public DataTable Detail(string id)
+        {
+            return chitietgiaodichDAO.LoadList(id);
+        }
     }
 }

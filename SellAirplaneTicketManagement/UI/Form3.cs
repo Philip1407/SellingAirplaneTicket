@@ -1,4 +1,5 @@
-﻿using SellAirplaneTicketManagement.UI;
+﻿using SellAirplaneTicketManagement.DTO;
+using SellAirplaneTicketManagement.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,7 +70,10 @@ namespace SellAirplaneTicketManagement
 
         private void checkTransaction1_DetailClick(object sender, EventArgs e)
         {
-            SeeTransactionInfo frm = new SeeTransactionInfo();
+            GiaoDich giaodich = new GiaoDich();
+
+
+            SeeTransactionInfo frm = new SeeTransactionInfo(giaodich);
             frm.ShowDialog();
         }
     }

@@ -12,6 +12,7 @@ namespace SellAirplaneTicketManagement.BUS
     public class LichChuyenBayBUS
     {
         LichBayDAO lichbayDAO = new LichBayDAO();
+        ChuyenBayDAO chuyenbayDAO = new ChuyenBayDAO();
 
         public DataTable Loadata()
         {
@@ -32,5 +33,11 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return lichbayDAO.Update(lb);
         }
+
+        public List<string> GetAllID()
+        {
+            return chuyenbayDAO.GetIDList();
+        }
+
     }
 }

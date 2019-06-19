@@ -111,7 +111,7 @@
             this.button1.Text = "Kiểm tra";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Add_EditEmployeeSchedule
+            // EmployeeScheduleDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,9 +125,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Add_EditEmployeeSchedule";
-            this.Text = "Add_EditEmployeeSchedule";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "EmployeeScheduleDetail";
+            this.Text = "EmployeeSchedule";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -13,7 +13,7 @@ namespace SellAirplaneTicketManagement.DAO
     {
         public DataTable LoadList()
         {
-            string sql = "Select * from ChuyenBay";
+            string sql = "Select * from ChuyenBay Where DaXoa=N'Chưa xóa'";
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
@@ -44,15 +44,15 @@ namespace SellAirplaneTicketManagement.DAO
             else if (id < 100) tmp += "0";
             tmp += id;
 
-            sql = string.Format("Insert into ChuyenBay(MaChuyenBay, HangHangKhong, DiemKhoiHanh, DiemDen, SoLuongKhach)  Values('{0}','{1}',N'{2}',N'{3}','{4}')",
-               tmp, ChuyenBay.HangHangKhong, ChuyenBay.DiemKhoiHanh,ChuyenBay.DiemDen, ChuyenBay.SoLuongKhach);
+            sql = string.Format("Insert into ChuyenBay(MaChuyenBay, HangHangKhong, DiemKhoiHanh, DiemDen, SoLuongKhach, DaXoa)  Values('{0}','{1}',N'{2}',N'{3}','{4}','{5}')",
+               tmp, ChuyenBay.HangHangKhong, ChuyenBay.DiemKhoiHanh,ChuyenBay.DiemDen, ChuyenBay.SoLuongKhach, ChuyenBay.DaXoa);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
 
         public int Delete(string id)
         {
-            string sql = string.Format("Delete from ChuyenBay Where MaChuyenBay='{0}'",
+            string sql = string.Format("Update ChuyenBay Set DaXoa=N'Đã xóa' Where MaChuyenBay='{0}'",
                id);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
@@ -65,6 +65,31 @@ namespace SellAirplaneTicketManagement.DAO
 
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
+        }
+
+        public List<string> GetIDList()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MaChuyenBay From ChuyenBay Where DaXoa=N'Chưa xóa'");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            List<string> list = new List<string>();
+
+            while (rd.Read())
+            {
+                list.Add(rd.GetString(0));
+            }
+
+            conn.Close();
+            return list;
+
+
         }
     }
 }

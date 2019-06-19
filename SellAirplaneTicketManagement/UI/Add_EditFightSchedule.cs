@@ -1,4 +1,5 @@
-﻿using SellAirplaneTicketManagement.DTO;
+﻿using SellAirplaneTicketManagement.BUS;
+using SellAirplaneTicketManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,23 @@ namespace SellAirplaneTicketManagement.UI
     {
 
         string idlich="";
+        LichChuyenBayBUS lichchuyenbay = new LichChuyenBayBUS();
 
+
+
+        private void GetIDList()
+        {
+            List<string> list = lichchuyenbay.GetAllID();
+            cmbFight.DataSource = new BindingSource(list, null);
+        }
        
         public Add_EditFightSchedule()
         {
             InitializeComponent();
             dpkStart.Format = DateTimePickerFormat.Time;
             dpkEnd.Format = DateTimePickerFormat.Time;
-
+            GetIDList();
+            cmbFight.SelectedIndex = 1;
             cmbState.SelectedIndex = 1;
         }
 
@@ -33,10 +43,12 @@ namespace SellAirplaneTicketManagement.UI
 
             dpkStart.Format = DateTimePickerFormat.Time;
             dpkEnd.Format = DateTimePickerFormat.Time;
+            GetIDList();
+            cmbFight.SelectedIndex = 1;
             cmbState.SelectedIndex = 1;
 
             idlich = lichbay.MaLichBay;
-            txtChuyenbay.Text = lichbay.MaChuyenBay;
+            cmbFight.SelectedIndex = cmbFight.Items.IndexOf(lichbay.MaChuyenBay);
             dpkDate.Text = lichbay.Ngay;
             dpkStart.Text = lichbay.GioKhoiHanh;
             dpkEnd.Text = lichbay.GioKetThuc;
@@ -62,7 +74,7 @@ namespace SellAirplaneTicketManagement.UI
             LichBay inf = new LichBay();
 
             inf.MaLichBay = idlich;
-            inf.MaChuyenBay = txtChuyenbay.Text;
+            inf.MaChuyenBay = cmbFight.SelectedItem.ToString();
             inf.Ngay = dpkDate.Value.ToShortDateString();
             inf.GioKhoiHanh = dpkStart.Value.ToShortTimeString();
             inf.GioKetThuc = dpkEnd.Value.ToShortTimeString();

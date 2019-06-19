@@ -13,22 +13,46 @@ namespace SellAirplaneTicketManagement.DAO
     {
         public DataTable LoadList()
         {
-        string sql = "Select * from NhanVien";
+        string sql = "Select * from NhanVien Where TinhTrang!=N'Đã xóa'";
         var rs = ProcessData.LoadData(sql);
         return rs;
         }
 
         public int Insert(NhanVien NhanVien)
         {
-            string sql = string.Format("Insert into NhanVien(MaNhanVien,HoTen, MatKhau, TinhTrang, MaNguoiQuanLy, NgaySinh, GioiTinh, ChucVu, DiaChi, SoDienThoai)  Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
-              NhanVien.MaNhanVien, NhanVien.HoTen, NhanVien.MatKhau, NhanVien.TinhTrang, NhanVien.MaNguoiQuanLy, NhanVien.NgaySinh, NhanVien.GioiTinh, NhanVien.ChucVu, NhanVien.DiaChi, NhanVien.SoDienThoai);
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MAX(MaNhanVien) From NhanVien");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            string tmp = "";
+
+            if (rd.Read()) tmp = rd.GetString(0);
+
+            conn.Close();
+
+
+            int id = int.Parse(tmp.Remove(0, 2));
+            id++;
+            tmp = "NV";
+            if (id < 10) tmp += "00";
+            else if (id < 100) tmp += "0";
+            tmp += id;
+
+            sql = string.Format("Insert into NhanVien(MaNhanVien,HoTen, MatKhau, TinhTrang, MaNguoiQuanLy, NgaySinh, GioiTinh, ChucVu, DiaChi, SoDienThoai)  Values('{0}',N'{1}','{2}',N'{3}','{4}','{5}','{6}',N'{7}',N'{8}','{9}')",
+              tmp, NhanVien.HoTen, NhanVien.MatKhau, NhanVien.TinhTrang, NhanVien.MaNguoiQuanLy, NhanVien.NgaySinh, NhanVien.GioiTinh, NhanVien.ChucVu, NhanVien.DiaChi, NhanVien.SoDienThoai);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
 
         public int Delete(string id)
         {
-            string sql = string.Format("Delete from NhanVien Where MaNhanVien='{0}'",
+            string sql = string.Format("Update NhanVien Set TinhTrang=N'Đã xóa' Where MaNhanVien='{0}'",
                id);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
@@ -110,6 +134,104 @@ namespace SellAirplaneTicketManagement.DAO
             {
                 conn.Close();
             }
+        }
+
+        public List<string> ManagerList()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MaNhanVien From NhanVien Where TinhTrang!=N'Đã xóa' and ChucVu!=N'Nhân viên bán vé'");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            List<string> list = new List<string>();
+
+            while (rd.Read())
+            {
+                list.Add(rd.GetString(0));
+            }
+
+            conn.Close();
+            return list;
+        }
+
+        public string ManagerName(string id)
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select HoTen From NhanVien Where MaNhanVien='{0}'", id);
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+            string name="";
+            if (rd.Read())
+                name = rd.GetString(0);
+
+            conn.Close();
+            return name;
+        }
+
+        public List<string> EmployeeList()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MaNhanVien From NhanVien Where TinhTrang!=N'Đã xóa'");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            List<string> list = new List<string>();
+
+            while (rd.Read())
+            {
+                list.Add(rd.GetString(0));
+            }
+
+            conn.Close();
+            return list;
+        }
+
+        public NhanVien GetInfo(string id)
+        {
+            NhanVien nhanvien = new NhanVien();
+
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select * From NhanVien Where MaNhanVien='{0}'", id);
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+            if (rd.Read())
+            {
+                nhanvien.MaNhanVien = id;
+                nhanvien.HoTen = rd.GetString(1);
+                nhanvien.MatKhau = rd.GetString(2);
+                nhanvien.TinhTrang = rd.GetString(3);
+                if (rd.IsDBNull(4)) nhanvien.MaNguoiQuanLy = "";
+                else
+                    nhanvien.MaNguoiQuanLy = rd.GetString(4);
+                nhanvien.NgaySinh = rd.GetDateTime(5).ToShortDateString();
+                nhanvien.GioiTinh = rd.GetString(6);
+                nhanvien.ChucVu = rd.GetString(7);
+                nhanvien.DiaChi = rd.GetString(8);
+                nhanvien.SoDienThoai = rd.GetString(9);
+            }
+            conn.Close();
+
+            return nhanvien;
         }
     }
 }

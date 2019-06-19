@@ -69,8 +69,7 @@ namespace SellAirplaneTicketManagement
 
         private void checkTransaction1_DetailClick(object sender, EventArgs e)
         {
-            SeeTransactionInfo frm = new SeeTransactionInfo();
-            frm.ShowDialog();
+            
         }
 
         private void EmployeeInfo_AddClick(object sender, EventArgs e)

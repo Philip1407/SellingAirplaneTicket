@@ -56,7 +56,7 @@ namespace SellAirplaneTicketManagement
             else if (nhanvien.FindUser(logIn1.UserName) == 2)
             {
                 this.Hide();
-                Admin frm = new Admin();
+                Admin frm = new Admin(logIn1.UserName);
                 frm.Show();
             }
             else if(nhanvien.FindUser(logIn1.UserName) == 1)
@@ -100,5 +100,6 @@ namespace SellAirplaneTicketManagement
                     e.Cancel = true;
             }
         }
+        
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SellAirplaneTicketManagement.BUS;
+using SellAirplaneTicketManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,18 @@ namespace SellAirplaneTicketManagement.UI
 {
     public partial class SeeTransactionInfo : Form
     {
-        public SeeTransactionInfo()
+
+        ThongTinNhanVienBUS thongtin = new ThongTinNhanVienBUS();
+        ThongTinGiaoDichBUS chitiet = new ThongTinGiaoDichBUS();
+        public SeeTransactionInfo(GiaoDich giaodich)
         {
             InitializeComponent();
-        }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+            lblTime.Text = giaodich.ThoiGianGiaoDich;
+            lblMoney.Text = giaodich.SoTienGiaoDich.ToString();
+            lblEmployee.Text = thongtin.GetManagerName(giaodich.MaNhanVien);
 
+            grvData.DataSource = chitiet.Detail(giaodich.MaKhachHang);
         }
     }
 }

@@ -17,6 +17,42 @@ namespace SellAirplaneTicketManagement
             InitializeComponent();
         }
 
+        public string FullName {
+            get { return txtName.Text; }
+            set { txtName.Text = value; }
+        }
+
+        public string State {
+            get { return txtState.Text; }
+            set { txtState.Text = value; }
+        }
+
+        public string Role {
+            get { return txtRole.Text; }
+            set { txtRole.Text = value; }
+        }
+
+        public string DOB {
+            get { return txtDOB.Text; }
+            set { txtDOB.Text = value; }
+        }
+
+        public string Address {
+            get { return txtAddress.Text; }
+            set { txtAddress.Text = value; }
+        }
+
+        public string Gender {
+            get { return txtGender.Text; }
+            set { txtGender.Text = value; }
+        }
+
+        public string Phone {
+            get { return txtPhone.Text; }
+            set { txtPhone.Text = value; }
+        }
+
+
         public event EventHandler ConfirmClick;
         public event EventHandler ExitClick;
 

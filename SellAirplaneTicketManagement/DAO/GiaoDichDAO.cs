@@ -12,7 +12,7 @@ namespace SellAirplaneTicketManagement.DAO
     {
         public DataTable LoadList()
         {
-            string sql = "Select * from GiaoDich";
+            string sql = "Select GiaoDich.*, KhachHang.TenKhachHang From GiaoDich, KhachHang Where GiaoDich.MaKhachHang = KhachHang.MaKhachHang";
             var rs = ProcessData.LoadData(sql);
             return rs;
         }

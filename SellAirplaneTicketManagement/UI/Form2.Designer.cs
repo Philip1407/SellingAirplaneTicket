@@ -28,25 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.forgetPassword1 = new SellAirplaneTicketManagement.ForgetPassword();
             this.signUp1 = new SellAirplaneTicketManagement.SignUp();
+            this.forgetPassword1 = new SellAirplaneTicketManagement.ForgetPassword();
             this.logIn1 = new SellAirplaneTicketManagement.LogIn();
             this.SuspendLayout();
-            // 
-            // forgetPassword1
-            // 
-            this.forgetPassword1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.forgetPassword1.BackColor = System.Drawing.SystemColors.Window;
-            this.forgetPassword1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.forgetPassword1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgetPassword1.Location = new System.Drawing.Point(352, 134);
-            this.forgetPassword1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.forgetPassword1.Name = "forgetPassword1";
-            this.forgetPassword1.Size = new System.Drawing.Size(502, 340);
-            this.forgetPassword1.TabIndex = 2;
-            this.forgetPassword1.BackClick += new System.EventHandler(this.forgetPassword1_BackClick);
             // 
             // signUp1
             // 
@@ -62,6 +47,21 @@
             this.signUp1.Size = new System.Drawing.Size(588, 545);
             this.signUp1.TabIndex = 0;
             this.signUp1.BackClick += new System.EventHandler(this.signUp1_BackClick);
+            // 
+            // forgetPassword1
+            // 
+            this.forgetPassword1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forgetPassword1.BackColor = System.Drawing.SystemColors.Window;
+            this.forgetPassword1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.forgetPassword1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgetPassword1.Location = new System.Drawing.Point(352, 134);
+            this.forgetPassword1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.forgetPassword1.Name = "forgetPassword1";
+            this.forgetPassword1.Size = new System.Drawing.Size(502, 340);
+            this.forgetPassword1.TabIndex = 2;
+            this.forgetPassword1.BackClick += new System.EventHandler(this.forgetPassword1_BackClick);
             // 
             // logIn1
             // 
