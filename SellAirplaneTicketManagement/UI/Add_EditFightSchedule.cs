@@ -25,6 +25,7 @@ namespace SellAirplaneTicketManagement.UI
         {
             List<string> list = lichchuyenbay.GetAllID();
             cmbFight.DataSource = new BindingSource(list, null);
+            
         }
        
         public Add_EditFightSchedule()

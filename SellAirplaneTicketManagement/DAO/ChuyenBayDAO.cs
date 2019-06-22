@@ -88,8 +88,52 @@ namespace SellAirplaneTicketManagement.DAO
 
             conn.Close();
             return list;
+        }
 
+        public List<string> DepartList()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
 
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select Distinct DiemKhoiHanh From ChuyenBay Where DaXoa=N'Chưa xóa'");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            List<string> list = new List<string>();
+
+            while (rd.Read())
+            {
+                list.Add(rd.GetString(0));
+            }
+
+            conn.Close();
+            return list;
+        }
+
+        public List<string> ArriveList()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select Distinct DiemDen From ChuyenBay Where DaXoa=N'Chưa xóa'");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            List<string> list = new List<string>();
+
+            while (rd.Read())
+            {
+                list.Add(rd.GetString(0));
+            }
+
+            conn.Close();
+            return list;
         }
     }
 }

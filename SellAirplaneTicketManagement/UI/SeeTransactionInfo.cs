@@ -14,9 +14,9 @@ namespace SellAirplaneTicketManagement.UI
 {
     public partial class SeeTransactionInfo : Form
     {
-
         ThongTinNhanVienBUS thongtin = new ThongTinNhanVienBUS();
         ThongTinGiaoDichBUS chitiet = new ThongTinGiaoDichBUS();
+        ThongTinKhachHangBUS khachhang = new ThongTinKhachHangBUS();
         public SeeTransactionInfo(GiaoDich giaodich)
         {
             InitializeComponent();
@@ -24,6 +24,7 @@ namespace SellAirplaneTicketManagement.UI
             lblTime.Text = giaodich.ThoiGianGiaoDich;
             lblMoney.Text = giaodich.SoTienGiaoDich.ToString();
             lblEmployee.Text = thongtin.GetManagerName(giaodich.MaNhanVien);
+            lblCustomer.Text = khachhang.GetName(giaodich.MaKhachHang);
 
             grvData.DataSource = chitiet.Detail(giaodich.MaKhachHang);
         }

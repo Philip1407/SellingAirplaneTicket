@@ -1,4 +1,5 @@
-﻿using SellAirplaneTicketManagement.DTO;
+﻿using SellAirplaneTicketManagement.BUS;
+using SellAirplaneTicketManagement.DTO;
 using SellAirplaneTicketManagement.UI;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,65 @@ namespace SellAirplaneTicketManagement
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        ThongTinChuyenBayBUS thongtinchuyenbay = new ThongTinChuyenBayBUS();
+        LichChuyenBayBUS lichchuyenbay = new LichChuyenBayBUS();
+        ThongTinAdminBUS thongtinadmin = new ThongTinAdminBUS();
+        ThongTinNhanVienBUS thongtinnhanvien = new ThongTinNhanVienBUS();
+        ThongTinGiaoDichBUS thongtingiaodich = new ThongTinGiaoDichBUS();
+        string EmployeeID = "";
+
+
+        private void ReloadData()
+        {
+            checkTransaction1.Data = thongtingiaodich.Loadata();
+            ShowEmployeeInfo(EmployeeID);
+        }
+
+        private void FillDestinationList()
+        {
+            List<string> list1 = thongtinchuyenbay.GetDepartList();
+            findFight1.DepartList.DataSource = new BindingSource(list1, null);
+
+            List<string> list2 = thongtinchuyenbay.GetArriveList();
+            findFight1.ArriveList.DataSource = new BindingSource(list2, null);
+        }
+
+        private void ShowEmployeeInfo(string id)
+        {
+            NhanVien employee = thongtinnhanvien.GetInfo(id);
+
+            ucEmployeeInfo1.FullName = employee.HoTen;
+            ucEmployeeInfo1.State = employee.TinhTrang;
+            ucEmployeeInfo1.DOB = employee.NgaySinh;
+            ucEmployeeInfo1.Address = employee.DiaChi;
+            ucEmployeeInfo1.Gender = employee.GioiTinh;
+            ucEmployeeInfo1.Phone = employee.SoDienThoai;
+            ucEmployeeInfo1.Manager = thongtinnhanvien.GetManagerName(employee.MaNguoiQuanLy);
+        }
+
+        private void UpdateEmployeeInfo(string id)
+        {
+            NhanVien employee = new NhanVien();
+
+            employee.HoTen = ucEmployeeInfo1.FullName;
+            employee.TinhTrang = ucEmployeeInfo1.State;
+            employee.NgaySinh = ucEmployeeInfo1.DOB;
+            employee.DiaChi = ucEmployeeInfo1.Address;
+            employee.GioiTinh = ucEmployeeInfo1.Gender;
+            employee.SoDienThoai = ucEmployeeInfo1.Phone;
+            employee.MaNguoiQuanLy = ucEmployeeInfo1.Manager;
+
+            thongtinnhanvien.Update(employee);
+        }
+
+        public Form3(string id)
         {
             InitializeComponent();
-
             tbMenu.DrawItem += new DrawItemEventHandler(tbMenu_DrawItem);
+            EmployeeID = id;
+            ReloadData();
+            checkTransaction1.GridView.Columns["SOTAIKHOANCHUYENDEN"].Visible = false;
+            FillDestinationList();
         }
 
         private void tbMenu_DrawItem(object sender, DrawItemEventArgs e)
@@ -72,9 +127,25 @@ namespace SellAirplaneTicketManagement
         {
             GiaoDich giaodich = new GiaoDich();
 
+            giaodich.MaGiaoDich = checkTransaction1.GridView.CurrentRow.Cells[0].Value.ToString();
+            giaodich.ThoiGianGiaoDich = checkTransaction1.GridView.CurrentRow.Cells[1].Value.ToString();
+            giaodich.SoTienGiaoDich = (int)checkTransaction1.GridView.CurrentRow.Cells[2].Value;
+            giaodich.MaKhachHang = checkTransaction1.GridView.CurrentRow.Cells[3].Value.ToString();
+            giaodich.MaNhanVien = checkTransaction1.GridView.CurrentRow.Cells[4].Value.ToString();
+            giaodich.SoTaiKhoanChuyenDen = checkTransaction1.GridView.CurrentRow.Cells[5].Value.ToString();
+            giaodich.MaLichBay = checkTransaction1.GridView.CurrentRow.Cells[6].Value.ToString();
 
             SeeTransactionInfo frm = new SeeTransactionInfo(giaodich);
             frm.ShowDialog();
+        }
+
+        private void findFight1_FindClick(object sender, EventArgs e)
+        {
+            string date = findFight1.Date;
+            string arrive = findFight1.Arrive;
+            string depart = findFight1.Depart;
+
+            findFight1.Data = lichchuyenbay.Search(depart, arrive, date);
         }
     }
 }

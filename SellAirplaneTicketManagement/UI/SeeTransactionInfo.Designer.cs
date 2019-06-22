@@ -35,17 +35,19 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
             this.lblEmployee = new System.Windows.Forms.Label();
+            this.lblCustomer = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.SuspendLayout();
             // 
             // grvData
             // 
             this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvData.Location = new System.Drawing.Point(48, 140);
+            this.grvData.Location = new System.Drawing.Point(48, 190);
             this.grvData.Margin = new System.Windows.Forms.Padding(4);
             this.grvData.Name = "grvData";
             this.grvData.RowTemplate.Height = 24;
-            this.grvData.Size = new System.Drawing.Size(780, 356);
+            this.grvData.Size = new System.Drawing.Size(780, 306);
             this.grvData.TabIndex = 0;
             // 
             // label1
@@ -106,11 +108,32 @@
             this.lblEmployee.TabIndex = 6;
             this.lblEmployee.Text = "<xem>";
             // 
+            // lblCustomer
+            // 
+            this.lblCustomer.AutoSize = true;
+            this.lblCustomer.Location = new System.Drawing.Point(343, 150);
+            this.lblCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(64, 22);
+            this.lblCustomer.TabIndex = 8;
+            this.lblCustomer.Text = "<xem>";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(168, 150);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 22);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Tên khách hàng";
+            // 
             // SeeTransactionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 514);
+            this.Controls.Add(this.lblCustomer);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblEmployee);
             this.Controls.Add(this.lblMoney);
             this.Controls.Add(this.lblTime);
@@ -137,5 +160,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.Label lblEmployee;
+        private System.Windows.Forms.Label lblCustomer;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -28,42 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.cmbArrive = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cmbDepart = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dpkDate = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grvData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnFind
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(487, 125);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 34);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.Location = new System.Drawing.Point(487, 125);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(132, 34);
+            this.btnFind.TabIndex = 26;
+            this.btnFind.Text = "Tìm";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // comboBox9
+            // cmbArrive
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.cmbArrive.FormattingEnabled = true;
+            this.cmbArrive.Items.AddRange(new object[] {
             "VietNamAirline",
             "VietJet"});
-            this.comboBox9.Location = new System.Drawing.Point(570, 179);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(290, 30);
-            this.comboBox9.TabIndex = 33;
-            
+            this.cmbArrive.Location = new System.Drawing.Point(570, 179);
+            this.cmbArrive.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbArrive.Name = "cmbArrive";
+            this.cmbArrive.Size = new System.Drawing.Size(290, 30);
+            this.cmbArrive.TabIndex = 33;
             // 
             // label18
             // 
@@ -76,17 +75,17 @@
             this.label18.TabIndex = 31;
             this.label18.Text = "Điểm đến";
             // 
-            // comboBox8
+            // cmbDepart
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cmbDepart.FormattingEnabled = true;
+            this.cmbDepart.Items.AddRange(new object[] {
             "VietNamAirline",
             "VietJet"});
-            this.comboBox8.Location = new System.Drawing.Point(178, 179);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(290, 30);
-            this.comboBox8.TabIndex = 30;
+            this.cmbDepart.Location = new System.Drawing.Point(178, 179);
+            this.cmbDepart.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDepart.Name = "cmbDepart";
+            this.cmbDepart.Size = new System.Drawing.Size(290, 30);
+            this.cmbDepart.TabIndex = 30;
             // 
             // label19
             // 
@@ -99,13 +98,13 @@
             this.label19.TabIndex = 32;
             this.label19.Text = "Điểm khởi hành";
             // 
-            // dateTimePicker2
+            // dpkDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(178, 127);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(290, 30);
-            this.dateTimePicker2.TabIndex = 27;
+            this.dpkDate.Location = new System.Drawing.Point(178, 127);
+            this.dpkDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dpkDate.Name = "dpkDate";
+            this.dpkDate.Size = new System.Drawing.Size(290, 30);
+            this.dpkDate.TabIndex = 27;
             // 
             // label13
             // 
@@ -129,32 +128,32 @@
             this.label20.TabIndex = 24;
             this.label20.Text = "TRA CỨU LỊCH BAY";
             // 
-            // dataGridView1
+            // grvData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 225);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 372);
-            this.dataGridView1.TabIndex = 34;
+            this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvData.Location = new System.Drawing.Point(31, 225);
+            this.grvData.Name = "grvData";
+            this.grvData.Size = new System.Drawing.Size(1067, 372);
+            this.grvData.TabIndex = 34;
             // 
             // FindFight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.grvData);
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.cmbArrive);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.cmbDepart);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dpkDate);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label20);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FindFight";
             this.Size = new System.Drawing.Size(1101, 600);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,14 +161,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.ComboBox cmbArrive;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cmbDepart;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dpkDate;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grvData;
     }
 }

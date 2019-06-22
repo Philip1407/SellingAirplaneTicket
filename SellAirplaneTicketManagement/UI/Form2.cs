@@ -62,7 +62,7 @@ namespace SellAirplaneTicketManagement
             else if(nhanvien.FindUser(logIn1.UserName) == 1)
             {
                 this.Hide();
-                Form3 frm = new Form3();
+                Form3 frm = new Form3(logIn1.UserName);
                 frm.Show();
             }
         }

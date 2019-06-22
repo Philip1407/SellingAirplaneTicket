@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,29 @@ namespace SellAirplaneTicketManagement.DAO
               KhachHang.MaKhachHang, KhachHang.TenKhachHang, KhachHang.SoDienThoai, KhachHang.MatKhau, KhachHang.CMND);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
+        }
+
+        public string GetName(string id)
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select TenKhachHang from KhachHang Where MaKhachHang='{0}'", id);
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            string dt ="";
+
+            if (rd.Read())
+            {
+                dt = rd.GetString(0);
+            }
+
+            conn.Close();
+            return dt;
         }
     }
 }

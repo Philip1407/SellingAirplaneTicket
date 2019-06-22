@@ -77,6 +77,7 @@
             // 
             // bookTicket1
             // 
+            this.bookTicket1.AddCustomer = true;
             this.bookTicket1.AutoSize = true;
             this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookTicket1.Location = new System.Drawing.Point(21, 21);
@@ -105,6 +106,7 @@
             this.findFight1.Name = "findFight1";
             this.findFight1.Size = new System.Drawing.Size(1146, 606);
             this.findFight1.TabIndex = 0;
+            this.findFight1.FindClick += new System.EventHandler(this.findFight1_FindClick);
             // 
             // tb3
             // 
@@ -120,7 +122,9 @@
             // checkTransaction1
             // 
             this.checkTransaction1.AddEnable = false;
+            this.checkTransaction1.Data = null;
             this.checkTransaction1.DeleteEnable = false;
+            this.checkTransaction1.DetailEnable = true;
             this.checkTransaction1.EditEnable = false;
             this.checkTransaction1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkTransaction1.Location = new System.Drawing.Point(37, 15);
@@ -143,13 +147,20 @@
             // 
             // ucEmployeeInfo1
             // 
+            this.ucEmployeeInfo1.Address = "";
             this.ucEmployeeInfo1.BackColor = System.Drawing.SystemColors.Window;
             this.ucEmployeeInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucEmployeeInfo1.DOB = "22-Jun-19";
             this.ucEmployeeInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucEmployeeInfo1.FullName = "";
+            this.ucEmployeeInfo1.Gender = "Nam";
             this.ucEmployeeInfo1.Location = new System.Drawing.Point(257, 68);
+            this.ucEmployeeInfo1.Manager = "Người quản lý";
             this.ucEmployeeInfo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ucEmployeeInfo1.Name = "ucEmployeeInfo1";
+            this.ucEmployeeInfo1.Phone = "";
             this.ucEmployeeInfo1.Size = new System.Drawing.Size(608, 536);
+            this.ucEmployeeInfo1.State = "";
             this.ucEmployeeInfo1.TabIndex = 0;
             // 
             // Form3

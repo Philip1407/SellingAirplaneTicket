@@ -32,5 +32,10 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return khachhangDAO.Update(lb);
         }
+
+        public string GetName(string id)
+        {
+            return khachhangDAO.GetName(id);
+        }
     }
 }

@@ -49,6 +49,9 @@ namespace SellAirplaneTicketManagement.BUS
             lichbayDAO.UpdateAll(dt);
         }
 
-
+        public DataTable Search(string diemkhoihanh, string diemden,string date)
+        {
+            return lichbayDAO.Search(diemkhoihanh, diemden, date);
+        }
     }
 }

@@ -31,5 +31,15 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return chuyenbayDAO.Update(cb);
         }
+
+        public List<string> GetDepartList()
+        {
+            return chuyenbayDAO.DepartList();
+        }
+
+        public List<string> GetArriveList()
+        {
+            return chuyenbayDAO.ArriveList();
+        }
     }
 }
