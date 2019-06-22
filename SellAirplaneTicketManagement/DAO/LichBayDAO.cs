@@ -64,5 +64,19 @@ namespace SellAirplaneTicketManagement.DAO
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
         }
+
+        public DataTable DetailLoad(string id)
+        {
+            string sql = string.Format("Select HangVe.*, SoChoTrong.SoChoConTrong From LichBay, HangVe, SoChoTrong Where LichBay.MaLichBay='{0}' and LichBay.MaChuyenBay = HangVe.MaChuyenBay and SoChoTrong.MaHangVe=HangVe.MaHangVe and SoChoTrong.MaLichBay=LichBay.MaLichBay",
+                id);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+
+        }
+
+        public void UpdateAll(DataTable dt)
+        {
+            ProcessData.UpdateAll(dt);
+        }
     }
 }

@@ -41,12 +41,12 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cmbState = new System.Windows.Forms.ComboBox();
             this.cmbManager = new System.Windows.Forms.ComboBox();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.dpkDOB = new System.Windows.Forms.DateTimePicker();
             this.lblManagerName = new System.Windows.Forms.Label();
             this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.cmbState = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -170,18 +170,6 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cmbState
-            // 
-            this.cmbState.FormattingEnabled = true;
-            this.cmbState.Items.AddRange(new object[] {
-            "Đang làm việc",
-            "Đã nghỉ việc",
-            "Tạm nghỉ"});
-            this.cmbState.Location = new System.Drawing.Point(194, 78);
-            this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(331, 30);
-            this.cmbState.TabIndex = 17;
-            // 
             // cmbManager
             // 
             this.cmbManager.FormattingEnabled = true;
@@ -197,7 +185,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cmbGender.Location = new System.Drawing.Point(194, 292);
+            this.cmbGender.Location = new System.Drawing.Point(194, 295);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(331, 30);
             this.cmbGender.TabIndex = 19;
@@ -226,11 +214,22 @@
             "Nhân viên bán vé",
             "Quản lý nhân sự",
             "Quản lý doanh thu"});
-            this.cmbRole.Location = new System.Drawing.Point(194, 137);
+            this.cmbRole.Location = new System.Drawing.Point(194, 140);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(331, 30);
-            this.cmbRole.TabIndex = 22;
-            this.cmbRole.SelectedValueChanged += new System.EventHandler(this.cmbRole_SelectedValueChanged);
+            this.cmbRole.TabIndex = 24;
+            // 
+            // cmbState
+            // 
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Items.AddRange(new object[] {
+            "Đang làm việc",
+            "Đã nghỉ việc",
+            "Tạm nghỉ"});
+            this.cmbState.Location = new System.Drawing.Point(194, 81);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(331, 30);
+            this.cmbState.TabIndex = 23;
             // 
             // Add_EditEmployeeInfo
             // 
@@ -238,11 +237,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 481);
             this.Controls.Add(this.cmbRole);
+            this.Controls.Add(this.cmbState);
             this.Controls.Add(this.lblManagerName);
             this.Controls.Add(this.dpkDOB);
             this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.cmbManager);
-            this.Controls.Add(this.cmbState);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtPhone);
@@ -280,11 +279,11 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.ComboBox cmbManager;
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.DateTimePicker dpkDOB;
         private System.Windows.Forms.Label lblManagerName;
         private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.ComboBox cmbState;
     }
 }

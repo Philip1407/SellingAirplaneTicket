@@ -40,6 +40,8 @@
             this.lblStart = new System.Windows.Forms.Label();
             this.lblEnd = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
+            this.grvData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -54,7 +56,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(400, 273);
+            this.btnCancel.Location = new System.Drawing.Point(407, 484);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(118, 58);
             this.btnCancel.TabIndex = 23;
@@ -64,7 +66,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(117, 273);
+            this.btnConfirm.Location = new System.Drawing.Point(124, 484);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(118, 58);
             this.btnConfirm.TabIndex = 22;
@@ -162,11 +164,21 @@
             this.lblState.TabIndex = 29;
             this.lblState.Text = "Chuyến bay";
             // 
+            // grvData
+            // 
+            this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvData.Location = new System.Drawing.Point(33, 271);
+            this.grvData.Name = "grvData";
+            this.grvData.RowTemplate.Height = 24;
+            this.grvData.Size = new System.Drawing.Size(599, 192);
+            this.grvData.TabIndex = 30;
+            // 
             // FightScheduleDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 385);
+            this.ClientSize = new System.Drawing.Size(644, 565);
+            this.Controls.Add(this.grvData);
             this.Controls.Add(this.lblState);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblStart);
@@ -180,9 +192,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FightScheduleDetail";
             this.Text = "FightScheduleDetail";
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Label lblState;
+        private System.Windows.Forms.DataGridView grvData;
     }
 }

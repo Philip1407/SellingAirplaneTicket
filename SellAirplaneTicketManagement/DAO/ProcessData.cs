@@ -10,14 +10,14 @@ namespace SellAirplaneTicketManagement.DAO
 {
     class ProcessData
     {
-
+        static SqlDataAdapter adapter = null;
         static string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
         public static DataTable LoadData(string sql)
         {
 
             SqlConnection conn = new SqlConnection(path);
 
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter = new SqlDataAdapter(sql, conn);
             DataTable table = new DataTable();
             adapter.Fill(table);
 
@@ -64,6 +64,18 @@ namespace SellAirplaneTicketManagement.DAO
             conn.Close();
 
             return rs;
+        }
+
+        public static void UpdateAll(DataTable dt)
+        {
+            SqlConnection conn = new SqlConnection(path);
+            conn.Open();
+
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+
+            adapter.Update(dt);
+
+            conn.Close();
         }
     }
 }

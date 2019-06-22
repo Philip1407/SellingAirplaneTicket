@@ -213,7 +213,15 @@ namespace SellAirplaneTicketManagement
 
         private void ucFightSchedule_DetailClick(object sender, EventArgs e)
         {
-            Add_EditFightSchedule frm = new Add_EditFightSchedule();
+            LichBay lichbay = new LichBay();
+            lichbay.MaLichBay = ucFightSchedule.GridView.CurrentRow.Cells[0].Value.ToString();
+            lichbay.MaChuyenBay = ucFightSchedule.GridView.CurrentRow.Cells[1].Value.ToString();
+            lichbay.Ngay = ucFightSchedule.GridView.CurrentRow.Cells[2].Value.ToString();
+            lichbay.GioKhoiHanh = ucFightSchedule.GridView.CurrentRow.Cells[3].Value.ToString();
+            lichbay.GioKetThuc = ucFightSchedule.GridView.CurrentRow.Cells[4].Value.ToString();
+            lichbay.TinhTrang = ucFightSchedule.GridView.CurrentRow.Cells[5].Value.ToString();
+
+            FightScheduleDetail frm = new FightScheduleDetail(lichbay);
             frm.ShowDialog();
         }
 

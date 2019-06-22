@@ -53,6 +53,8 @@ namespace SellAirplaneTicketManagement.UI
             dpkStart.Text = lichbay.GioKhoiHanh;
             dpkEnd.Text = lichbay.GioKetThuc;
             cmbState.SelectedIndex = cmbState.Items.IndexOf(lichbay.TinhTrang);
+
+            grvData.DataSource = lichchuyenbay.LoadDetail(lichbay.MaLichBay);
         }
 
         public delegate void Add(LichBay lichbay);
@@ -64,6 +66,8 @@ namespace SellAirplaneTicketManagement.UI
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             LichBay lichbay = GetInfo();
+            lichchuyenbay.UpdateAll(grvData.DataSource as DataTable);
+
             onAdd?.Invoke(lichbay);
             onEdit?.Invoke(lichbay);
             this.Close();

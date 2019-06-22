@@ -23,18 +23,22 @@ namespace SellAirplaneTicketManagement
         }
 
         public string State {
-            get { return txtState.Text; }
-            set { txtState.Text = value; }
+            get {
+                if(cmbState.SelectedItem!=null) return cmbState.SelectedItem.ToString();
+                else return "";
+            }
+            set { cmbState.SelectedIndex = cmbState.Items.IndexOf(value); }
         }
 
         public string Role {
-            get { return txtRole.Text; }
-            set { txtRole.Text = value; }
+            get { return lblRole.Text; }
+            set { lblRole.Text = value; }
         }
 
         public string DOB {
-            get { return txtDOB.Text; }
-            set { txtDOB.Text = value; }
+            get { return dpkDOB.Value.ToShortDateString(); }
+            set { if (string.IsNullOrEmpty(value)) dpkDOB.Text = DateTime.Today.ToShortDateString();
+                else dpkDOB.Text = value; }
         }
 
         public string Address {
@@ -43,8 +47,14 @@ namespace SellAirplaneTicketManagement
         }
 
         public string Gender {
-            get { return txtGender.Text; }
-            set { txtGender.Text = value; }
+            get { if (cmbGender.SelectedItem != null) return cmbGender.SelectedItem.ToString();
+                else return "";
+            }
+            set {
+                if (string.IsNullOrEmpty(value))
+                    cmbGender.SelectedIndex = 0;
+                else  cmbGender.SelectedIndex = cmbGender.Items.IndexOf(value);
+            }
         }
 
         public string Phone {

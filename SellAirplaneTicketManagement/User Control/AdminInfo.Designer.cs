@@ -32,11 +32,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtDOB = new System.Windows.Forms.TextBox();
-            this.txtRole = new System.Windows.Forms.TextBox();
-            this.txtState = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +41,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.dpkDOB = new System.Windows.Forms.DateTimePicker();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.lblRole = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label26
@@ -84,40 +84,12 @@
             this.txtPhone.Size = new System.Drawing.Size(331, 30);
             this.txtPhone.TabIndex = 35;
             // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(161, 333);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(331, 30);
-            this.txtGender.TabIndex = 34;
-            // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(161, 279);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(331, 30);
             this.txtAddress.TabIndex = 33;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(161, 225);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(331, 30);
-            this.txtDOB.TabIndex = 32;
-            // 
-            // txtRole
-            // 
-            this.txtRole.Location = new System.Drawing.Point(161, 172);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(331, 30);
-            this.txtRole.TabIndex = 31;
-            // 
-            // txtState
-            // 
-            this.txtState.Location = new System.Drawing.Point(161, 120);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(331, 30);
-            this.txtState.TabIndex = 30;
             // 
             // txtName
             // 
@@ -196,20 +168,60 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Họ tên";
             // 
+            // cmbState
+            // 
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Items.AddRange(new object[] {
+            "Đang làm việc",
+            "Đã nghỉ việc",
+            "Tạm nghỉ"});
+            this.cmbState.Location = new System.Drawing.Point(161, 119);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(331, 30);
+            this.cmbState.TabIndex = 17;
+            // 
+            // dpkDOB
+            // 
+            this.dpkDOB.Location = new System.Drawing.Point(161, 232);
+            this.dpkDOB.Name = "dpkDOB";
+            this.dpkDOB.Size = new System.Drawing.Size(331, 30);
+            this.dpkDOB.TabIndex = 39;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cmbGender.Location = new System.Drawing.Point(161, 334);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(331, 30);
+            this.cmbGender.TabIndex = 40;
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Location = new System.Drawing.Point(160, 175);
+            this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(70, 22);
+            this.lblRole.TabIndex = 41;
+            this.lblRole.Text = "lblRole";
+            // 
             // ucAdminInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lblRole);
+            this.Controls.Add(this.cmbGender);
+            this.Controls.Add(this.dpkDOB);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.txtDOB);
-            this.Controls.Add(this.txtRole);
-            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.cmbState);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -233,11 +245,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtDOB;
-        private System.Windows.Forms.TextBox txtRole;
-        private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -246,5 +254,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.DateTimePicker dpkDOB;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.Label lblRole;
     }
 }

@@ -39,5 +39,16 @@ namespace SellAirplaneTicketManagement.BUS
             return chuyenbayDAO.GetIDList();
         }
 
+        public DataTable LoadDetail(string id)
+        {
+            return lichbayDAO.DetailLoad(id);
+        }
+
+        public void UpdateAll(DataTable dt)
+        {
+            lichbayDAO.UpdateAll(dt);
+        }
+
+
     }
 }

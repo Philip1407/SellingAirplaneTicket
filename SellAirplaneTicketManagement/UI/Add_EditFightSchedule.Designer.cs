@@ -40,6 +40,8 @@
             this.dpkStart = new System.Windows.Forms.DateTimePicker();
             this.dpkEnd = new System.Windows.Forms.DateTimePicker();
             this.cmbFight = new System.Windows.Forms.ComboBox();
+            this.grvData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +86,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(117, 302);
+            this.btnConfirm.Location = new System.Drawing.Point(113, 494);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(118, 58);
             this.btnConfirm.TabIndex = 8;
@@ -94,7 +96,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(400, 302);
+            this.btnCancel.Location = new System.Drawing.Point(396, 494);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(118, 58);
             this.btnCancel.TabIndex = 10;
@@ -154,11 +156,21 @@
             this.cmbFight.Size = new System.Drawing.Size(291, 30);
             this.cmbFight.TabIndex = 17;
             // 
+            // grvData
+            // 
+            this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvData.Location = new System.Drawing.Point(23, 278);
+            this.grvData.Name = "grvData";
+            this.grvData.RowTemplate.Height = 24;
+            this.grvData.Size = new System.Drawing.Size(634, 192);
+            this.grvData.TabIndex = 31;
+            // 
             // Add_EditFightSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 385);
+            this.ClientSize = new System.Drawing.Size(669, 564);
+            this.Controls.Add(this.grvData);
             this.Controls.Add(this.cmbFight);
             this.Controls.Add(this.dpkEnd);
             this.Controls.Add(this.dpkStart);
@@ -175,6 +187,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_EditFightSchedule";
             this.Text = "Add_EditFightSchedule";
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +207,6 @@
         private System.Windows.Forms.DateTimePicker dpkStart;
         private System.Windows.Forms.DateTimePicker dpkEnd;
         private System.Windows.Forms.ComboBox cmbFight;
+        private System.Windows.Forms.DataGridView grvData;
     }
 }
