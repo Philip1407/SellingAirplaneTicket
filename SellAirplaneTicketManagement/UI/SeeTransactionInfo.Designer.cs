@@ -53,10 +53,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 26);
+            this.label1.Location = new System.Drawing.Point(138, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 22);
+            this.label1.Size = new System.Drawing.Size(127, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thời điểm giao dịch";
             // 
@@ -65,16 +65,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(156, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 22);
+            this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Số tiền giao dịch";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 114);
+            this.label3.Location = new System.Drawing.Point(78, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 22);
+            this.label3.Size = new System.Drawing.Size(187, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nhân viên thực hiện giao dịch";
             // 
@@ -84,7 +84,7 @@
             this.lblTime.Location = new System.Drawing.Point(343, 26);
             this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(64, 22);
+            this.lblTime.Size = new System.Drawing.Size(52, 19);
             this.lblTime.TabIndex = 4;
             this.lblTime.Text = "<xem>";
             // 
@@ -94,7 +94,7 @@
             this.lblMoney.Location = new System.Drawing.Point(343, 73);
             this.lblMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(64, 22);
+            this.lblMoney.Size = new System.Drawing.Size(52, 19);
             this.lblMoney.TabIndex = 5;
             this.lblMoney.Text = "<xem>";
             // 
@@ -104,7 +104,7 @@
             this.lblEmployee.Location = new System.Drawing.Point(343, 114);
             this.lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(64, 22);
+            this.lblEmployee.Size = new System.Drawing.Size(52, 19);
             this.lblEmployee.TabIndex = 6;
             this.lblEmployee.Text = "<xem>";
             // 
@@ -114,22 +114,22 @@
             this.lblCustomer.Location = new System.Drawing.Point(343, 150);
             this.lblCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(64, 22);
+            this.lblCustomer.Size = new System.Drawing.Size(52, 19);
             this.lblCustomer.TabIndex = 8;
             this.lblCustomer.Text = "<xem>";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(168, 150);
+            this.label5.Location = new System.Drawing.Point(161, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 22);
+            this.label5.Size = new System.Drawing.Size(104, 19);
             this.label5.TabIndex = 7;
             this.label5.Text = "Tên khách hàng";
             // 
             // SeeTransactionInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 514);
             this.Controls.Add(this.lblCustomer);

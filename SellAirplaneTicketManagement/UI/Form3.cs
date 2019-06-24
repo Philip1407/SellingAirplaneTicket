@@ -25,6 +25,8 @@ namespace SellAirplaneTicketManagement
         string EmployeeID = "";
         bool valid = false;
 
+        
+
         private void FillFlightIDList()
         {
             List<string> list = lichchuyenbay.GetIDList();
@@ -280,6 +282,19 @@ namespace SellAirplaneTicketManagement
             }
             
             bookTicket1.ClassList.DataSource = new BindingSource(list, null);
+        }
+
+        private void ucEmployeeInfo1_ExitClick(object sender, EventArgs e)
+        {
+            EmployeeID = "";
+            Form2 frm = new Form2();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void ucEmployeeInfo1_ConfirmClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -50,7 +50,7 @@
             this.label4.Location = new System.Drawing.Point(163, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 22);
+            this.label4.Size = new System.Drawing.Size(42, 19);
             this.label4.TabIndex = 24;
             this.label4.Text = "Ngày";
             // 
@@ -77,40 +77,40 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(124, 231);
+            this.label5.Location = new System.Drawing.Point(136, 231);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 22);
+            this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 20;
             this.label5.Text = "Tình trạng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 175);
+            this.label3.Location = new System.Drawing.Point(89, 175);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 22);
+            this.label3.Size = new System.Drawing.Size(116, 19);
             this.label3.TabIndex = 19;
             this.label3.Text = "Thời gian kết thúc";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 122);
+            this.label2.Location = new System.Drawing.Point(79, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 22);
+            this.label2.Size = new System.Drawing.Size(126, 19);
             this.label2.TabIndex = 18;
             this.label2.Text = "Thời gian khởi hành";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 33);
+            this.label1.Location = new System.Drawing.Point(124, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 22);
+            this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 17;
             this.label1.Text = "Chuyến bay";
             // 
@@ -120,7 +120,7 @@
             this.lblFight.Location = new System.Drawing.Point(277, 33);
             this.lblFight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFight.Name = "lblFight";
-            this.lblFight.Size = new System.Drawing.Size(101, 22);
+            this.lblFight.Size = new System.Drawing.Size(81, 19);
             this.lblFight.TabIndex = 25;
             this.lblFight.Text = "Chuyến bay";
             // 
@@ -130,7 +130,7 @@
             this.lblDate.Location = new System.Drawing.Point(277, 75);
             this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(101, 22);
+            this.lblDate.Size = new System.Drawing.Size(81, 19);
             this.lblDate.TabIndex = 26;
             this.lblDate.Text = "Chuyến bay";
             // 
@@ -140,7 +140,7 @@
             this.lblStart.Location = new System.Drawing.Point(277, 122);
             this.lblStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(101, 22);
+            this.lblStart.Size = new System.Drawing.Size(81, 19);
             this.lblStart.TabIndex = 27;
             this.lblStart.Text = "Chuyến bay";
             // 
@@ -150,7 +150,7 @@
             this.lblEnd.Location = new System.Drawing.Point(277, 175);
             this.lblEnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnd.Name = "lblEnd";
-            this.lblEnd.Size = new System.Drawing.Size(101, 22);
+            this.lblEnd.Size = new System.Drawing.Size(81, 19);
             this.lblEnd.TabIndex = 28;
             this.lblEnd.Text = "Chuyến bay";
             // 
@@ -160,7 +160,7 @@
             this.lblState.Location = new System.Drawing.Point(277, 231);
             this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(101, 22);
+            this.lblState.Size = new System.Drawing.Size(81, 19);
             this.lblState.TabIndex = 29;
             this.lblState.Text = "Chuyến bay";
             // 
@@ -175,7 +175,7 @@
             // 
             // FightScheduleDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 565);
             this.Controls.Add(this.grvData);

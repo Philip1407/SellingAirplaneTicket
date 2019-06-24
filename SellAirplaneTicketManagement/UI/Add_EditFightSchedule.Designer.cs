@@ -47,40 +47,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 47);
+            this.label1.Location = new System.Drawing.Point(123, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 22);
+            this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chuyến bay";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 136);
+            this.label2.Location = new System.Drawing.Point(78, 136);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 22);
+            this.label2.Size = new System.Drawing.Size(126, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Thời gian khởi hành";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 189);
+            this.label3.Location = new System.Drawing.Point(88, 189);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 22);
+            this.label3.Size = new System.Drawing.Size(116, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Thời gian kết thúc";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 245);
+            this.label5.Location = new System.Drawing.Point(135, 245);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 22);
+            this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 3;
             this.label5.Text = "Tình trạng";
             // 
@@ -110,7 +110,7 @@
             this.label4.Location = new System.Drawing.Point(162, 89);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 22);
+            this.label4.Size = new System.Drawing.Size(42, 19);
             this.label4.TabIndex = 11;
             this.label4.Text = "Ngày";
             // 
@@ -124,28 +124,28 @@
             "Đã hủy"});
             this.cmbState.Location = new System.Drawing.Point(239, 242);
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(291, 30);
+            this.cmbState.Size = new System.Drawing.Size(291, 27);
             this.cmbState.TabIndex = 13;
             // 
             // dpkDate
             // 
             this.dpkDate.Location = new System.Drawing.Point(239, 89);
             this.dpkDate.Name = "dpkDate";
-            this.dpkDate.Size = new System.Drawing.Size(291, 30);
+            this.dpkDate.Size = new System.Drawing.Size(291, 26);
             this.dpkDate.TabIndex = 14;
             // 
             // dpkStart
             // 
             this.dpkStart.Location = new System.Drawing.Point(239, 136);
             this.dpkStart.Name = "dpkStart";
-            this.dpkStart.Size = new System.Drawing.Size(291, 30);
+            this.dpkStart.Size = new System.Drawing.Size(291, 26);
             this.dpkStart.TabIndex = 15;
             // 
             // dpkEnd
             // 
             this.dpkEnd.Location = new System.Drawing.Point(239, 189);
             this.dpkEnd.Name = "dpkEnd";
-            this.dpkEnd.Size = new System.Drawing.Size(291, 30);
+            this.dpkEnd.Size = new System.Drawing.Size(291, 26);
             this.dpkEnd.TabIndex = 16;
             // 
             // cmbFight
@@ -153,7 +153,7 @@
             this.cmbFight.FormattingEnabled = true;
             this.cmbFight.Location = new System.Drawing.Point(239, 47);
             this.cmbFight.Name = "cmbFight";
-            this.cmbFight.Size = new System.Drawing.Size(291, 30);
+            this.cmbFight.Size = new System.Drawing.Size(291, 27);
             this.cmbFight.TabIndex = 17;
             // 
             // grvData
@@ -167,7 +167,7 @@
             // 
             // Add_EditFightSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 564);
             this.Controls.Add(this.grvData);

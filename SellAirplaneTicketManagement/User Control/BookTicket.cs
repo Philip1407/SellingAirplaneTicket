@@ -86,9 +86,7 @@ namespace SellAirplaneTicketManagement.User_Control
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    cmbIDNumber.SelectedIndex = 0;
-                else cmbIDNumber.SelectedIndex = cmbIDNumber.Items.IndexOf(value);
+                cmbIDNumber.SelectedIndex = cmbIDNumber.Items.IndexOf(value);
             }
         }
 

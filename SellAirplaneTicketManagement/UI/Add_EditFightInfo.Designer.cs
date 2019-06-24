@@ -45,16 +45,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(76, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 22);
+            this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Hãng hàng không";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(133, 123);
+            this.label3.Location = new System.Drawing.Point(123, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 22);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Điểm đến";
             // 
@@ -63,16 +63,16 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(85, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 22);
+            this.label4.Size = new System.Drawing.Size(103, 19);
             this.label4.TabIndex = 2;
             this.label4.Text = "Điểm khởi hành";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 177);
+            this.label5.Location = new System.Drawing.Point(48, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 22);
+            this.label5.Size = new System.Drawing.Size(142, 19);
             this.label5.TabIndex = 3;
             this.label5.Text = "Số lượng khách tối đa";
             // 
@@ -80,28 +80,28 @@
             // 
             this.txtHangHangKhong.Location = new System.Drawing.Point(234, 12);
             this.txtHangHangKhong.Name = "txtHangHangKhong";
-            this.txtHangHangKhong.Size = new System.Drawing.Size(375, 30);
+            this.txtHangHangKhong.Size = new System.Drawing.Size(375, 26);
             this.txtHangHangKhong.TabIndex = 4;
             // 
             // txtDiemKhoiHanh
             // 
             this.txtDiemKhoiHanh.Location = new System.Drawing.Point(234, 62);
             this.txtDiemKhoiHanh.Name = "txtDiemKhoiHanh";
-            this.txtDiemKhoiHanh.Size = new System.Drawing.Size(375, 30);
+            this.txtDiemKhoiHanh.Size = new System.Drawing.Size(375, 26);
             this.txtDiemKhoiHanh.TabIndex = 5;
             // 
             // txtDiemDen
             // 
             this.txtDiemDen.Location = new System.Drawing.Point(234, 120);
             this.txtDiemDen.Name = "txtDiemDen";
-            this.txtDiemDen.Size = new System.Drawing.Size(375, 30);
+            this.txtDiemDen.Size = new System.Drawing.Size(375, 26);
             this.txtDiemDen.TabIndex = 6;
             // 
             // txtSoLuongKhach
             // 
             this.txtSoLuongKhach.Location = new System.Drawing.Point(234, 177);
             this.txtSoLuongKhach.Name = "txtSoLuongKhach";
-            this.txtSoLuongKhach.Size = new System.Drawing.Size(375, 30);
+            this.txtSoLuongKhach.Size = new System.Drawing.Size(375, 26);
             this.txtSoLuongKhach.TabIndex = 7;
             // 
             // btnConfirm
@@ -126,7 +126,7 @@
             // 
             // Add_EditFightInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 323);
             this.Controls.Add(this.btnCancel);

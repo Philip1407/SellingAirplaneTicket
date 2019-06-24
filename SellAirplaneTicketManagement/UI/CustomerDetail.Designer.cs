@@ -64,27 +64,27 @@
             this.label3.Location = new System.Drawing.Point(101, 172);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 22);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "CMND";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 113);
+            this.label2.Location = new System.Drawing.Point(70, 113);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 22);
+            this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 9;
             this.label2.Text = "Số điện thoại";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 44);
+            this.label1.Location = new System.Drawing.Point(54, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 22);
+            this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên khách hàng";
             // 
@@ -94,7 +94,7 @@
             this.lblName.Location = new System.Drawing.Point(192, 44);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(131, 22);
+            this.lblName.Size = new System.Drawing.Size(104, 19);
             this.lblName.TabIndex = 16;
             this.lblName.Text = "Tên khách hàng";
             // 
@@ -104,7 +104,7 @@
             this.lblPhone.Location = new System.Drawing.Point(192, 113);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(131, 22);
+            this.lblPhone.Size = new System.Drawing.Size(104, 19);
             this.lblPhone.TabIndex = 17;
             this.lblPhone.Text = "Tên khách hàng";
             // 
@@ -114,13 +114,13 @@
             this.lblEmail.Location = new System.Drawing.Point(192, 172);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(131, 22);
+            this.lblEmail.Size = new System.Drawing.Size(104, 19);
             this.lblEmail.TabIndex = 18;
             this.lblEmail.Text = "Tên khách hàng";
             // 
             // CustomerDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 373);
             this.Controls.Add(this.lblEmail);

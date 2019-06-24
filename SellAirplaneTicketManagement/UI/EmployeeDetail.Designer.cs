@@ -54,17 +54,17 @@
             this.label9.Location = new System.Drawing.Point(36, 429);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 22);
+            this.label9.Size = new System.Drawing.Size(95, 19);
             this.label9.TabIndex = 24;
             this.label9.Text = "Người quản lý";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(50, 363);
+            this.label8.Location = new System.Drawing.Point(50, 347);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 22);
+            this.label8.Size = new System.Drawing.Size(88, 19);
             this.label8.TabIndex = 23;
             this.label8.Text = "Số điện thoại";
             // 
@@ -74,7 +74,7 @@
             this.label6.Location = new System.Drawing.Point(79, 297);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 22);
+            this.label6.Size = new System.Drawing.Size(59, 19);
             this.label6.TabIndex = 22;
             this.label6.Text = "Giới tính";
             // 
@@ -84,7 +84,7 @@
             this.label5.Location = new System.Drawing.Point(69, 189);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 22);
+            this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 21;
             this.label5.Text = "Ngày sinh";
             // 
@@ -94,7 +94,7 @@
             this.label4.Location = new System.Drawing.Point(87, 246);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 22);
+            this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 20;
             this.label4.Text = "Địa chỉ";
             // 
@@ -104,7 +104,7 @@
             this.label3.Location = new System.Drawing.Point(77, 139);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 22);
+            this.label3.Size = new System.Drawing.Size(61, 19);
             this.label3.TabIndex = 19;
             this.label3.Text = "Chức vụ";
             // 
@@ -114,7 +114,7 @@
             this.label2.Location = new System.Drawing.Point(69, 83);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 22);
+            this.label2.Size = new System.Drawing.Size(69, 19);
             this.label2.TabIndex = 18;
             this.label2.Text = "Tình trạng";
             // 
@@ -124,7 +124,7 @@
             this.label1.Location = new System.Drawing.Point(88, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 22);
+            this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 17;
             this.label1.Text = "Họ tên";
             // 
@@ -134,7 +134,7 @@
             this.lblName.Location = new System.Drawing.Point(216, 29);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 22);
+            this.lblName.Size = new System.Drawing.Size(50, 19);
             this.lblName.TabIndex = 35;
             this.lblName.Text = "Họ tên";
             // 
@@ -144,7 +144,7 @@
             this.lblState.Location = new System.Drawing.Point(216, 83);
             this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(62, 22);
+            this.lblState.Size = new System.Drawing.Size(50, 19);
             this.lblState.TabIndex = 36;
             this.lblState.Text = "Họ tên";
             // 
@@ -154,7 +154,7 @@
             this.lblRole.Location = new System.Drawing.Point(216, 139);
             this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(62, 22);
+            this.lblRole.Size = new System.Drawing.Size(50, 19);
             this.lblRole.TabIndex = 37;
             this.lblRole.Text = "Họ tên";
             // 
@@ -164,7 +164,7 @@
             this.lblDOB.Location = new System.Drawing.Point(216, 189);
             this.lblDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(62, 22);
+            this.lblDOB.Size = new System.Drawing.Size(50, 19);
             this.lblDOB.TabIndex = 38;
             this.lblDOB.Text = "Họ tên";
             // 
@@ -174,7 +174,7 @@
             this.lblAddress.Location = new System.Drawing.Point(216, 246);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(62, 22);
+            this.lblAddress.Size = new System.Drawing.Size(50, 19);
             this.lblAddress.TabIndex = 39;
             this.lblAddress.Text = "Họ tên";
             // 
@@ -184,17 +184,17 @@
             this.lblGender.Location = new System.Drawing.Point(216, 297);
             this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(62, 22);
+            this.lblGender.Size = new System.Drawing.Size(50, 19);
             this.lblGender.TabIndex = 40;
             this.lblGender.Text = "Họ tên";
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(216, 363);
+            this.lblPhone.Location = new System.Drawing.Point(216, 347);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(62, 22);
+            this.lblPhone.Size = new System.Drawing.Size(50, 19);
             this.lblPhone.TabIndex = 41;
             this.lblPhone.Text = "Họ tên";
             // 
@@ -204,7 +204,7 @@
             this.lblManager.Location = new System.Drawing.Point(216, 429);
             this.lblManager.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManager.Name = "lblManager";
-            this.lblManager.Size = new System.Drawing.Size(62, 22);
+            this.lblManager.Size = new System.Drawing.Size(50, 19);
             this.lblManager.TabIndex = 42;
             this.lblManager.Text = "Họ tên";
             // 
@@ -230,7 +230,7 @@
             // 
             // EmployeeDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 481);
             this.Controls.Add(this.btnCancel);
@@ -252,7 +252,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeDetail";
             this.Text = "EmployeeDetail";
             this.ResumeLayout(false);

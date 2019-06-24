@@ -81,22 +81,21 @@
             this.bookTicket1.AutoSize = true;
             this.bookTicket1.Class = "Thương gia";
             this.bookTicket1.CustomerName = "";
-            this.bookTicket1.FlightIDList.Items.Add("Thương gia");
             this.bookTicket1.FlightID = "Thương gia";
             this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookTicket1.IDNumber = "0";
+            this.bookTicket1.IDNumber = "";
             this.bookTicket1.Location = new System.Drawing.Point(21, 21);
             this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bookTicket1.Name = "bookTicket1";
-            this.bookTicket1.Size = new System.Drawing.Size(1131, 472);
+            this.bookTicket1.Size = new System.Drawing.Size(1131, 476);
             this.bookTicket1.TabIndex = 0;
             this.bookTicket1.Total = "0 VND";
             this.bookTicket1.BookClick += new System.EventHandler(this.bookTicket1_BookClick);
             this.bookTicket1.AddCustomerClick += new System.EventHandler(this.bookTicket1_AddCustomerClick);
-            this.bookTicket1.onChangeCustomerIDNumber += new System.EventHandler(this.bookTicket1_onChangeCustomerIDNumber);
             this.bookTicket1.onAmountChange += new System.EventHandler(this.bookTicket1_onAmountChange);
             this.bookTicket1.onClassChange += new System.EventHandler(this.bookTicket1_onClassChange);
             this.bookTicket1.onFlightIDChange += new System.EventHandler(this.bookTicket1_onFlightIDChange);
+            this.bookTicket1.onChangeCustomerIDNumber += new System.EventHandler(this.bookTicket1_onChangeCustomerIDNumber);
             // 
             // tb2
             // 
@@ -114,7 +113,7 @@
             // 
             this.findFight1.Arrive = "VietNamAirline";
             this.findFight1.Data = null;
-            this.findFight1.Date = "24-Jun-19";
+            this.findFight1.Date = "6/24/2019";
             this.findFight1.Depart = "VietNamAirline";
             this.findFight1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findFight1.Location = new System.Drawing.Point(4, 9);
@@ -166,7 +165,7 @@
             this.ucEmployeeInfo1.Address = "";
             this.ucEmployeeInfo1.BackColor = System.Drawing.SystemColors.Window;
             this.ucEmployeeInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucEmployeeInfo1.DOB = "22-Jun-19";
+            this.ucEmployeeInfo1.DOB = "6/22/2019";
             this.ucEmployeeInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucEmployeeInfo1.FullName = "";
             this.ucEmployeeInfo1.Gender = "Nam";
@@ -178,6 +177,8 @@
             this.ucEmployeeInfo1.Size = new System.Drawing.Size(608, 536);
             this.ucEmployeeInfo1.State = "";
             this.ucEmployeeInfo1.TabIndex = 0;
+            this.ucEmployeeInfo1.ConfirmClick += new System.EventHandler(this.ucEmployeeInfo1_ConfirmClick);
+            this.ucEmployeeInfo1.ExitClick += new System.EventHandler(this.ucEmployeeInfo1_ExitClick);
             // 
             // Form3
             // 

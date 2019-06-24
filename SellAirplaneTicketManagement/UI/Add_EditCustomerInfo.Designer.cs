@@ -41,20 +41,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 55);
+            this.label1.Location = new System.Drawing.Point(39, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 22);
+            this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khách hàng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 124);
+            this.label2.Location = new System.Drawing.Point(55, 124);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 22);
+            this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại";
             // 
@@ -63,7 +63,7 @@
             this.txtName.Location = new System.Drawing.Point(161, 55);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(415, 30);
+            this.txtName.Size = new System.Drawing.Size(415, 26);
             this.txtName.TabIndex = 2;
             // 
             // txtPhoneNumber
@@ -71,16 +71,16 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(161, 124);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(415, 30);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(415, 26);
             this.txtPhoneNumber.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 192);
+            this.label3.Location = new System.Drawing.Point(86, 192);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 22);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "CMND";
             // 
@@ -89,12 +89,12 @@
             this.txtCustomerIDNumber.Location = new System.Drawing.Point(161, 192);
             this.txtCustomerIDNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerIDNumber.Name = "txtCustomerIDNumber";
-            this.txtCustomerIDNumber.Size = new System.Drawing.Size(415, 30);
+            this.txtCustomerIDNumber.Size = new System.Drawing.Size(415, 26);
             this.txtCustomerIDNumber.TabIndex = 5;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(133, 266);
+            this.btnConfirm.Location = new System.Drawing.Point(126, 266);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(107, 49);
             this.btnConfirm.TabIndex = 6;
@@ -114,7 +114,7 @@
             // 
             // Add_EditCustomerInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 373);
             this.Controls.Add(this.btnCancel);

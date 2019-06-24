@@ -63,9 +63,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 187);
+            this.label5.Location = new System.Drawing.Point(44, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 22);
+            this.label5.Size = new System.Drawing.Size(142, 19);
             this.label5.TabIndex = 13;
             this.label5.Text = "Số lượng khách tối đa";
             // 
@@ -74,16 +74,16 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(81, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 22);
+            this.label4.Size = new System.Drawing.Size(103, 19);
             this.label4.TabIndex = 11;
             this.label4.Text = "Điểm khởi hành";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 133);
+            this.label3.Location = new System.Drawing.Point(119, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 22);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Điểm đến";
             // 
@@ -92,7 +92,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(72, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 22);
+            this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 10;
             this.label2.Text = "Hãng hàng không";
             // 
@@ -101,7 +101,7 @@
             this.lblAirport.AutoSize = true;
             this.lblAirport.Location = new System.Drawing.Point(258, 22);
             this.lblAirport.Name = "lblAirport";
-            this.lblAirport.Size = new System.Drawing.Size(143, 22);
+            this.lblAirport.Size = new System.Drawing.Size(114, 19);
             this.lblAirport.TabIndex = 20;
             this.lblAirport.Text = "Hãng hàng không";
             // 
@@ -110,7 +110,7 @@
             this.lblStart.AutoSize = true;
             this.lblStart.Location = new System.Drawing.Point(258, 72);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(143, 22);
+            this.lblStart.Size = new System.Drawing.Size(114, 19);
             this.lblStart.TabIndex = 21;
             this.lblStart.Text = "Hãng hàng không";
             // 
@@ -119,7 +119,7 @@
             this.lblFinish.AutoSize = true;
             this.lblFinish.Location = new System.Drawing.Point(258, 133);
             this.lblFinish.Name = "lblFinish";
-            this.lblFinish.Size = new System.Drawing.Size(143, 22);
+            this.lblFinish.Size = new System.Drawing.Size(114, 19);
             this.lblFinish.TabIndex = 22;
             this.lblFinish.Text = "Hãng hàng không";
             // 
@@ -128,13 +128,13 @@
             this.lblLimit.AutoSize = true;
             this.lblLimit.Location = new System.Drawing.Point(258, 187);
             this.lblLimit.Name = "lblLimit";
-            this.lblLimit.Size = new System.Drawing.Size(143, 22);
+            this.lblLimit.Size = new System.Drawing.Size(114, 19);
             this.lblLimit.TabIndex = 23;
             this.lblLimit.Text = "Hãng hàng không";
             // 
             // FightInfoDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 323);
             this.Controls.Add(this.lblLimit);

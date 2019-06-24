@@ -46,17 +46,17 @@
             this.label1.Location = new System.Drawing.Point(85, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 22);
+            this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 18;
             this.label1.Text = "Họ tên";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 31);
+            this.label2.Location = new System.Drawing.Point(45, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 22);
+            this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 19;
             this.label2.Text = "Mã nhân viên";
             // 
@@ -66,27 +66,27 @@
             this.lblName.Location = new System.Drawing.Point(159, 93);
             this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 22);
+            this.lblName.Size = new System.Drawing.Size(50, 19);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Họ tên";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 158);
+            this.label4.Location = new System.Drawing.Point(93, 148);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 22);
+            this.label4.Size = new System.Drawing.Size(42, 19);
             this.label4.TabIndex = 21;
             this.label4.Text = "Ngày";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 221);
+            this.label5.Location = new System.Drawing.Point(108, 211);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 22);
+            this.label5.Size = new System.Drawing.Size(27, 19);
             this.label5.TabIndex = 22;
             this.label5.Text = "Ca";
             // 
@@ -112,9 +112,9 @@
             // 
             // dpkDate
             // 
-            this.dpkDate.Location = new System.Drawing.Point(156, 158);
+            this.dpkDate.Location = new System.Drawing.Point(163, 148);
             this.dpkDate.Name = "dpkDate";
-            this.dpkDate.Size = new System.Drawing.Size(294, 30);
+            this.dpkDate.Size = new System.Drawing.Size(294, 26);
             this.dpkDate.TabIndex = 47;
             // 
             // cmbShift
@@ -124,9 +124,9 @@
             "1",
             "2",
             "3"});
-            this.cmbShift.Location = new System.Drawing.Point(156, 218);
+            this.cmbShift.Location = new System.Drawing.Point(163, 208);
             this.cmbShift.Name = "cmbShift";
-            this.cmbShift.Size = new System.Drawing.Size(80, 30);
+            this.cmbShift.Size = new System.Drawing.Size(80, 27);
             this.cmbShift.TabIndex = 48;
             // 
             // cmbID
@@ -134,13 +134,13 @@
             this.cmbID.FormattingEnabled = true;
             this.cmbID.Location = new System.Drawing.Point(163, 31);
             this.cmbID.Name = "cmbID";
-            this.cmbID.Size = new System.Drawing.Size(287, 30);
+            this.cmbID.Size = new System.Drawing.Size(287, 27);
             this.cmbID.TabIndex = 49;
             this.cmbID.SelectedValueChanged += new System.EventHandler(this.cmbID_SelectedValueChanged);
             // 
             // Add_EditEmployeeSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 361);
             this.Controls.Add(this.cmbID);
