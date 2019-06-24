@@ -177,7 +177,6 @@
             this.ucEmployeeInfo1.Size = new System.Drawing.Size(608, 536);
             this.ucEmployeeInfo1.State = "";
             this.ucEmployeeInfo1.TabIndex = 0;
-            this.ucEmployeeInfo1.ConfirmClick += new System.EventHandler(this.ucEmployeeInfo1_ConfirmClick);
             this.ucEmployeeInfo1.ExitClick += new System.EventHandler(this.ucEmployeeInfo1_ExitClick);
             // 
             // Form3

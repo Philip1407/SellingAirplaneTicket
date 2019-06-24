@@ -137,5 +137,29 @@ namespace SellAirplaneTicketManagement.DAO
             conn.Close();
             return list;
         }
+
+        public string GetIDbyIDNum(string id)
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MaKhachHang from KhachHang Where CMND='{0}'", id);
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            if (!rd.HasRows) return "";
+
+            string dt = "";
+            if (rd.Read())
+            {
+                dt = rd.GetString(0);
+            }
+
+            conn.Close();
+            return dt;
+        }
     }
 }

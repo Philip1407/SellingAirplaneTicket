@@ -81,7 +81,7 @@ namespace SellAirplaneTicketManagement.DAO
 
         public DataTable Search(string diemkhoihanh, string diemden, string date)
         {
-            string sql = string.Format("Select lb.machuyenbay,hanghangkhong,giokhoihanh,gioketthuc,mahangve,sochocontrong,tinhtrang from LichBay lb,ChuyenBay cb, SoChoTrong sct where lb.MaLichBay = sct.MaLichBay AND lb.MaChuyenBay = cb.MaChuyenBay AND DiemKhoiHanh = N'{0}' AND DiemDen = N'{1}' AND Ngay = '{2}'", diemkhoihanh, diemden, date);
+            string sql = string.Format("Select lb.malichbay,hanghangkhong,giokhoihanh,gioketthuc,mahangve,sochocontrong,tinhtrang from LichBay lb,ChuyenBay cb, SoChoTrong sct where lb.MaLichBay = sct.MaLichBay AND lb.MaChuyenBay = cb.MaChuyenBay AND DiemKhoiHanh = N'{0}' AND DiemDen = N'{1}' AND Ngay = '{2}'", diemkhoihanh, diemden, date);
             var rs = ProcessData.LoadData(sql);
             return rs;
         }

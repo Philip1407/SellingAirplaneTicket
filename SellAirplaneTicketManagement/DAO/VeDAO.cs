@@ -40,14 +40,15 @@ namespace SellAirplaneTicketManagement.DAO
             int id = int.Parse(tmp.Remove(0, 1));
 
             int rs=0;
-            for(id++; id<=id+amount; id++)
+            int temp= id;
+            for(id++; id<=temp+amount+1; id++)
             {
                 tmp = "V";
                 if (id < 10) tmp += "00";
                 else if (id < 100) tmp += "0";
                 tmp += id;
 
-                sql = string.Format("Insert into LichLamViec(MaVe, MaLichBay, MahangVe)  Values('{0}','{1}','{2}')",
+                sql = string.Format("Insert into Ve(MaVe, MaLichBay, MahangVe)  Values('{0}','{1}','{2}')",
                 tmp, Ve.MaLichBay, Ve.MaHangVe);
                 rs += ProcessData.ExecuteNonQuery(sql);
                 sql = string.Format("Insert into ChiTietGiaoDich(MaGiaoDich, MaVe) values('{0}','{1}')",

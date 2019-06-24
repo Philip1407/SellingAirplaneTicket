@@ -74,6 +74,7 @@ namespace SellAirplaneTicketManagement
         {
             checkTransaction1.Data = thongtingiaodich.Loadata();
             ShowEmployeeInfo(EmployeeID);
+            FillIDNumberList();
         }
 
         private void FillDestinationList()
@@ -222,21 +223,23 @@ namespace SellAirplaneTicketManagement
             try
             {
                 GiaoDich giaodich = new GiaoDich();
-                giaodich.MaKhachHang = null;
+                giaodich.MaKhachHang = thongtinkhachhang.GetIDbyIDNum(bookTicket1.IDNumber);
                 giaodich.MaLichBay = bookTicket1.FlightID;
                 giaodich.MaNhanVien = EmployeeID;
-                giaodich.SoTienGiaoDich = int.Parse(bookTicket1.Total);
+                giaodich.SoTienGiaoDich = int.Parse(bookTicket1.Total.Split(' ')[0]);
                 giaodich.ThoiGianGiaoDich = DateTime.Now.ToString();
 
                 thongtingiaodich.Insert(giaodich);
 
                 Ve ve = new Ve();
                 ve.MaLichBay = bookTicket1.FlightID;
-                ve.MaHangVe = bookTicket1.Class;
+                ve.MaHangVe = GetClassID(bookTicket1.Class);
                 int amount = bookTicket1.Amount;
                 datve.Insert(ve, amount, thongtingiaodich.GetID(giaodich.MaNhanVien, giaodich.ThoiGianGiaoDich));
 
                 MessageBox.Show("Đặt vé thành công");
+                ReloadData();
+
             }
             catch
             {
@@ -249,12 +252,13 @@ namespace SellAirplaneTicketManagement
         private void bookTicket1_onAmountChange(object sender, EventArgs e)
         {
             bookTicket1.Total = Cost(bookTicket1.FlightID, bookTicket1.Amount, bookTicket1.Class);
-
+            valid = true;
         }
 
         private void bookTicket1_onClassChange(object sender, EventArgs e)
         {
             bookTicket1.Total = Cost(bookTicket1.FlightID, bookTicket1.Amount, bookTicket1.Class);
+            valid = true;
         }
 
         private void bookTicket1_onChangeCustomerIDNumber(object sender, EventArgs e)
@@ -292,9 +296,6 @@ namespace SellAirplaneTicketManagement
             frm.Show();
         }
 
-        private void ucEmployeeInfo1_ConfirmClick(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

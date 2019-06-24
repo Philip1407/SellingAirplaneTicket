@@ -44,7 +44,7 @@ namespace SellAirplaneTicketManagement.DAO
             else if (id < 100) tmp += "0";
             tmp += id;
 
-            sql = string.Format("Insert into NhanVien(MaNhanVien,HoTen, MatKhau, TinhTrang, MaNguoiQuanLy, NgaySinh, GioiTinh, ChucVu, DiaChi, SoDienThoai)  Values('{0}',N'{1}','{2}',N'{3}','{4}','{5}','{6}',N'{7}',N'{8}','{9}')",
+            sql = string.Format("Insert into NhanVien(MaNhanVien,HoTen, MatKhau, TinhTrang, MaNguoiQuanLy, NgaySinh, GioiTinh, ChucVu, DiaChi, SoDienThoai)  Values('{0}',N'{1}','{2}',N'{3}','{4}','{5}',N'{6}',N'{7}',N'{8}','{9}')",
               tmp, NhanVien.HoTen, NhanVien.MatKhau, NhanVien.TinhTrang, NhanVien.MaNguoiQuanLy, NhanVien.NgaySinh, NhanVien.GioiTinh, NhanVien.ChucVu, NhanVien.DiaChi, NhanVien.SoDienThoai);
             var rs = ProcessData.ExecuteNonQuery(sql);
             return rs;
