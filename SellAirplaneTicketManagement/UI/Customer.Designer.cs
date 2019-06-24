@@ -30,7 +30,7 @@
         {
             this.tbMenu = new System.Windows.Forms.TabControl();
             this.tb1 = new System.Windows.Forms.TabPage();
-            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.lblNotifyCusInfo();
+            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
             this.tb2 = new System.Windows.Forms.TabPage();
             this.checkTransaction2 = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
             this.tb3 = new System.Windows.Forms.TabPage();
@@ -76,7 +76,7 @@
             // 
             // bookTicket1
             // 
-            this.bookTicket1.AddCustomer = false;
+            
             this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookTicket1.Location = new System.Drawing.Point(0, 0);
             this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -171,7 +171,7 @@
         private System.Windows.Forms.TabControl tbMenu;
         private System.Windows.Forms.TabPage tb1;
         private System.Windows.Forms.TabPage tb3;
-        private User_Control.lblNotifyCusInfo bookTicket1;
+        private User_Control.BookTicket bookTicket1;
         private User_Control.CheckTransaction checkTransaction1;
         private System.Windows.Forms.TabPage tb4;
         private System.Windows.Forms.TabPage tb2;

@@ -85,5 +85,49 @@ namespace SellAirplaneTicketManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
+
+        public string GetFlightID(string id)
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MaChuyenBay From LichBay Where MaLichBay like '{0}%'",id.Trim());
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            string tmp = "";
+
+            if (rd.Read()) tmp = rd.GetString(0);
+
+            conn.Close();
+
+            return tmp;
+        }
+
+        public List<string> GetIDList()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MaLichBay From LichBay");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            List<string> list = new List<string>();
+
+            while (rd.Read())
+            {
+                list.Add(rd.GetString(0));
+            }
+
+            conn.Close();
+            return list;
+        }
     }
 }

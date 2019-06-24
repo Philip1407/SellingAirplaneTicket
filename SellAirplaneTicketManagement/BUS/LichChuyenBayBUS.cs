@@ -53,5 +53,20 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return lichbayDAO.Search(diemkhoihanh, diemden, date);
         }
+
+        public string GetFlightID(string id)
+        {
+            return lichbayDAO.GetFlightID(id);
+        }
+
+        public List<string> GetIDList()
+        {
+            return lichbayDAO.GetIDList();
+        }
+
+        public List<string> GetClassList(string id)
+        {
+            return new HangVeDAO().GetClassList(id);
+        }
     }
 }

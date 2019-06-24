@@ -38,5 +38,15 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return chitietgiaodichDAO.LoadList(id);
         }
+
+        public string GetID(string idemployee, string time)
+        {
+            return giaodichDAO.GetID(idemployee,time);
+        }
+
+        public DataTable GetReportData(int from,int to)
+        {
+            return giaodichDAO.getReportData(from,to);
+        }
     }
 }

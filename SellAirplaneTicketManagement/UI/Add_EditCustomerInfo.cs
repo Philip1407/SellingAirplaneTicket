@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SellAirplaneTicketManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace SellAirplaneTicketManagement.UI
 {
     public partial class Add_EditCustomerInfo : Form
     {
-        public delegate void Add();
+        public delegate void Add(KhachHang khachhang);
         public event Add onAdd = null;
 
         public delegate void Edit();
@@ -23,18 +24,27 @@ namespace SellAirplaneTicketManagement.UI
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            KhachHang khachhang = GetInfo();
+            onAdd?.Invoke(khachhang);
+
             this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private KhachHang GetInfo()
+        {
+            KhachHang khachhang = new KhachHang();
+            khachhang.TenKhachHang = txtName.Text;
+            khachhang.SoDienThoai = txtPhoneNumber.Text;
+            khachhang.CMND = txtCustomerIDNumber.Text;
+
+            return khachhang;
         }
     }
 }

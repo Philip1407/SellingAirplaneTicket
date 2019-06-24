@@ -44,7 +44,7 @@
             this.lblTitle.Location = new System.Drawing.Point(261, 22);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(457, 31);
+            this.lblTitle.Size = new System.Drawing.Size(572, 38);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "TRA CỨU THÔNG TIN GIAO DỊCH";
             // 
@@ -52,6 +52,8 @@
             // 
             this.grvData.AllowUserToAddRows = false;
             this.grvData.AllowUserToDeleteRows = false;
+            this.grvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvData.Location = new System.Drawing.Point(17, 163);
             this.grvData.Name = "grvData";
@@ -102,7 +104,7 @@
             // 
             // CheckTransaction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);

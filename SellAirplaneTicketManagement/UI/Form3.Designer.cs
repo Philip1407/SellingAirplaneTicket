@@ -30,7 +30,7 @@
         {
             this.tbMenu = new System.Windows.Forms.TabControl();
             this.tb1 = new System.Windows.Forms.TabPage();
-            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.lblNotifyCusInfo();
+            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
             this.tb2 = new System.Windows.Forms.TabPage();
             this.findFight1 = new SellAirplaneTicketManagement.User_Control.FindFight();
             this.tb3 = new System.Windows.Forms.TabPage();
@@ -58,7 +58,7 @@
             this.tbMenu.Multiline = true;
             this.tbMenu.Name = "tbMenu";
             this.tbMenu.SelectedIndex = 0;
-            this.tbMenu.Size = new System.Drawing.Size(1400, 974);
+            this.tbMenu.Size = new System.Drawing.Size(1364, 974);
             this.tbMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbMenu.TabIndex = 0;
             this.tbMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tbMenu_DrawItem);
@@ -70,21 +70,33 @@
             this.tb1.Margin = new System.Windows.Forms.Padding(5);
             this.tb1.Name = "tb1";
             this.tb1.Padding = new System.Windows.Forms.Padding(5);
-            this.tb1.Size = new System.Drawing.Size(1192, 966);
+            this.tb1.Size = new System.Drawing.Size(1156, 966);
             this.tb1.TabIndex = 0;
             this.tb1.Text = "Đặt vé chuyến bay";
             this.tb1.UseVisualStyleBackColor = true;
             // 
             // bookTicket1
             // 
-            this.bookTicket1.AddCustomer = true;
+            this.bookTicket1.Amount = 0;
             this.bookTicket1.AutoSize = true;
+            this.bookTicket1.Class = "Thương gia";
+            this.bookTicket1.CustomerName = "";
+            this.bookTicket1.FlightIDList.Items.Add("Thương gia");
+            this.bookTicket1.FlightID = "Thương gia";
             this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookTicket1.IDNumber = "0";
             this.bookTicket1.Location = new System.Drawing.Point(21, 21);
             this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bookTicket1.Name = "bookTicket1";
             this.bookTicket1.Size = new System.Drawing.Size(1131, 472);
             this.bookTicket1.TabIndex = 0;
+            this.bookTicket1.Total = "0 VND";
+            this.bookTicket1.BookClick += new System.EventHandler(this.bookTicket1_BookClick);
+            this.bookTicket1.AddCustomerClick += new System.EventHandler(this.bookTicket1_AddCustomerClick);
+            this.bookTicket1.onChangeCustomerIDNumber += new System.EventHandler(this.bookTicket1_onChangeCustomerIDNumber);
+            this.bookTicket1.onAmountChange += new System.EventHandler(this.bookTicket1_onAmountChange);
+            this.bookTicket1.onClassChange += new System.EventHandler(this.bookTicket1_onClassChange);
+            this.bookTicket1.onFlightIDChange += new System.EventHandler(this.bookTicket1_onFlightIDChange);
             // 
             // tb2
             // 
@@ -93,13 +105,17 @@
             this.tb2.Margin = new System.Windows.Forms.Padding(5);
             this.tb2.Name = "tb2";
             this.tb2.Padding = new System.Windows.Forms.Padding(5);
-            this.tb2.Size = new System.Drawing.Size(1192, 966);
+            this.tb2.Size = new System.Drawing.Size(1156, 966);
             this.tb2.TabIndex = 1;
             this.tb2.Text = "Tra cứu chuyến bay";
             this.tb2.UseVisualStyleBackColor = true;
             // 
             // findFight1
             // 
+            this.findFight1.Arrive = "VietNamAirline";
+            this.findFight1.Data = null;
+            this.findFight1.Date = "24-Jun-19";
+            this.findFight1.Depart = "VietNamAirline";
             this.findFight1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findFight1.Location = new System.Drawing.Point(4, 9);
             this.findFight1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -114,7 +130,7 @@
             this.tb3.Location = new System.Drawing.Point(204, 4);
             this.tb3.Margin = new System.Windows.Forms.Padding(5);
             this.tb3.Name = "tb3";
-            this.tb3.Size = new System.Drawing.Size(1192, 966);
+            this.tb3.Size = new System.Drawing.Size(1156, 966);
             this.tb3.TabIndex = 2;
             this.tb3.Text = "Lịch sử giao dịch";
             this.tb3.UseVisualStyleBackColor = true;
@@ -140,7 +156,7 @@
             this.tb4.Controls.Add(this.ucEmployeeInfo1);
             this.tb4.Location = new System.Drawing.Point(204, 4);
             this.tb4.Name = "tb4";
-            this.tb4.Size = new System.Drawing.Size(1192, 966);
+            this.tb4.Size = new System.Drawing.Size(1156, 966);
             this.tb4.TabIndex = 3;
             this.tb4.Text = "Thông tin tài khoản";
             this.tb4.UseVisualStyleBackColor = true;
@@ -190,7 +206,7 @@
         private System.Windows.Forms.TabPage tb2;
         private System.Windows.Forms.TabPage tb3;
         private System.Windows.Forms.TabPage tb1;
-        private User_Control.lblNotifyCusInfo bookTicket1;
+        private User_Control.BookTicket bookTicket1;
         private User_Control.FindFight findFight1;
         private User_Control.CheckTransaction checkTransaction1;
         private System.Windows.Forms.TabPage tb4;

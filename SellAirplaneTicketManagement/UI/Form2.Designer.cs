@@ -28,40 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.signUp1 = new SellAirplaneTicketManagement.SignUp();
-            this.forgetPassword1 = new SellAirplaneTicketManagement.ForgetPassword();
             this.logIn1 = new SellAirplaneTicketManagement.LogIn();
             this.SuspendLayout();
-            // 
-            // signUp1
-            // 
-            this.signUp1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.signUp1.BackColor = System.Drawing.SystemColors.Window;
-            this.signUp1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.signUp1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUp1.Location = new System.Drawing.Point(278, 68);
-            this.signUp1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.signUp1.Name = "signUp1";
-            this.signUp1.Size = new System.Drawing.Size(588, 545);
-            this.signUp1.TabIndex = 0;
-            this.signUp1.BackClick += new System.EventHandler(this.signUp1_BackClick);
-            // 
-            // forgetPassword1
-            // 
-            this.forgetPassword1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.forgetPassword1.BackColor = System.Drawing.SystemColors.Window;
-            this.forgetPassword1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.forgetPassword1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgetPassword1.Location = new System.Drawing.Point(352, 134);
-            this.forgetPassword1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.forgetPassword1.Name = "forgetPassword1";
-            this.forgetPassword1.Size = new System.Drawing.Size(502, 340);
-            this.forgetPassword1.TabIndex = 2;
-            this.forgetPassword1.BackClick += new System.EventHandler(this.forgetPassword1_BackClick);
             // 
             // logIn1
             // 
@@ -80,8 +48,7 @@
             this.logIn1.TabIndex = 3;
             this.logIn1.UserName = "";
             this.logIn1.LoginClick += new System.EventHandler(this.logIn1_LoginClick);
-            this.logIn1.ForgotPasswordClick += new System.EventHandler(this.logIn1_ForgotPasswordClick);
-            this.logIn1.SignUpClick += new System.EventHandler(this.logIn1_SignUpClick);
+            
             // 
             // Form2
             // 
@@ -90,8 +57,6 @@
             this.BackgroundImage = global::SellAirplaneTicketManagement.Properties.Resources.Login1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1214, 639);
-            this.Controls.Add(this.signUp1);
-            this.Controls.Add(this.forgetPassword1);
             this.Controls.Add(this.logIn1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -105,9 +70,6 @@
         }
 
         #endregion
-
-        private SignUp signUp1;
-        private ForgetPassword forgetPassword1;
         private LogIn logIn1;
     }
 }

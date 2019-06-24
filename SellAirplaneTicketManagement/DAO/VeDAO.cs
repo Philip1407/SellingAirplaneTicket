@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,44 @@ namespace SellAirplaneTicketManagement.DAO
             return rs;
         }
 
-        public int Insert(Ve Ve)
+        public int Insert(Ve Ve, int amount, string idTran)
         {
-            string sql = string.Format("Insert into LichLamViec(maVe, MaLichBay, MahangVe)  Values('{0}','{1}','{2}')",
-            Ve.MaVe, Ve.MaLichBay, Ve.MaHangVe);
-            var rs = ProcessData.ExecuteNonQuery(sql);
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MAX(MaVe) From Ve");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            string tmp = "";
+
+            if (rd.Read()) tmp = rd.GetString(0);
+
+            conn.Close();
+
+
+            int id = int.Parse(tmp.Remove(0, 1));
+
+            int rs=0;
+            for(id++; id<=id+amount; id++)
+            {
+                tmp = "V";
+                if (id < 10) tmp += "00";
+                else if (id < 100) tmp += "0";
+                tmp += id;
+
+                sql = string.Format("Insert into LichLamViec(MaVe, MaLichBay, MahangVe)  Values('{0}','{1}','{2}')",
+                tmp, Ve.MaLichBay, Ve.MaHangVe);
+                rs += ProcessData.ExecuteNonQuery(sql);
+                sql = string.Format("Insert into ChiTietGiaoDich(MaGiaoDich, MaVe) values('{0}','{1}')",
+                idTran, tmp);
+                rs += ProcessData.ExecuteNonQuery(sql);
+            }
+
+            
             return rs;
         }
 

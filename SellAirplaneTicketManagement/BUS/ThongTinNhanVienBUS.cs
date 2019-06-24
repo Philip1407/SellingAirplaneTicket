@@ -52,5 +52,10 @@ namespace SellAirplaneTicketManagement.BUS
         {
             return nhanvienDAO.GetInfo(id);
         }
+
+        public string NewID()
+        {
+            return nhanvienDAO.GetNewID();
+        }
     }
 }

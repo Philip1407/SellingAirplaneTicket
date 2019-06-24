@@ -233,5 +233,34 @@ namespace SellAirplaneTicketManagement.DAO
 
             return nhanvien;
         }
+
+        public string GetNewID()
+        {
+            string path = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLBanvechuyenbay;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(path);
+            string sql = string.Format("Select MAX(MaNhanVien) From NhanVien");
+
+            SqlCommand command = new SqlCommand(sql, conn);
+            conn.Open();
+
+            var rd = command.ExecuteReader();
+
+            string tmp = "";
+
+            if (rd.Read()) tmp = rd.GetString(0);
+
+            conn.Close();
+
+
+            int id = int.Parse(tmp.Remove(0, 2));
+            id++;
+            tmp = "NV";
+            if (id < 10) tmp += "00";
+            else if (id < 100) tmp += "0";
+            tmp += id;
+
+            return tmp;
+        }
     }
 }

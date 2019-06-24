@@ -33,7 +33,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtCustomerIDNumber = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,7 +57,6 @@
             this.label2.Size = new System.Drawing.Size(114, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtName
             // 
@@ -81,17 +80,17 @@
             this.label3.Location = new System.Drawing.Point(96, 192);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 22);
+            this.label3.Size = new System.Drawing.Size(68, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Email";
+            this.label3.Text = "CMND";
             // 
-            // txtEmail
+            // txtCustomerIDNumber
             // 
-            this.txtEmail.Location = new System.Drawing.Point(161, 192);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(415, 30);
-            this.txtEmail.TabIndex = 5;
+            this.txtCustomerIDNumber.Location = new System.Drawing.Point(161, 192);
+            this.txtCustomerIDNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerIDNumber.Name = "txtCustomerIDNumber";
+            this.txtCustomerIDNumber.Size = new System.Drawing.Size(415, 30);
+            this.txtCustomerIDNumber.TabIndex = 5;
             // 
             // btnConfirm
             // 
@@ -120,7 +119,7 @@
             this.ClientSize = new System.Drawing.Size(657, 373);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtCustomerIDNumber);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtName);
@@ -142,7 +141,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtCustomerIDNumber;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
     }

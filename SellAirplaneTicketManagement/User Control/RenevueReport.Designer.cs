@@ -31,30 +31,25 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnReport = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.ChartData = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbMonth1 = new System.Windows.Forms.ComboBox();
-            this.lbl = new System.Windows.Forms.Label();
-            this.txtYear1 = new System.Windows.Forms.TextBox();
-            this.txtYear2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbYear2 = new System.Windows.Forms.ComboBox();
+            this.cmbMonth2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ChartData)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BÁO CÁO DOANH THU";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(342, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(393, 38);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "BÁO CÁO DOANH THU";
             // 
             // label3
             // 
@@ -68,20 +63,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(552, 86);
+            this.label4.Location = new System.Drawing.Point(335, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Đến";
-            // 
-            // btnReport
-            // 
-            this.btnReport.Location = new System.Drawing.Point(957, 58);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(119, 53);
-            this.btnReport.TabIndex = 7;
-            this.btnReport.Text = "Xuất báo cáo";
-            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -98,11 +84,11 @@
             this.ChartData.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.ChartData.Legends.Add(legend1);
-            this.ChartData.Location = new System.Drawing.Point(81, 150);
+            this.ChartData.Location = new System.Drawing.Point(33, 123);
             this.ChartData.Name = "ChartData";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Total";
             this.ChartData.Series.Add(series1);
             this.ChartData.Size = new System.Drawing.Size(1043, 423);
             this.ChartData.TabIndex = 10;
@@ -126,45 +112,14 @@
             "Tháng 12"});
             this.cmbMonth1.Location = new System.Drawing.Point(117, 87);
             this.cmbMonth1.Name = "cmbMonth1";
-            this.cmbMonth1.Size = new System.Drawing.Size(121, 30);
+            this.cmbMonth1.Size = new System.Drawing.Size(162, 30);
             this.cmbMonth1.TabIndex = 11;
+            this.cmbMonth1.TextChanged += new System.EventHandler(this.cmbMonth1_TextChanged);
             // 
-            // lbl
+            // cmbMonth2
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(262, 93);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(42, 22);
-            this.lbl.TabIndex = 12;
-            this.lbl.Text = "năm";
-            // 
-            // txtYear1
-            // 
-            this.txtYear1.Location = new System.Drawing.Point(310, 87);
-            this.txtYear1.Name = "txtYear1";
-            this.txtYear1.Size = new System.Drawing.Size(85, 30);
-            this.txtYear1.TabIndex = 13;
-            // 
-            // txtYear2
-            // 
-            this.txtYear2.Location = new System.Drawing.Point(810, 81);
-            this.txtYear2.Name = "txtYear2";
-            this.txtYear2.Size = new System.Drawing.Size(85, 30);
-            this.txtYear2.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(762, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 22);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "năm";
-            // 
-            // cmbYear2
-            // 
-            this.cmbYear2.FormattingEnabled = true;
-            this.cmbYear2.Items.AddRange(new object[] {
+            this.cmbMonth2.FormattingEnabled = true;
+            this.cmbMonth2.Items.AddRange(new object[] {
             "Tháng 1",
             "Tháng 2",
             "Tháng 3",
@@ -177,27 +132,23 @@
             "Tháng 10",
             "Tháng 11",
             "Tháng 12"});
-            this.cmbYear2.Location = new System.Drawing.Point(617, 81);
-            this.cmbYear2.Name = "cmbYear2";
-            this.cmbYear2.Size = new System.Drawing.Size(121, 30);
-            this.cmbYear2.TabIndex = 14;
+            this.cmbMonth2.Location = new System.Drawing.Point(400, 85);
+            this.cmbMonth2.Name = "cmbMonth2";
+            this.cmbMonth2.Size = new System.Drawing.Size(165, 30);
+            this.cmbMonth2.TabIndex = 14;
+            this.cmbMonth2.TextChanged += new System.EventHandler(this.cmbMonth2_TextChanged);
             // 
             // RenevueReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtYear2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbYear2);
-            this.Controls.Add(this.txtYear1);
-            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.cmbMonth2);
             this.Controls.Add(this.cmbMonth1);
             this.Controls.Add(this.ChartData);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RenevueReport";
@@ -210,17 +161,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartData;
         private System.Windows.Forms.ComboBox cmbMonth1;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.TextBox txtYear1;
-        private System.Windows.Forms.TextBox txtYear2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbYear2;
+        private System.Windows.Forms.ComboBox cmbMonth2;
     }
 }

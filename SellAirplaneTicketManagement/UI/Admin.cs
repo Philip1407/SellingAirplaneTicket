@@ -53,23 +53,6 @@ namespace SellAirplaneTicketManagement
             thongtinadmin.Update(admin);
         }
 
-        /*public string RandomString(int size, bool lowerCase)
-        {
-            StringBuilder builder = new StringBuilder();
-            Random random = new Random();
-            char ch;
-            for (int i = 0; i < size; i++)
-            {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
-            }
-            if (lowerCase)
-                return builder.ToString().ToLower();
-            return builder.ToString();
-        }*/
-
-
-
         private void ReloadData()
         {
             ucFightInfo.Data = thongtinchuyenbay.Loadata();
@@ -79,6 +62,7 @@ namespace SellAirplaneTicketManagement
             checkTransaction1.Data = thongtingiaodich.Loadata();
             ucCustomerInfo.Data = thongtinkhachhang.Loadata();
             ShowAdminInfo(AdminID);
+            signUp1.IDEmployee = thongtinnhanvien.NewID();
         }
         
         public Admin(string id)
@@ -89,7 +73,15 @@ namespace SellAirplaneTicketManagement
             ReloadData();
 
             EmployeeInfo.GridView.Columns["MATKHAU"].Visible = false;
+            ucFightInfo.GridView.Columns["DAXOA"].Visible = false;
+            checkTransaction1.GridView.Columns["SOTAIKHOANCHUYENDEN"].Visible = false;
+
+            renevueReport1.FromMonth = "Tháng 1";
+            renevueReport1.ToMonth = "Tháng 12";
+            DrawChart();
         }
+
+        
 
         private void tbMenu_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -375,6 +367,74 @@ namespace SellAirplaneTicketManagement
         {
             UpdateAdminInfo(AdminID);
             MessageBox.Show("Cập nhật thành công!");
+        }
+
+        private void signUp1_SignUpClick(object sender, EventArgs e)
+        {
+            NhanVien nhanvien = new NhanVien();
+            if (signUp1.Pass != signUp1.RePass)
+            {
+                MessageBox.Show("Xác nhận mật khẩu không khớp");
+                return;
+            }
+            try
+            {
+                nhanvien.ChucVu = "Nhân viên bán vé";
+                nhanvien.TinhTrang = "Đang làm việc";
+                nhanvien.MatKhau = signUp1.Pass;
+                nhanvien.HoTen = signUp1.FullName;
+                nhanvien.NgaySinh = signUp1.DOB;
+                nhanvien.GioiTinh = signUp1.Gender;
+                nhanvien.DiaChi = signUp1.Address;
+                nhanvien.MaNguoiQuanLy = AdminID;
+                nhanvien.SoDienThoai = signUp1.Phone;
+
+                thongtinnhanvien.Insert(nhanvien);
+                MessageBox.Show("Đăng ký thành công");
+                ReloadData();
+            }catch
+            {
+                MessageBox.Show("Dữ liệu không hợp lệ");
+            }
+        }
+
+
+        private void DrawChart()
+        {
+
+
+            renevueReport1.Data.DataSource = thongtingiaodich.GetReportData(1,12);
+
+            renevueReport1.Data.Series["Total"].XValueMember = "Month";
+
+            renevueReport1.Data.Series["Total"].YValueMembers = "Total";
+        }
+
+        private void renevueReport1_FromMonthChange(object sender, EventArgs e)
+        {
+            int frommonth= int.Parse(renevueReport1.FromMonth.Split(' ')[1]);
+            int tomonth = 12;
+            if(renevueReport1.ToMonth != "")
+                tomonth = int.Parse(renevueReport1.ToMonth.Split(' ')[1]);
+            
+            renevueReport1.Data.DataSource = thongtingiaodich.GetReportData(frommonth,tomonth);
+
+            renevueReport1.Data.Series["Total"].XValueMember = "Month";
+
+            renevueReport1.Data.Series["Total"].YValueMembers = "Total";
+            renevueReport1.Data.Update();
+        }
+
+        private void renevueReport1_ToMonthChange(object sender, EventArgs e)
+        {
+            int frommonth = int.Parse(renevueReport1.FromMonth.Split(' ')[1]);
+            int tomonth = int.Parse(renevueReport1.ToMonth.Split(' ')[1]);
+            //renevueReport1.Data.Series.Clear();
+            renevueReport1.Data.DataSource = thongtingiaodich.GetReportData(frommonth, tomonth);
+
+            renevueReport1.Data.Series["Total"].XValueMember = "Month";
+
+            renevueReport1.Data.Series["Total"].YValueMembers = "Total";
         }
     }
 }

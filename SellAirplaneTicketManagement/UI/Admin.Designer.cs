@@ -45,11 +45,13 @@
             this.ucAdminInfo1 = new SellAirplaneTicketManagement.ucAdminInfo();
             this.tb8 = new System.Windows.Forms.TabPage();
             this.ucCustomerInfo = new SellAirplaneTicketManagement.User_Control.CheckTransaction();
+            this.tb9 = new System.Windows.Forms.TabPage();
+            this.signUp1 = new SellAirplaneTicketManagement.SignUp();
             this.pnFlightPolicy = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.lblNotifyCusInfo();
+            this.bookTicket1 = new SellAirplaneTicketManagement.User_Control.BookTicket();
             this.findFight1 = new SellAirplaneTicketManagement.User_Control.FindFight();
             this.tbMenu.SuspendLayout();
             this.tb1.SuspendLayout();
@@ -60,6 +62,7 @@
             this.tb6.SuspendLayout();
             this.tb7.SuspendLayout();
             this.tb8.SuspendLayout();
+            this.tb9.SuspendLayout();
             this.pnFlightPolicy.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,8 +77,9 @@
             this.tbMenu.Controls.Add(this.tb6);
             this.tbMenu.Controls.Add(this.tb7);
             this.tbMenu.Controls.Add(this.tb8);
+            this.tbMenu.Controls.Add(this.tb9);
             this.tbMenu.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tbMenu.ItemSize = new System.Drawing.Size(75, 200);
+            this.tbMenu.ItemSize = new System.Drawing.Size(60, 200);
             this.tbMenu.Location = new System.Drawing.Point(3, 5);
             this.tbMenu.Margin = new System.Windows.Forms.Padding(5);
             this.tbMenu.Multiline = true;
@@ -108,7 +112,7 @@
             this.ucFightInfo.Location = new System.Drawing.Point(0, 0);
             this.ucFightInfo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ucFightInfo.Name = "ucFightInfo";
-            this.ucFightInfo.Size = new System.Drawing.Size(1173, 640);
+            this.ucFightInfo.Size = new System.Drawing.Size(1168, 640);
             this.ucFightInfo.TabIndex = 0;
             this.ucFightInfo.Title = "THÔNG TIN CÁC CHUYẾN BAY";
             this.ucFightInfo.AddClick += new System.EventHandler(this.ucFightInfo_AddClick);
@@ -159,11 +163,15 @@
             // renevueReport1
             // 
             this.renevueReport1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renevueReport1.FromMonth = "";
             this.renevueReport1.Location = new System.Drawing.Point(4, 4);
             this.renevueReport1.Margin = new System.Windows.Forms.Padding(4);
             this.renevueReport1.Name = "renevueReport1";
             this.renevueReport1.Size = new System.Drawing.Size(1165, 636);
             this.renevueReport1.TabIndex = 0;
+            this.renevueReport1.ToMonth = "";
+            this.renevueReport1.FromMonthChange += new System.EventHandler(this.renevueReport1_FromMonthChange);
+            this.renevueReport1.ToMonthChange += new System.EventHandler(this.renevueReport1_ToMonthChange);
             // 
             // tb4
             // 
@@ -263,10 +271,10 @@
             this.ucAdminInfo1.Address = "";
             this.ucAdminInfo1.BackColor = System.Drawing.SystemColors.Window;
             this.ucAdminInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucAdminInfo1.DOB = "";
+            this.ucAdminInfo1.DOB = "24-Jun-19";
             this.ucAdminInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucAdminInfo1.FullName = "";
-            this.ucAdminInfo1.Gender = "";
+            this.ucAdminInfo1.Gender = "Nam";
             this.ucAdminInfo1.Location = new System.Drawing.Point(162, 37);
             this.ucAdminInfo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ucAdminInfo1.Name = "ucAdminInfo1";
@@ -304,6 +312,36 @@
             this.ucCustomerInfo.Title = "XEM THÔNG TIN KHÁCH HÀNG";
             this.ucCustomerInfo.DetailClick += new System.EventHandler(this.CheckCustomerInfo_DetailClick);
             // 
+            // tb9
+            // 
+            this.tb9.Controls.Add(this.signUp1);
+            this.tb9.Location = new System.Drawing.Point(204, 4);
+            this.tb9.Name = "tb9";
+            this.tb9.Size = new System.Drawing.Size(1173, 644);
+            this.tb9.TabIndex = 8;
+            this.tb9.Text = "Thêm tài khoản nhân viên";
+            this.tb9.UseVisualStyleBackColor = true;
+            // 
+            // signUp1
+            // 
+            this.signUp1.Address = "";
+            this.signUp1.BackColor = System.Drawing.SystemColors.Window;
+            this.signUp1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.signUp1.DOB = "24-Jun-19";
+            this.signUp1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUp1.FullName = "";
+            this.signUp1.Gender = "Nam";
+            this.signUp1.IDEmployee = "Mã nhân viên";
+            this.signUp1.Location = new System.Drawing.Point(211, 29);
+            this.signUp1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.signUp1.Name = "signUp1";
+            this.signUp1.Pass = "";
+            this.signUp1.Phone = "";
+            this.signUp1.RePass = "";
+            this.signUp1.Size = new System.Drawing.Size(608, 536);
+            this.signUp1.TabIndex = 0;
+            this.signUp1.SignUpClick += new System.EventHandler(this.signUp1_SignUpClick);
+            // 
             // pnFlightPolicy
             // 
             this.pnFlightPolicy.Controls.Add(this.label37);
@@ -340,20 +378,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1192, 966);
             this.panel1.TabIndex = 9;
-            // 
-            // bookTicket1
-            // 
-            this.bookTicket1.AddCustomer = true;
-            this.bookTicket1.AutoSize = true;
-            this.bookTicket1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookTicket1.Location = new System.Drawing.Point(21, 21);
-            this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bookTicket1.Name = "bookTicket1";
-            this.bookTicket1.Size = new System.Drawing.Size(1131, 416);
-            this.bookTicket1.TabIndex = 0;
+            
             // 
             // findFight1
             // 
+            this.findFight1.Arrive = "VietNamAirline";
+            this.findFight1.Data = null;
+            this.findFight1.Date = "24-Jun-19";
+            this.findFight1.Depart = "VietNamAirline";
             this.findFight1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findFight1.Location = new System.Drawing.Point(4, 9);
             this.findFight1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -370,7 +402,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.tbMenu.ResumeLayout(false);
             this.tb1.ResumeLayout(false);
@@ -381,6 +413,7 @@
             this.tb6.ResumeLayout(false);
             this.tb7.ResumeLayout(false);
             this.tb8.ResumeLayout(false);
+            this.tb9.ResumeLayout(false);
             this.pnFlightPolicy.ResumeLayout(false);
             this.pnFlightPolicy.PerformLayout();
             this.ResumeLayout(false);
@@ -394,7 +427,7 @@
         private System.Windows.Forms.Panel pnFlightPolicy;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Panel panel1;
-        private User_Control.lblNotifyCusInfo bookTicket1;
+        private User_Control.BookTicket bookTicket1;
         private User_Control.FindFight findFight1;
         private System.Windows.Forms.TabPage tb1;
         private System.Windows.Forms.TabPage tb2;
@@ -412,5 +445,7 @@
         private ucAdminInfo ucAdminInfo1;
         private System.Windows.Forms.TabPage tb8;
         private User_Control.CheckTransaction ucCustomerInfo;
+        private System.Windows.Forms.TabPage tb9;
+        private SignUp signUp1;
     }
 }

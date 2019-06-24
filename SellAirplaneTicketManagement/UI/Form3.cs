@@ -20,8 +20,53 @@ namespace SellAirplaneTicketManagement
         ThongTinAdminBUS thongtinadmin = new ThongTinAdminBUS();
         ThongTinNhanVienBUS thongtinnhanvien = new ThongTinNhanVienBUS();
         ThongTinGiaoDichBUS thongtingiaodich = new ThongTinGiaoDichBUS();
+        ThongTinKhachHangBUS thongtinkhachhang = new ThongTinKhachHangBUS();
+        DatVeBUS datve = new DatVeBUS();
         string EmployeeID = "";
+        bool valid = false;
 
+        private void FillFlightIDList()
+        {
+            List<string> list = lichchuyenbay.GetIDList();
+            bookTicket1.FlightIDList.DataSource = new BindingSource(list, null);
+        }
+        
+        private void FillIDNumberList()
+        {
+            List<string> list = thongtinkhachhang.GetIDNumberList();
+            bookTicket1.IDNumberList.DataSource = new BindingSource(list, null);
+        }
+
+        private string GetClassName(string id)
+        {
+            switch(id){
+                case "HV001": return "Thương gia";
+                case "HV002": return "Hạng nhất";
+                case "HV003": return "Phổ thông";
+
+            }
+            return "";
+        }
+
+        private string GetClassID(string id)
+        {
+            switch (id)
+            {
+                case "Thương gia": return "HV001";
+                case "Hạng nhất": return "HV002";
+                case "Phổ thông": return "HV003";
+
+            }
+            return "";
+        }
+
+        private string Cost(string id, int amount, string Class){
+            string idflight = lichchuyenbay.GetFlightID(id);
+            int cost= datve.GetCost(GetClassID(Class), idflight)*amount;
+            if (cost == 0) valid = false;
+            else valid = true;
+            return cost.ToString()+" VND";
+        }
 
         private void ReloadData()
         {
@@ -74,6 +119,8 @@ namespace SellAirplaneTicketManagement
             ReloadData();
             checkTransaction1.GridView.Columns["SOTAIKHOANCHUYENDEN"].Visible = false;
             FillDestinationList();
+            FillFlightIDList();
+            FillIDNumberList();
         }
 
         private void tbMenu_DrawItem(object sender, DrawItemEventArgs e)
@@ -123,6 +170,8 @@ namespace SellAirplaneTicketManagement
 
         }
 
+
+
         private void checkTransaction1_DetailClick(object sender, EventArgs e)
         {
             GiaoDich giaodich = new GiaoDich();
@@ -146,6 +195,91 @@ namespace SellAirplaneTicketManagement
             string depart = findFight1.Depart;
 
             findFight1.Data = lichchuyenbay.Search(depart, arrive, date);
+        }
+
+        private void bookTicket1_AddCustomerClick(object sender, EventArgs e)
+        {
+            Add_EditCustomerInfo frm = new Add_EditCustomerInfo();
+            frm.onAdd += Frm_onAdd;
+            frm.ShowDialog();
+        }
+
+        private void Frm_onAdd(KhachHang khachhang)
+        {
+            thongtinkhachhang.Insert(khachhang);
+            ReloadData();
+        }
+
+        private void bookTicket1_BookClick(object sender, EventArgs e)
+        {
+            if (!valid)
+            {
+                MessageBox.Show("Chưa nhập đủ trường");
+                return;
+            }
+            try
+            {
+                GiaoDich giaodich = new GiaoDich();
+                giaodich.MaKhachHang = null;
+                giaodich.MaLichBay = bookTicket1.FlightID;
+                giaodich.MaNhanVien = EmployeeID;
+                giaodich.SoTienGiaoDich = int.Parse(bookTicket1.Total);
+                giaodich.ThoiGianGiaoDich = DateTime.Now.ToString();
+
+                thongtingiaodich.Insert(giaodich);
+
+                Ve ve = new Ve();
+                ve.MaLichBay = bookTicket1.FlightID;
+                ve.MaHangVe = bookTicket1.Class;
+                int amount = bookTicket1.Amount;
+                datve.Insert(ve, amount, thongtingiaodich.GetID(giaodich.MaNhanVien, giaodich.ThoiGianGiaoDich));
+
+                MessageBox.Show("Đặt vé thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Chưa nhập đủ trường");
+                return;
+            }
+
+        }
+
+        private void bookTicket1_onAmountChange(object sender, EventArgs e)
+        {
+            bookTicket1.Total = Cost(bookTicket1.FlightID, bookTicket1.Amount, bookTicket1.Class);
+
+        }
+
+        private void bookTicket1_onClassChange(object sender, EventArgs e)
+        {
+            bookTicket1.Total = Cost(bookTicket1.FlightID, bookTicket1.Amount, bookTicket1.Class);
+        }
+
+        private void bookTicket1_onChangeCustomerIDNumber(object sender, EventArgs e)
+        {
+            string name = thongtinkhachhang.GetNameByIdNum(bookTicket1.IDNumber);
+            if (string.IsNullOrEmpty(name))
+            {
+                bookTicket1.CustomerName = "Chưa có khách hàng này trong dữ liệu";
+                valid = false;
+            }
+            else
+            {
+                bookTicket1.CustomerName = name;
+                valid = true;
+            }
+                
+        }
+
+        private void bookTicket1_onFlightIDChange(object sender, EventArgs e)
+        {
+            List<string> list= new List<string>();
+            foreach(string item in lichchuyenbay.GetClassList(bookTicket1.FlightID))
+            {
+                list.Add(GetClassName(item));
+            }
+            
+            bookTicket1.ClassList.DataSource = new BindingSource(list, null);
         }
     }
 }
